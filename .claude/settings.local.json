@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/kirbyziada/Downloads/**)",
+      "Bash(pandoc Blazesites_CRM_PRD.docx -o /tmp/blazesites_prd.md)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Read(//Users/kirbyziada/Desktop/**)",
+      "Bash(npx create-next-app@latest blazesites-cms --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(rm -rf blazesites-cms)",
+      "Bash(yes \"no\")",
+      "Bash(cp -a blazesites-cms/. \"Blazesites CMS/\")",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest init -d)"
+    ]
+  }
+}
