@@ -5,6 +5,7 @@ import { useContentEditorStore } from '@/lib/editor/content-store';
 import { ContentEditorToolbar } from '@/components/editor/content-editor-toolbar';
 import { ContentSidebar } from '@/components/editor/content-sidebar';
 import { ContentFields } from '@/components/editor/content-fields';
+import { BrandImportOverlay } from '@/components/editor/brand-import-overlay';
 import { cn } from '@/lib/utils';
 import type { AstroBrandContent } from '@/types';
 
@@ -53,6 +54,7 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const [iframeSrc, setIframeSrc] = useState(project.built_url);
   const [error, setError] = useState<string | null>(null);
+  const [showImport, setShowImport] = useState(!project.brand_profile);
 
   // -------------------------------------------------------------------------
   // Initialize content store on mount
@@ -155,7 +157,22 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
         </div>
       )}
 
-      {/* Main area */}
+      {/* Brand import overlay OR main editor */}
+      {showImport ? (
+        <BrandImportOverlay
+          projectId={projectId}
+          onComplete={(content) => {
+            setContent(content);
+            setShowImport(false);
+            // Trigger rebuild to update iframe
+            handleSaveAndRebuild();
+          }}
+          onSkip={() => {
+            setContent(emptyBrandContent);
+            setShowImport(false);
+          }}
+        />
+      ) : (
       <div className="flex flex-1 overflow-hidden">
         {/* Left sidebar */}
         <ContentSidebar />
@@ -182,6 +199,7 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
         {/* Right: content fields panel */}
         <ContentFields />
       </div>
+      )}
     </div>
   );
 }
