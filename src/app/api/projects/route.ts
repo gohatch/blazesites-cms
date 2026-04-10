@@ -51,7 +51,22 @@ export async function POST(req: Request) {
 
     const supabase = await createServiceRoleClient();
 
-    // Create the project
+    // Look up template before creating project (to set built_url on insert for Astro templates)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let template: any = null;
+    if (data.template_id) {
+      const { data: tmpl } = await supabase
+        .from('templates')
+        .select('*')
+        .eq('id', data.template_id)
+        .single();
+      template = tmpl;
+    }
+
+    const isAstro = template?.template_type === 'astro' && template?.template_dir;
+    const defaultBuiltUrl = isAstro ? `/previews/${template!.template_dir}/index.html` : null;
+
+    // Create the project (with built_url for Astro templates)
     const { data: project, error } = await supabase
       .from('projects')
       .insert({
@@ -61,6 +76,7 @@ export async function POST(req: Request) {
         brand_profile: data.brand_profile || null,
         org_id: orgId,
         subdomain: data.name.toLowerCase().replace(/[^a-z0-9]/g, '-').slice(0, 30),
+        ...(defaultBuiltUrl ? { built_url: defaultBuiltUrl, status: 'building' } : {}),
       })
       .select()
       .single();
@@ -70,22 +86,8 @@ export async function POST(req: Request) {
     // Set up project content from template + brand profile
     let pagesCreated = false;
 
-    if (data.template_id) {
-      const { data: template } = await supabase
-        .from('templates')
-        .select('*')
-        .eq('id', data.template_id)
-        .single();
-
-      const isAstro = template?.template_type === 'astro' && template?.template_dir;
-
+    if (template) {
       if (isAstro) {
-        // Astro template: set default preview and trigger branded build
-        const defaultUrl = `/previews/${template.template_dir}/index.html`;
-        await supabase
-          .from('projects')
-          .update({ built_url: defaultUrl, status: 'building' })
-          .eq('id', project.id);
 
         // Fire branded Astro build async
         if (data.brand_profile) {
