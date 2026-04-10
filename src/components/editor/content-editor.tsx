@@ -8,6 +8,24 @@ import { ContentFields } from '@/components/editor/content-fields';
 import { cn } from '@/lib/utils';
 import type { AstroBrandContent } from '@/types';
 
+const emptyBrandContent: AstroBrandContent = {
+  name: '', tagline: '', description: '', phone: '', email: '', address: '',
+  colors: { primary: '#1a1a2e', primaryDark: '#0d0d1a', primaryLight: '#2a2a4e', accent: '#2563EB', bg: '#ffffff', bgDark: '#f8f9fa', white: '#ffffff', text: '#1a1a2e', textLight: '#6b7280', border: '#e5e7eb' },
+  fonts: { heading: 'Inter', body: 'Inter' },
+  nav: [{ label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Services', href: '/services' }, { label: 'Contact', href: '/contact' }],
+  hero: { eyebrow: '', heading: '', subheading: '', cta: 'Get Started', ctaSecondary: '', image: '' },
+  about: { eyebrow: 'About Us', heading: '', body: '', values: [], image: '' },
+  stats: [],
+  services: [],
+  benefits: [],
+  pricing: [],
+  testimonials: [],
+  cta: { heading: '', subheading: '', primary: 'Get Started', secondary: '' },
+  contact: { heading: 'Contact Us', subheading: '', image: '', hours: [] },
+  footer: { tagline: '', socials: [] },
+  seo: { homepage: { title: '', description: '' }, keywords: [] },
+};
+
 interface ContentEditorProps {
   projectId: string;
   project: {
@@ -40,7 +58,7 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
   // Initialize content store on mount
   // -------------------------------------------------------------------------
   useEffect(() => {
-    setContent(project.brand_profile);
+    setContent(project.brand_profile || emptyBrandContent);
   }, [project.brand_profile, setContent]);
 
   // -------------------------------------------------------------------------
