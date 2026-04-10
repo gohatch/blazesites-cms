@@ -4,14 +4,18 @@ import { batch2Templates } from './seed-templates-batch2';
 import { batch3Templates } from './seed-templates-batch3';
 import { batch4Templates } from './seed-templates-batch4';
 
-export const seedTemplates: Array<{
+export type SeedTemplate = {
   name: string;
   description: string;
   industry_tags: string[];
   style_tags: string[];
   page_count: number;
   template_data: TemplateData;
-}> = [
+  template_type?: 'block' | 'astro';
+  template_dir?: string;
+};
+
+export const seedTemplates: SeedTemplate[] = [
   {
     name: 'Professional Services',
     description: 'Clean, modern template for consulting firms, law practices, and professional services.',

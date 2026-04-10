@@ -1,0 +1,261 @@
+import type { SeedTemplate } from '../seed-templates';
+
+export const educationTemplate: SeedTemplate = {
+  name: 'LearnSpace Academy',
+  description: 'Modern online learning platform template with course catalog, instructor profiles, pricing plans, student testimonials, FAQ, and contact section. Clean and professional.',
+  industry_tags: ['Education', 'Online Learning', 'Courses'],
+  style_tags: ['Modern', 'Clean', 'Professional'],
+  page_count: 4,
+  template_type: 'astro',
+  template_dir: 'education',
+  template_data: {
+    pages: [
+      {
+        id: 'edu-home',
+        name: 'Home',
+        slug: '/',
+        blocks: [
+          {
+            id: 'edu-hero',
+            type: 'hero',
+            order: 0,
+            content: {
+              heading: 'Unlock your potential with expert-led courses',
+              subheading: 'Join thousands of learners mastering new skills in technology, business, and design with courses created by industry professionals.',
+              ctaText: 'Get Started Free',
+              ctaLink: '#contact',
+              backgroundImage: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80',
+            },
+            settings: {
+              backgroundColor: '#FAFBFF',
+              textColor: '#0F172A',
+              padding: '120px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+          {
+            id: 'edu-courses',
+            type: 'features',
+            order: 1,
+            content: {
+              heading: 'Explore Our Courses',
+              subheading: 'Browse Categories',
+              features: [
+                { title: 'Web Development', description: 'Master modern frameworks — React, Next.js, Node.js and full-stack development.', icon: 'settings' },
+                { title: 'UI/UX Design', description: 'Learn design thinking, Figma, prototyping and user research from top designers.', icon: 'palette' },
+                { title: 'Data Science', description: 'Python, machine learning, analytics and AI — the skills employers want most.', icon: 'zap' },
+                { title: 'Digital Marketing', description: 'SEO, social media, paid ads and content strategy to grow any brand.', icon: 'phone' },
+                { title: 'Business & Leadership', description: 'Strategy, management, entrepreneurship and negotiation skills.', icon: 'briefcase' },
+                { title: 'Creative Arts', description: 'Photography, video production, illustration and motion graphics.', icon: 'camera' },
+              ],
+            },
+            settings: {
+              backgroundColor: '#FFFFFF',
+              textColor: '#0F172A',
+              padding: '80px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+          {
+            id: 'edu-about',
+            type: 'about',
+            order: 2,
+            content: {
+              heading: 'Education that works for you',
+              text: "LearnSpace was built on a simple belief: world-class education should be accessible to everyone. Our courses combine practical, project-based learning with mentorship from industry leaders — so you don't just learn theory, you build real skills that employers value.",
+              image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80',
+            },
+            settings: {
+              backgroundColor: '#FAFBFF',
+              textColor: '#0F172A',
+              padding: '80px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+          {
+            id: 'edu-stats',
+            type: 'stats',
+            order: 3,
+            content: {
+              stats: [
+                { value: '50000+', label: 'Active Students' },
+                { value: '200+', label: 'Expert Courses' },
+                { value: '98%', label: 'Completion Rate' },
+                { value: '45+', label: 'Countries' },
+              ],
+            },
+            settings: {
+              backgroundColor: '#0F172A',
+              textColor: '#ffffff',
+              padding: '64px 0',
+              accentColor: '#F59E0B',
+            },
+          },
+          {
+            id: 'edu-team',
+            type: 'team',
+            order: 4,
+            content: {
+              heading: 'Our Instructors',
+              subheading: 'Learn From The Best',
+              members: [
+                { name: 'Dr. Sarah Chen', role: 'Data Science Lead', image: '' },
+                { name: 'Marcus Rivera', role: 'Web Dev Instructor', image: '' },
+                { name: 'Priya Sharma', role: 'Design Director', image: '' },
+                { name: 'James Okafor', role: 'Marketing Expert', image: '' },
+              ],
+            },
+            settings: {
+              backgroundColor: '#FFFFFF',
+              textColor: '#0F172A',
+              padding: '80px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+          {
+            id: 'edu-testimonials',
+            type: 'testimonials',
+            order: 5,
+            content: {
+              heading: 'What Our Students Say',
+              testimonials: [
+                { quote: 'LearnSpace completely changed my career trajectory. I went from a junior role to a senior developer in 8 months thanks to their project-based curriculum.', author: 'Alex Kim', role: 'Software Engineer at Stripe' },
+                { quote: 'The design courses are incredible — practical, well-structured, and taught by real professionals. I landed my dream job three months after completing the program.', author: 'Maya Torres', role: 'UX Designer at Figma' },
+                { quote: 'As a career changer, I needed flexible learning. LearnSpace delivered — I studied evenings and weekends and now work full-time in data science.', author: 'Daniel Obi', role: 'Data Analyst at Shopify' },
+              ],
+            },
+            settings: {
+              backgroundColor: '#FAFBFF',
+              textColor: '#0F172A',
+              padding: '80px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+          {
+            id: 'edu-pricing',
+            type: 'pricing',
+            order: 6,
+            content: {
+              heading: 'Choose Your Plan',
+              subheading: 'Simple Pricing',
+              plans: [
+                {
+                  name: 'Free',
+                  price: 'Free',
+                  period: '',
+                  description: 'Explore with free courses and community access.',
+                  features: ['5 free courses', 'Community forums', 'Basic quizzes', 'Mobile access'],
+                  ctaText: 'Get Started',
+                  ctaLink: '#contact',
+                },
+                {
+                  name: 'Pro',
+                  price: '$29',
+                  period: '/month',
+                  description: 'Full access to all courses and certifications.',
+                  features: ['All 200+ courses', 'Certificates', 'Project reviews', 'Priority support', '1-on-1 mentorship'],
+                  ctaText: 'Start Pro',
+                  ctaLink: '#contact',
+                  featured: true,
+                },
+                {
+                  name: 'Teams',
+                  price: '$79',
+                  period: '/user/month',
+                  description: 'For organizations training teams at scale.',
+                  features: ['Everything in Pro', 'Team analytics', 'Custom learning paths', 'Admin dashboard', 'SSO integration', 'Dedicated support'],
+                  ctaText: 'Contact Sales',
+                  ctaLink: '#contact',
+                },
+              ],
+            },
+            settings: {
+              backgroundColor: '#FFFFFF',
+              textColor: '#0F172A',
+              padding: '80px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+          {
+            id: 'edu-cta',
+            type: 'cta',
+            order: 7,
+            content: {
+              heading: 'Start learning today — for free',
+              subheading: 'Join thousands of students already building their future with LearnSpace.',
+              ctaText: 'Get Started Free',
+              ctaLink: '#contact',
+            },
+            settings: {
+              backgroundColor: '#1E40AF',
+              textColor: '#ffffff',
+              padding: '80px 0',
+              accentColor: '#F59E0B',
+            },
+          },
+          {
+            id: 'edu-faq',
+            type: 'faq',
+            order: 8,
+            content: {
+              heading: 'Questions?',
+              subheading: 'Our team is here to help you find the right learning path.',
+              faqs: [
+                { question: 'How do I get started?', answer: 'Simply create a free account and browse our course catalog. You can start learning immediately with our free courses.' },
+                { question: 'Can I switch plans later?', answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.' },
+                { question: 'Are certificates recognized by employers?', answer: 'Our certificates are recognized by leading tech companies and can be shared on LinkedIn to showcase your skills.' },
+                { question: 'Do you offer refunds?', answer: 'We offer a 30-day money-back guarantee on all paid plans. If you are not satisfied, contact our support team for a full refund.' },
+              ],
+            },
+            settings: {
+              backgroundColor: '#FAFBFF',
+              textColor: '#0F172A',
+              padding: '80px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+          {
+            id: 'edu-contact',
+            type: 'contact',
+            order: 9,
+            content: {
+              heading: 'Get in Touch',
+              text: 'Have questions about our courses or need help choosing the right plan? Our team is here to help.',
+              email: 'hello@learnspace.com',
+              phone: '',
+            },
+            settings: {
+              backgroundColor: '#FFFFFF',
+              textColor: '#0F172A',
+              padding: '80px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+          {
+            id: 'edu-footer',
+            type: 'footer',
+            order: 10,
+            content: {
+              companyName: 'LearnSpace Academy',
+              tagline: 'Modern online learning platform offering expert-led courses in technology, business, design, and personal development.',
+              links: [
+                { label: 'Courses', href: '/courses' },
+                { label: 'About', href: '/about' },
+                { label: 'Instructors', href: '/instructors' },
+                { label: 'Contact', href: '/contact' },
+              ],
+              email: 'hello@learnspace.com',
+              phone: '',
+            },
+            settings: {
+              backgroundColor: '#0F172A',
+              textColor: '#94A3B8',
+              padding: '48px 0',
+              accentColor: '#1E40AF',
+            },
+          },
+        ],
+      },
+    ],
+  },
+};

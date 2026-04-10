@@ -117,7 +117,7 @@ export async function POST(req: Request) {
 
       // Block template with pages: copy template pages with brand applied
       const hasPages = template?.template_data?.pages?.length > 0;
-      if (!isAstro && hasPages) {
+      if (hasPages) {
         let templateData = template!.template_data;
         if (data.brand_profile) {
           templateData = applyBrandToTemplate(templateData, data.brand_profile);
