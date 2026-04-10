@@ -76,7 +76,7 @@ export async function POST(req: Request) {
         brand_profile: data.brand_profile || null,
         org_id: orgId,
         subdomain: data.name.toLowerCase().replace(/[^a-z0-9]/g, '-').slice(0, 30),
-        ...(defaultBuiltUrl ? { built_url: defaultBuiltUrl, status: 'building' } : {}),
+        ...(defaultBuiltUrl ? { built_url: defaultBuiltUrl } : {}),
       })
       .select()
       .single();
