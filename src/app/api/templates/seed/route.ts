@@ -67,9 +67,37 @@ export async function POST() {
     }
   }
 
+  // Deduplicate: find templates sharing the same template_dir and convert extras to block type
+  let deduped = 0;
+  const { data: astroTemplates } = await supabase
+    .from('templates')
+    .select('id, name, template_dir, created_at')
+    .not('template_dir', 'is', null)
+    .order('created_at', { ascending: true });
+
+  if (astroTemplates) {
+    const byDir: Record<string, typeof astroTemplates> = {};
+    for (const t of astroTemplates) {
+      const dir = t.template_dir!;
+      if (!byDir[dir]) byDir[dir] = [];
+      byDir[dir].push(t);
+    }
+    for (const [, group] of Object.entries(byDir)) {
+      if (group.length <= 1) continue;
+      for (let i = 1; i < group.length; i++) {
+        const { error } = await supabase
+          .from('templates')
+          .update({ template_type: 'block', template_dir: null })
+          .eq('id', group[i].id);
+        if (!error) deduped++;
+      }
+    }
+  }
+
   return NextResponse.json({
     success: results.errors.length === 0,
     total: allTemplates.length,
     ...results,
+    deduped,
   });
 }
