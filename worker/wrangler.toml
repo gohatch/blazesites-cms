@@ -1,0 +1,18 @@
+name = "blazesites-sites"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+
+# R2 bucket binding
+[[r2_buckets]]
+binding = "SITES_BUCKET"
+bucket_name = "blazesites-sites"
+
+# Routes — uncomment and set your domain
+# [[routes]]
+# pattern = "*.blazesites.com.au/*"
+# zone_name = "blazesites.com.au"
+
+[vars]
+APP_DOMAIN = "blazesites.com.au"
+# Set this to your CMS API URL for custom domain lookups
+CMS_API_URL = "https://app.blazesites.com.au"
