@@ -13,7 +13,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ id: str
 
   const { data, error } = await supabase
     .from('projects')
-    .select('*, client:clients(id, name, email, company)')
+    .select('*, client:clients(id, name, email, company), template:templates(id, name, template_type, template_dir)')
     .eq('id', id)
     .eq('org_id', orgId)
     .single();
