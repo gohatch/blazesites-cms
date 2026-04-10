@@ -1,7 +1,7 @@
 import type { SeedTemplate } from '../seed-templates';
 
 export const architectureTemplate: SeedTemplate = {
-  name: 'DNOIN.INC Architecture',
+  name: 'DNOIN Architecture',
   description: 'Sophisticated architecture firm template with serif typography, project gallery, team roster, case studies, and project categories. Minimal and elegant.',
   industry_tags: ['Architecture', 'Design', 'Interior'],
   style_tags: ['Minimal', 'Elegant', 'Serif'],

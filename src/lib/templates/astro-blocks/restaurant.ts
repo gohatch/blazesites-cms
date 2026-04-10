@@ -1,7 +1,7 @@
 import type { SeedTemplate } from '../seed-templates';
 
 export const restaurantTemplate: SeedTemplate = {
-  name: 'Drizzle.',
+  name: 'Drizzle Restaurant',
   description: 'Elegant restaurant template with warm cream tones, menu categories, photo gallery, reservation section, and customer reviews. Refined and inviting.',
   industry_tags: ['Restaurant', 'Dining', 'Food & Beverage'],
   style_tags: ['Elegant', 'Warm', 'Serif Typography'],

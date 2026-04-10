@@ -1,7 +1,7 @@
 import type { SeedTemplate } from '../seed-templates';
 
 export const roofingTemplate: SeedTemplate = {
-  name: 'ApexRoofing',
+  name: 'Apex Roofing',
   description: 'Professional roofing template with trust badges, service cards, project gallery, and testimonial grid. Clean and authoritative.',
   industry_tags: ['Roofing', 'Construction', 'Home Services'],
   style_tags: ['Professional', 'Clean', 'Blue Accent'],
