@@ -4,6 +4,7 @@ import { useEffect, useCallback, useRef, useState } from 'react';
 import { useContentEditorStore } from '@/lib/editor/content-store';
 import { ContentEditorToolbar } from '@/components/editor/content-editor-toolbar';
 import { ContentSidebar } from '@/components/editor/content-sidebar';
+import { ContentFields } from '@/components/editor/content-fields';
 import { cn } from '@/lib/utils';
 import type { AstroBrandContent } from '@/types';
 
@@ -160,12 +161,8 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
           </div>
         </div>
 
-        {/* Right: content fields panel (placeholder for ContentFields component) */}
-        <aside className="w-80 overflow-y-auto border-l bg-background p-4">
-          <p className="text-sm text-muted-foreground">
-            Select a section from the sidebar to edit its content.
-          </p>
-        </aside>
+        {/* Right: content fields panel */}
+        <ContentFields />
       </div>
     </div>
   );
