@@ -1,0 +1,20 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background-color: ${brand.colors.warm}`}>
+  <div class="mx-auto max-w-7xl">
+    <div class="animate-on-scroll grid items-center gap-12 lg:grid-cols-2">
+      <div>
+        <span class="badge-pill">Reserve your <strong>Table</strong></span>
+        <h2 class="heading-serif mt-6 text-3xl leading-tight sm:text-4xl">
+          {brand.cta.heading}
+        </h2>
+        <a href={brand.cta.buttonLink} class="btn-accent mt-8 inline-block">{brand.cta.buttonText}</a>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <img src={brand.galleryImages[0]} alt="Dining" class="rounded-xl object-cover shadow-md" style="aspect-ratio: 3/4" loading="lazy" />
+        <img src={brand.galleryImages[1]} alt="Dining" class="mt-8 rounded-xl object-cover shadow-md" style="aspect-ratio: 3/4" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>

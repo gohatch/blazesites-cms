@@ -1,0 +1,226 @@
+{
+  "name": "Forge & Co",
+  "tagline": "We Build Bold Brands",
+  "description": "Forge & Co is a bold creative agency crafting exceptional brand experiences through strategy, design, and digital innovation.",
+  "colors": {
+    "background": "#0A0A0A",
+    "card": "#141414",
+    "accent": "#7C3AED",
+    "accentLight": "#A78BFA",
+    "text": "#FFFFFF",
+    "textLight": "#9CA3AF",
+    "border": "#1F1F1F"
+  },
+  "fonts": {
+    "heading": "Space Grotesk",
+    "body": "Inter"
+  },
+  "nav": [
+    { "label": "Services", "href": "#services" },
+    { "label": "Work", "href": "#work" },
+    { "label": "About", "href": "#about" },
+    { "label": "Pricing", "href": "#pricing" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "heading": "We Craft Digital Experiences That",
+    "accentWord": "Ignite Growth",
+    "subheading": "Forge & Co is a creative agency that blends bold strategy with cutting-edge design to build brands that dominate their markets.",
+    "cta": "Start a Project",
+    "ctaSecondary": "View Our Work",
+    "clientLogos": ["Stripe", "Spotify", "Airbnb", "Slack", "Notion", "Figma"]
+  },
+  "services": {
+    "heading": "What We Do",
+    "subheading": "We deliver end-to-end creative solutions that transform ambitious visions into market-defining realities.",
+    "items": [
+      {
+        "title": "Brand Strategy",
+        "description": "We define your brand's DNA through market research, positioning frameworks, and identity systems that create lasting differentiation.",
+        "icon": "strategy"
+      },
+      {
+        "title": "Web Design",
+        "description": "Stunning, conversion-driven websites built with modern technologies that deliver exceptional user experiences at scale.",
+        "icon": "web"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Human-centered design thinking applied to create intuitive interfaces that delight users and drive measurable engagement.",
+        "icon": "uiux"
+      },
+      {
+        "title": "Digital Marketing",
+        "description": "Data-driven campaigns across search, social, and programmatic channels that maximize ROI and accelerate growth.",
+        "icon": "marketing"
+      },
+      {
+        "title": "Content Creation",
+        "description": "Compelling visual and written content that tells your brand story and resonates with your target audience.",
+        "icon": "content"
+      },
+      {
+        "title": "Motion Design",
+        "description": "Dynamic animations and video content that capture attention and communicate complex ideas with clarity and impact.",
+        "icon": "motion"
+      }
+    ]
+  },
+  "about": {
+    "heading": "Bold Ideas. Flawless Execution.",
+    "description": "Founded in 2018, Forge & Co has grown from a two-person studio into a full-service creative agency trusted by startups, scale-ups, and enterprise brands alike. We believe great design is not decoration — it is strategy made visible.",
+    "highlights": [
+      "Award-winning creative team of 40+ specialists",
+      "Over 200 successful brand launches",
+      "Offices in New York, London, and Berlin"
+    ],
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+  },
+  "stats": [
+    { "value": 200, "suffix": "+", "label": "Projects Delivered" },
+    { "value": 98, "suffix": "%", "label": "Client Retention" },
+    { "value": 40, "suffix": "+", "label": "Team Members" },
+    { "value": 12, "suffix": "", "label": "Industry Awards" }
+  ],
+  "work": {
+    "heading": "Selected Work",
+    "subheading": "A showcase of projects where bold ideas met flawless execution.",
+    "items": [
+      {
+        "title": "Nova Fintech",
+        "category": "Brand Identity & Web",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
+      },
+      {
+        "title": "Pulse Fitness",
+        "category": "UI/UX & Mobile App",
+        "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80"
+      },
+      {
+        "title": "Meridian Hotels",
+        "category": "Brand Strategy & Web",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+      },
+      {
+        "title": "Aero Logistics",
+        "category": "Digital Marketing",
+        "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
+      },
+      {
+        "title": "Bloom Skincare",
+        "category": "Content & Motion",
+        "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80"
+      },
+      {
+        "title": "Vertex SaaS",
+        "category": "Product Design",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Forge & Co completely transformed our brand presence. Their strategic approach and stunning design work resulted in a 300% increase in qualified leads within six months.",
+      "name": "Sarah Chen",
+      "role": "CMO, Nova Fintech",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+    },
+    {
+      "quote": "Working with Forge was a game-changer. They didn't just design our app — they reimagined the entire user experience. Our retention rates doubled.",
+      "name": "Marcus Rivera",
+      "role": "Founder, Pulse Fitness",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+    },
+    {
+      "quote": "The team at Forge brings a rare combination of creative vision and business acumen. Every deliverable exceeded our expectations.",
+      "name": "Emily Thornton",
+      "role": "Brand Director, Meridian Hotels",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+    }
+  ],
+  "pricing": [
+    {
+      "name": "Starter",
+      "price": "$5,000",
+      "period": "per project",
+      "description": "Perfect for startups and small businesses looking to establish their brand.",
+      "features": [
+        "Brand Identity Package",
+        "5-Page Website Design",
+        "Social Media Kit",
+        "1 Round of Revisions",
+        "2-Week Delivery"
+      ]
+    },
+    {
+      "name": "Growth",
+      "price": "$12,000",
+      "period": "per project",
+      "description": "For growing brands ready to scale their digital presence.",
+      "features": [
+        "Full Brand Strategy",
+        "Custom Website (up to 15 pages)",
+        "UI/UX Audit & Redesign",
+        "Content Strategy & Creation",
+        "3 Rounds of Revisions",
+        "Dedicated Project Manager"
+      ],
+      "popular": true
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "tailored scope",
+      "description": "Comprehensive creative partnership for enterprise brands.",
+      "features": [
+        "Everything in Growth",
+        "Ongoing Design Retainer",
+        "Motion & Video Production",
+        "Performance Marketing",
+        "Priority Support & SLA",
+        "Quarterly Strategy Reviews"
+      ]
+    }
+  ],
+  "cta": {
+    "heading": "Ready to Build Something Bold?",
+    "subheading": "Let's turn your vision into a brand that commands attention. Start a conversation with our team today.",
+    "button": "Get in Touch"
+  },
+  "contact": {
+    "heading": "Let's Talk",
+    "subheading": "Have a project in mind? Drop us a line and we'll get back to you within 24 hours.",
+    "email": "hello@forgeandco.studio",
+    "phone": "+1 (212) 555-0147",
+    "address": "88 Creative Way, New York, NY 10013"
+  },
+  "footer": {
+    "description": "A bold creative agency crafting digital experiences that ignite growth.",
+    "links": [
+      {
+        "heading": "Company",
+        "items": [
+          { "label": "About", "href": "#about" },
+          { "label": "Services", "href": "#services" },
+          { "label": "Work", "href": "#work" },
+          { "label": "Careers", "href": "#" }
+        ]
+      },
+      {
+        "heading": "Resources",
+        "items": [
+          { "label": "Blog", "href": "#" },
+          { "label": "Case Studies", "href": "#work" },
+          { "label": "Pricing", "href": "#pricing" },
+          { "label": "FAQ", "href": "#" }
+        ]
+      }
+    ],
+    "social": {
+      "twitter": "#",
+      "instagram": "#",
+      "linkedin": "#",
+      "dribbble": "#"
+    }
+  }
+}

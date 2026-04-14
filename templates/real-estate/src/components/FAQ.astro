@@ -1,0 +1,38 @@
+---
+import brand from '../../brand.json';
+---
+<section id="faq" class="section-padding">
+  <div class="mx-auto max-w-3xl">
+    <!-- Heading -->
+    <div class="animate-on-scroll text-center mb-14">
+      <span class="inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider" style={`background-color: ${brand.colors.accent}15; color: ${brand.colors.accent}`}>
+        FAQ
+      </span>
+      <h2 class="mt-4 text-3xl font-extrabold md:text-4xl lg:text-5xl" style={`color: ${brand.colors.primary}`}>
+        Frequently Asked Questions
+      </h2>
+      <p class="mt-4 mx-auto max-w-2xl text-base md:text-lg" style={`color: ${brand.colors.textLight}`}>
+        Find answers to the most common questions about our real estate services.
+      </p>
+    </div>
+
+    <!-- FAQ accordion -->
+    <div class="animate-on-scroll space-y-4">
+      {brand.faqs.map((faq, i) => (
+        <details class="group rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+          <summary class="flex cursor-pointer items-center justify-between p-6 text-left">
+            <span class="text-base font-semibold pr-4" style={`color: ${brand.colors.primary}`}>{faq.question}</span>
+            <span class="faq-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-lg font-light" style={`background-color: ${brand.colors.accent}15; color: ${brand.colors.accent}`}>
+              +
+            </span>
+          </summary>
+          <div class="px-6 pb-6 -mt-1">
+            <p class="text-sm leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+              {faq.answer}
+            </p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

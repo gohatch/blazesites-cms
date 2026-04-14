@@ -1,0 +1,72 @@
+---
+import brand from '../../brand.json';
+---
+<section class="relative overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24" style={`background-color: ${brand.colors.lavender}`}>
+  <div class="mx-auto max-w-7xl px-6">
+    <!-- Centered text -->
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="hero-animate hero-animate-1">
+        <span class="badge-purple">Project Management Tool</span>
+      </div>
+      <h1 class="hero-animate hero-animate-2 mt-6 heading-italic text-4xl leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl" style={`color: ${brand.colors.text}`}>
+        {brand.tagline}
+      </h1>
+      <p class="hero-animate hero-animate-3 mt-6 mx-auto max-w-xl text-lg leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+        {brand.description}
+      </p>
+      <div class="hero-animate hero-animate-3 mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="#cta" class="btn-primary">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download for iOS
+        </a>
+        <a href="#cta" class="btn-outline">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.4l2.651 1.535a1 1 0 010 1.716l-2.651 1.535-2.537-2.537 2.537-2.25zM5.864 1.458L16.8 7.79l-2.302 2.302-8.634-8.634z"/></svg>
+          Download for Playstore
+        </a>
+      </div>
+    </div>
+
+    <!-- App mockup with floating cards -->
+    <div class="hero-animate hero-animate-4 relative mx-auto mt-16 max-w-4xl">
+      <!-- Floating UI card - left -->
+      <div class="hero-float absolute -left-4 top-12 z-10 hidden rounded-xl bg-white p-4 shadow-lg lg:block" style="max-width: 200px">
+        <div class="flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-lg" style={`background-color: ${brand.colors.accentLight}`}>
+            <svg class="h-4 w-4" style={`color: ${brand.colors.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold">Tasks Done</p>
+            <p class="text-lg font-bold" style={`color: ${brand.colors.accent}`}>248</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating UI card - right -->
+      <div class="hero-float-delay absolute -right-4 top-32 z-10 hidden rounded-xl bg-white p-4 shadow-lg lg:block" style="max-width: 200px">
+        <div class="flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-full" style={`background-color: ${brand.colors.green}20`}>
+            <svg class="h-4 w-4" style={`color: ${brand.colors.green}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs font-semibold">Productivity</p>
+            <p class="text-lg font-bold" style={`color: ${brand.colors.green}`}>+34%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main mockup image -->
+      <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+        <img
+          src={brand.heroImage}
+          alt={brand.tagline}
+          class="w-full object-cover"
+          style="aspect-ratio: 16/9"
+        />
+      </div>
+    </div>
+  </div>
+</section>

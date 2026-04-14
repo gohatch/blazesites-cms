@@ -1,0 +1,48 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background:${brand.colors.white}`}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-6 animate-on-scroll">
+      <div class="section-label">Loved by Couples</div>
+      <h2 class="font-display text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>Testimonials</h2>
+      <p class="text-sm font-light mt-3 max-w-md mx-auto" style={`color:${brand.colors.textMuted}`}>
+        Throughout the years, our attention to love and human connection has earned us the most beautiful reviews. Here are just a few.
+      </p>
+    </div>
+
+    <!-- Featured testimonial -->
+    <div class="max-w-3xl mx-auto mt-12 animate-on-scroll">
+      {brand.testimonials.slice(0, 1).map((t: any) => (
+        <div class="text-center">
+          <!-- Decorative quote -->
+          <div class="font-serif text-7xl leading-none mb-4" style={`color:${brand.colors.accentLight}; opacity:0.4`}>"</div>
+          <blockquote class="font-serif text-lg sm:text-xl font-light italic leading-relaxed mb-8" style={`color:${brand.colors.text}`}>
+            {t.quote}
+          </blockquote>
+          <div class="ornament mb-4">
+            <span class="text-xs" style={`color:${brand.colors.accent}`}>✦</span>
+          </div>
+          <p class="font-script text-2xl mb-1" style={`color:${brand.colors.text}`}>{t.name}</p>
+          <p class="text-xs tracking-[0.15em] uppercase" style={`color:${brand.colors.textMuted}`}>{t.role}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Additional testimonials -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-14 stagger-children">
+      {brand.testimonials.slice(1).map((t: any) => (
+        <div class="p-6" style={`border:1px solid ${brand.colors.border}`}>
+          <p class="font-serif italic text-sm leading-[1.8] mb-4" style={`color:${brand.colors.textMuted}`}>"{t.quote}"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center text-xs font-medium text-white" style={`background:${brand.colors.accent}`}>{t.avatar}</div>
+            <div>
+              <p class="text-sm font-medium" style={`color:${brand.colors.text}`}>{t.name}</p>
+              <p class="text-[10px] tracking-wider uppercase" style={`color:${brand.colors.textMuted}`}>{t.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

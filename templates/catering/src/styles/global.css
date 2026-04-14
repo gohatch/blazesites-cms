@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #5C6B1F;
+  --color-accent: #E85D26;
+  --color-cream: #F5F0E8;
+  --color-bg: #FAF7F2;
+  --color-text: #2A2A1A;
+  --color-text-light: #6B6B5A;
+}
+
+html { scroll-behavior: smooth; }
+body { background-color: var(--color-bg); font-family: 'Inter', system-ui, sans-serif; }
+
+/* Serif display font */
+.font-serif { font-family: 'DM Serif Display', Georgia, serif; }
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+.animate-on-scroll.from-left { transform: translateX(-40px); }
+.animate-on-scroll.from-left.visible { transform: translateX(0); }
+.animate-on-scroll.from-right { transform: translateX(40px); }
+.animate-on-scroll.from-right.visible { transform: translateX(0); }
+
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s; }
+.stagger-children.visible > * { opacity: 1; transform: translateY(0); }
+
+/* Hero entrance */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-animate { opacity: 0; animation: heroFadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.hero-animate-1 { animation-delay: 0.2s; }
+.hero-animate-2 { animation-delay: 0.5s; }
+.hero-animate-3 { animation-delay: 0.8s; }
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Primary button (orange filled) */
+.btn-primary {
+  display: inline-block;
+  padding: 0.875rem 2.25rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.btn-primary:hover {
+  background-color: #D14E1A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 93, 38, 0.3);
+}
+
+/* Outline button (olive border) */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Section padding */
+.section-padding { padding: 5rem 1.5rem; }
+@media (min-width: 768px) { .section-padding { padding: 6rem 2rem; } }
+@media (min-width: 1024px) { .section-padding { padding: 7rem 2rem; } }
+
+/* Image zoom on hover */
+.img-zoom { overflow: hidden; }
+.img-zoom img {
+  transition: transform 0.5s ease;
+}
+.img-zoom:hover img {
+  transform: scale(1.05);
+}

@@ -1,0 +1,21 @@
+---
+import brand from '../../brand.json';
+---
+<section id="services" class="section-padding" style={`background:${brand.colors.bg}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-xs tracking-[0.2em] uppercase mb-3" style={`color:${brand.colors.accent}`}>What We Offer</p>
+      <h2 class="font-script text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>Our Services</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
+      {brand.services.map((svc: any) => (
+        <div class="group text-center p-6 rounded-xl transition-all duration-300 hover:-translate-y-1" style={`background:${brand.colors.white}; border:1px solid ${brand.colors.border}`}>
+          <div class="text-3xl mb-4">{svc.icon}</div>
+          <h3 class="font-serif text-lg font-medium mb-2" style={`color:${brand.colors.text}`}>{svc.name}</h3>
+          <p class="text-xs font-light leading-relaxed" style={`color:${brand.colors.textMuted}`}>{svc.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

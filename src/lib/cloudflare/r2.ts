@@ -76,6 +76,72 @@ export async function deleteSubdomainFromR2(subdomain: string): Promise<void> {
   );
 }
 
+const MIME_TYPES: Record<string, string> = {
+  '.html': 'text/html; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.js': 'application/javascript; charset=utf-8',
+  '.json': 'application/json; charset=utf-8',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.gif': 'image/gif',
+  '.webp': 'image/webp',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.ico': 'image/x-icon',
+  '.xml': 'application/xml',
+  '.txt': 'text/plain',
+};
+
+function getMimeType(filePath: string): string {
+  const ext = filePath.substring(filePath.lastIndexOf('.')).toLowerCase();
+  return MIME_TYPES[ext] || 'application/octet-stream';
+}
+
+/**
+ * Upload an entire directory (e.g. Astro dist/) to R2 under a prefix.
+ * Returns the public URL for the index.html.
+ */
+export async function uploadPreviewToR2(distDir: string, slug: string): Promise<string> {
+  const { readdir, readFile } = await import('fs/promises');
+  const path = await import('path');
+
+  async function walkDir(dir: string): Promise<string[]> {
+    const entries = await readdir(dir, { withFileTypes: true });
+    const files: string[] = [];
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        files.push(...(await walkDir(fullPath)));
+      } else {
+        files.push(fullPath);
+      }
+    }
+    return files;
+  }
+
+  const files = await walkDir(distDir);
+  const prefix = `previews/${slug}`;
+
+  // Upload all files in parallel (batched to avoid overwhelming)
+  const BATCH_SIZE = 10;
+  for (let i = 0; i < files.length; i += BATCH_SIZE) {
+    const batch = files.slice(i, i + BATCH_SIZE);
+    await Promise.all(
+      batch.map(async (filePath) => {
+        const relativePath = path.relative(distDir, filePath);
+        const key = `${prefix}/${relativePath}`;
+        const body = await readFile(filePath);
+        const contentType = getMimeType(filePath);
+        await uploadToR2(key, body, contentType);
+      })
+    );
+  }
+
+  return getR2PublicUrl(`${prefix}/index.html`);
+}
+
 export function getR2PublicUrl(key: string): string {
   if (PUBLIC_URL) {
     return `${PUBLIC_URL.replace(/\/$/, '')}/${key}`;

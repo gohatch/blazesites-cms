@@ -1,0 +1,193 @@
+{
+  "name": "Nestora",
+  "tagline": "Discover Homes Built on Trust & Elegance",
+  "description": "Premium real estate brand specializing in luxury homes and properties. We create thoughtful, sustainable, and inspiring spaces for discerning clients.",
+  "colors": {
+    "primary": "#2A2A1E",
+    "accent": "#A68B3C",
+    "cream": "#F9F7F2",
+    "background": "#FDFCF8",
+    "text": "#2A2A1E",
+    "textLight": "#6B6B5A"
+  },
+  "fonts": {
+    "heading": "Playfair Display",
+    "body": "Poppins"
+  },
+  "nav": [
+    { "label": "About us", "href": "#about" },
+    { "label": "Properties", "href": "#properties" },
+    { "label": "Services", "href": "#services" },
+    { "label": "FAQs", "href": "#faq" }
+  ],
+  "hero": {
+    "heading": "Discover Homes Built on Trust & Elegance",
+    "subheading": "Explore our curated collection of premium properties designed for modern living with timeless appeal.",
+    "cta": "Explore Properties",
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80"
+  },
+  "about": {
+    "label": "Who we are?",
+    "heading": "We are a team of passionate expert creating thoughtful, sustainable, and inspiring spaces.",
+    "description": "With over a decade of experience in the real estate industry, Nestora has been transforming dreams into addresses. Our commitment to excellence and client satisfaction drives everything we do."
+  },
+  "stats": [
+    { "value": 500, "suffix": "+", "label": "Homes Sold" },
+    { "value": 10, "suffix": "+", "label": "Years Experience" },
+    { "value": 98, "suffix": "%", "label": "Client Satisfaction" },
+    { "value": 100, "suffix": "+", "label": "Projects Completed" }
+  ],
+  "services": [
+    {
+      "title": "Property Buying & Selling",
+      "description": "Expert guidance through every step of buying or selling your property, ensuring the best value and seamless transactions.",
+      "icon": "home"
+    },
+    {
+      "title": "Rental Solutions",
+      "description": "Comprehensive rental services connecting property owners with qualified tenants for hassle-free leasing experiences.",
+      "icon": "key"
+    },
+    {
+      "title": "Property Management",
+      "description": "Full-service property management handling maintenance, tenant relations, and financial reporting for your investments.",
+      "icon": "building"
+    },
+    {
+      "title": "Real Estate Consulting",
+      "description": "Strategic consulting services to help you make informed decisions about real estate investments and market opportunities.",
+      "icon": "chart"
+    }
+  ],
+  "properties": [
+    {
+      "name": "The Heritage Villa",
+      "location": "Beverly Hills, CA",
+      "price": "$2,450,000",
+      "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80",
+      "beds": 5,
+      "baths": 4,
+      "sqft": "4,200"
+    },
+    {
+      "name": "Sunset Penthouse",
+      "location": "Miami Beach, FL",
+      "price": "$1,890,000",
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80",
+      "beds": 3,
+      "baths": 3,
+      "sqft": "2,800"
+    },
+    {
+      "name": "Oak Park Residence",
+      "location": "Aspen, CO",
+      "price": "$3,200,000",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+      "beds": 6,
+      "baths": 5,
+      "sqft": "5,500"
+    },
+    {
+      "name": "Coastal Modern Home",
+      "location": "Malibu, CA",
+      "price": "$4,750,000",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
+      "beds": 4,
+      "baths": 4,
+      "sqft": "3,600"
+    },
+    {
+      "name": "Garden Estate",
+      "location": "Hamptons, NY",
+      "price": "$5,100,000",
+      "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80",
+      "beds": 7,
+      "baths": 6,
+      "sqft": "6,800"
+    },
+    {
+      "name": "Urban Loft Suite",
+      "location": "Manhattan, NY",
+      "price": "$1,350,000",
+      "image": "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80",
+      "beds": 2,
+      "baths": 2,
+      "sqft": "1,800"
+    }
+  ],
+  "team": [
+    {
+      "name": "Alexander Reed",
+      "role": "Founder & CEO",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    },
+    {
+      "name": "Sophia Laurent",
+      "role": "Head of Sales",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+    },
+    {
+      "name": "Marcus Chen",
+      "role": "Property Manager",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
+    },
+    {
+      "name": "Isabella Torres",
+      "role": "Senior Consultant",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Nestora made our dream home a reality. Their attention to detail and understanding of our needs was exceptional. The entire process felt effortless.",
+      "name": "Jonathan & Sarah Mitchell",
+      "role": "Homeowners",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80"
+    },
+    {
+      "quote": "Working with Nestora was the best decision we made. Their market knowledge and professional approach helped us find the perfect investment property.",
+      "name": "David Harrington",
+      "role": "Property Investor",
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80"
+    },
+    {
+      "quote": "From start to finish, the Nestora team provided outstanding service. They truly understand luxury real estate and deliver results beyond expectations.",
+      "name": "Emily Chen-Watkins",
+      "role": "Interior Designer",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What areas does Nestora specialize in?",
+      "answer": "Nestora specializes in premium residential properties across major metropolitan areas including Beverly Hills, Miami, Manhattan, Aspen, and the Hamptons. We focus on luxury homes, penthouses, estates, and exclusive investment properties."
+    },
+    {
+      "question": "How does the property buying process work with Nestora?",
+      "answer": "Our process begins with a personalized consultation to understand your needs and preferences. We then curate a selection of properties, arrange private viewings, handle all negotiations, and guide you through closing. Our team manages every detail so you can focus on choosing your perfect home."
+    },
+    {
+      "question": "Do you offer property management services for investors?",
+      "answer": "Yes, we provide comprehensive property management services including tenant screening, rent collection, maintenance coordination, financial reporting, and regular property inspections. Our goal is to maximize your investment returns while minimizing your involvement in day-to-day operations."
+    },
+    {
+      "question": "What sets Nestora apart from other real estate agencies?",
+      "answer": "Nestora combines deep market expertise with a client-first approach. Our team has over 10 years of experience, a 98% client satisfaction rate, and access to exclusive off-market listings. We prioritize long-term relationships and provide personalized service that goes beyond the transaction."
+    },
+    {
+      "question": "Can Nestora help with real estate investment consulting?",
+      "answer": "Absolutely. Our consulting team analyzes market trends, identifies high-potential investment opportunities, and provides detailed financial projections. Whether you are a first-time investor or expanding your portfolio, we offer strategic guidance tailored to your financial goals and risk tolerance."
+    }
+  ],
+  "contact": {
+    "phone": "+1 (800) 555-NEST",
+    "email": "hello@nestora.com",
+    "address": "123 Luxury Lane, Beverly Hills, CA 90210"
+  },
+  "social": {
+    "instagram": "#",
+    "facebook": "#",
+    "linkedin": "#",
+    "twitter": "#"
+  }
+}

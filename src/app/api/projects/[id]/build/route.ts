@@ -1,8 +1,11 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { createServiceRoleClient } from '@/lib/supabase/server';
-import { buildAstroTemplate, deployToPublicPreviews, cleanupBuild } from '@/lib/astro/build-template';
+import { buildAstroTemplate, cleanupBuild } from '@/lib/astro/build-template';
 import type { AstroBrandContent } from '@/types';
+
+// Allow up to 60s for Astro builds (Vercel Pro supports up to 300s)
+export const maxDuration = 60;
 
 export async function POST(
   _req: Request,
@@ -44,12 +47,18 @@ export async function POST(
   }
 
   try {
-    // Build the template
+    const slug = project.subdomain || projectId;
+
+    // Build the template — handles R2 upload or local deploy automatically
     const result = await buildAstroTemplate(
       project.template.template_dir,
       project.brand_profile as AstroBrandContent,
-      projectId
+      projectId,
+      slug
     );
+
+    // Clean up temp build
+    cleanupBuild(projectId);
 
     if (!result.success) {
       return NextResponse.json(
@@ -58,14 +67,8 @@ export async function POST(
       );
     }
 
-    // Deploy to public previews
-    const slug = project.subdomain || projectId;
-    const builtUrl = deployToPublicPreviews(result.outputDir, slug);
-
-    // Clean up temp build
-    cleanupBuild(projectId);
-
-    // Update project with built URL
+    // Update project with built URL (from R2 or local)
+    const builtUrl = result.builtUrl || `/previews/${slug}/index.html`;
     await supabase
       .from('projects')
       .update({ built_url: builtUrl })
@@ -74,8 +77,10 @@ export async function POST(
     return NextResponse.json({ success: true, url: builtUrl });
   } catch (err) {
     cleanupBuild(projectId);
+    const message = err instanceof Error ? err.message : 'Build failed unexpectedly';
+    console.error(`[build-endpoint] ${projectId}:`, message);
     return NextResponse.json(
-      { error: 'Build failed unexpectedly' },
+      { error: message },
       { status: 500 }
     );
   }

@@ -1,0 +1,54 @@
+---
+import brand from '../../brand.json';
+---
+<section class="relative overflow-hidden py-20 sm:py-24" style={`background-color: ${brand.colors.accent}`}>
+  <!-- Decorative pattern -->
+  <div class="absolute inset-0 opacity-10" style={`background-image: radial-gradient(circle at 1px 1px, ${brand.colors.primary} 1px, transparent 0); background-size: 32px 32px`}></div>
+
+  <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+    <div class="animate-on-scroll">
+      <!-- Label -->
+      <div class="mb-4 flex items-center justify-center gap-3">
+        <div class="h-px w-8" style={`background-color: ${brand.colors.primary}; opacity: 0.3`}></div>
+        <span
+          class="text-xs font-semibold uppercase tracking-[0.2em]"
+          style={`color: ${brand.colors.primary}; opacity: 0.7`}
+        >
+          Get Started Today
+        </span>
+        <div class="h-px w-8" style={`background-color: ${brand.colors.primary}; opacity: 0.3`}></div>
+      </div>
+
+      <!-- Heading -->
+      <h2
+        class="font-serif text-3xl font-bold sm:text-4xl lg:text-5xl"
+        style={`color: ${brand.colors.primary}; font-family: 'Playfair Display', Georgia, serif`}
+      >
+        {brand.cta.heading}
+      </h2>
+
+      <!-- Subheading -->
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed" style={`color: ${brand.colors.primary}; opacity: 0.7`}>
+        {brand.cta.subheading}
+      </p>
+
+      <!-- Phone number -->
+      <div class="mt-8">
+        <a
+          href={`tel:${brand.cta.phone.replace(/[^0-9+]/g, '')}`}
+          class="font-serif text-2xl font-bold sm:text-3xl"
+          style={`color: ${brand.colors.primary}; font-family: 'Playfair Display', Georgia, serif; text-decoration: none`}
+        >
+          {brand.cta.phone}
+        </a>
+      </div>
+
+      <!-- CTA button -->
+      <div class="mt-8">
+        <a href="#contact" class="btn-dark">
+          {brand.cta.buttonText}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

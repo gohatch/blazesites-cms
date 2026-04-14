@@ -1,0 +1,95 @@
+{
+  "name": "Story Studio",
+  "tagline": "Capture Moments That Last Forever",
+  "description": "We turn your memories into timeless visuals — from weddings to brands, every story deserves to be beautifully told.",
+  "phone": "+1 (555) 328-7741",
+  "email": "hello@storystudio.co",
+  "address": "88 Film Row, Austin, TX 78701",
+  "instagram": "@storystudioco",
+  "colors": {
+    "primary": "#2C2C2C",
+    "accent": "#E2DF4E",
+    "accentDark": "#C8C542",
+    "olive": "#3D4A2A",
+    "warm": "#C4A36F",
+    "bg": "#F7F4EF",
+    "bgDark": "#2C2C2C",
+    "white": "#FFFFFF",
+    "text": "#2C2C2C",
+    "textMuted": "#6B6B6B",
+    "border": "#E5DDD3"
+  },
+  "nav": [
+    { "label": "Home", "href": "#" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Work", "href": "#work" },
+    { "label": "About Us", "href": "#about" },
+    { "label": "Contact Us", "href": "#contact" }
+  ],
+  "hero": {
+    "heading": "Capture Moments That Last Forever",
+    "subheading": "We turn your memories into timeless visuals — from weddings to brands, every story deserves to be beautifully told.",
+    "cta": "Book a Session",
+    "ctaSecondary": "View Portfolio",
+    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600&q=80"
+  },
+  "about": {
+    "eyebrow": "Behind the Lens",
+    "heading": "Behind the Lens",
+    "body": "Hi, I'm Drashti, a passionate photographer who believes every moment has a story worth capturing. With a keen eye for detail and a love for natural aesthetics, I specialize in creating images that feel real, emotional, and timeless.\n\nWith a deep appreciation for natural light, subtle details, and genuine emotions, we approach every shoot with intention and artistry.",
+    "image": "https://images.unsplash.com/photo-1554080353-a576cf803bda?w=800&q=80",
+    "sideImage": "https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?w=400&q=80"
+  },
+  "services": [
+    { "name": "Wedding Photography", "desc": "Timeless, candid coverage of your entire celebration.", "icon": "📷", "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" },
+    { "name": "Portrait Sessions", "desc": "Authentic portraits that capture your personality.", "icon": "🎞️", "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" },
+    { "name": "Brand Photography", "desc": "Visual storytelling that elevates your brand.", "icon": "✨", "image": "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&q=80" },
+    { "name": "Event Coverage", "desc": "Every moment, every detail, beautifully documented.", "icon": "🎬", "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" }
+  ],
+  "work": [
+    { "src": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80", "title": "Editorial" },
+    { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80", "title": "Wedding" },
+    { "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80", "title": "Portrait" },
+    { "src": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80", "title": "Commercial" },
+    { "src": "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80", "title": "Fashion" },
+    { "src": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=80", "title": "Lifestyle" }
+  ],
+  "stats": [
+    { "value": "350", "suffix": "+", "label": "Sessions Shot" },
+    { "value": "8", "suffix": "", "label": "Years Experience" },
+    { "value": "50", "suffix": "+", "label": "Happy Clients" },
+    { "value": "10", "suffix": "", "label": "Awards" }
+  ],
+  "testimonials": [
+    { "quote": "The photos captured our wedding day perfectly. Every emotion, every detail — it was like reliving the day all over again.", "name": "Mia & Jackson", "role": "Wedding, 2024", "avatar": "MJ" },
+    { "quote": "Story Studio has an incredible talent for making you feel comfortable and bringing out natural expressions. The results speak for themselves.", "name": "Arjun Patel", "role": "Brand Shoot", "avatar": "AP" }
+  ],
+  "pricing": [
+    { "name": "Starter", "price": "450", "period": "per session", "desc": "Perfect for portraits and personal sessions.", "features": ["1-hour session", "20 edited images", "Online gallery", "Print release"], "cta": "Book Now", "highlight": false },
+    { "name": "Professional", "price": "1,200", "period": "per session", "desc": "Our most popular package for events and brands.", "features": ["4-hour coverage", "100+ edited images", "Creative direction", "Online gallery + prints", "Sneak peek in 48hrs"], "cta": "Book Now", "highlight": true },
+    { "name": "Premium", "price": "2,800", "period": "full day", "desc": "Complete coverage for weddings and large events.", "features": ["Full-day coverage", "500+ edited images", "Second photographer", "Engagement session included", "Wedding album", "Same-day previews"], "cta": "Book Now", "highlight": false }
+  ],
+  "cta": {
+    "heading": "Ready to tell your story?",
+    "subheading": "Let's create something timeless together.",
+    "primary": "Book a Session"
+  },
+  "contact": {
+    "heading": "Let's Connect",
+    "subheading": "Drop us a line and let's start creating.",
+    "hours": [
+      { "days": "Monday – Friday", "time": "9am – 6pm" },
+      { "days": "Saturday", "time": "10am – 4pm" },
+      { "days": "Sunday", "time": "Closed" }
+    ]
+  },
+  "footer": {
+    "tagline": "Every click tells a story.",
+    "socials": [
+      { "name": "Instagram", "href": "#" },
+      { "name": "Facebook", "href": "#" },
+      { "name": "Pinterest", "href": "#" },
+      { "name": "TikTok", "href": "#" }
+    ]
+  }
+}

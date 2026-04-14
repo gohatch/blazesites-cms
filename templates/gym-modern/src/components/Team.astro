@@ -1,0 +1,65 @@
+---
+import brand from '../../brand.json';
+---
+
+<section id="about" class="section-padding">
+  <div class="container mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12 fade-up">
+      <div class="section-label mx-auto w-fit">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Our Trainers
+      </div>
+      <h2 class="section-title">Meet our Team</h2>
+      <p class="section-desc mx-auto">
+        Our certified trainers bring passion, expertise, and dedication to help you reach your full potential.
+      </p>
+    </div>
+
+    <!-- Trainer cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      {brand.team.map((trainer, i) => (
+        <div class={`card p-5 fade-up fade-up-delay-${i + 1}`}>
+          <div class="flex gap-5">
+            <!-- Trainer image -->
+            <div class="w-32 h-40 rounded-xl overflow-hidden flex-shrink-0">
+              <img
+                src={trainer.image}
+                alt={trainer.name}
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Trainer info -->
+            <div class="flex flex-col justify-between py-1">
+              <!-- Experience badge -->
+              <div class="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--color-accent)] bg-[var(--color-accent)]/10 px-2.5 py-1 rounded-full w-fit mb-2">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Experience: {trainer.experience}
+              </div>
+
+              <!-- Role tag -->
+              <span class="text-xs text-[var(--color-text-light)] uppercase tracking-wider font-medium mb-1">{trainer.role}</span>
+
+              <!-- Name -->
+              <h3 class="text-lg font-semibold text-white mb-3" style="font-family: var(--font-clash);">{trainer.name}</h3>
+
+              <!-- Specialties -->
+              <div class="flex flex-wrap gap-1.5">
+                {trainer.specialties.map((spec) => (
+                  <span class="text-xs px-2.5 py-1 rounded-full bg-[var(--color-border)] text-[var(--color-text-light)]">
+                    {spec}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

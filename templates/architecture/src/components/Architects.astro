@@ -1,0 +1,25 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding bg-white">
+  <div class="mx-auto max-w-7xl">
+    <p class="animate-on-scroll dot-marker text-sm font-medium">Our Architects</p>
+
+    <div class="animate-on-scroll mt-10 divide-y divide-gray-100">
+      {brand.architects.map((architect) => (
+        <div class="flex items-center justify-between py-5 transition-colors hover:bg-gray-50/50">
+          <div class="flex items-center gap-4">
+            <div class="h-10 w-10 overflow-hidden rounded-full bg-gray-200">
+              {architect.image && <img src={architect.image} alt={architect.name} class="h-full w-full object-cover" />}
+            </div>
+            <p class="font-semibold">{architect.name}</p>
+          </div>
+          <div class="hidden sm:block">
+            <p class="dot-marker text-xs" style={`color: ${brand.colors.textLight}`}>{architect.detail}</p>
+          </div>
+          <a href="/about" class="text-sm font-medium transition-opacity hover:opacity-60">View Profile</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

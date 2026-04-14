@@ -1,0 +1,137 @@
+{
+  "businessName": "GlowDent",
+  "tagline": "Your Smile, Our Priority",
+  "description": "Combining advanced dental technology with personalized care, we help you maintain a healthy, radiant smile in a calm and welcoming environment.",
+  "colors": {
+    "primary": "#0B2D8C",
+    "primaryDark": "#071E5E",
+    "accent": "#0B2D8C",
+    "accentLight": "#E8EEFB",
+    "light": "#F0F4FF",
+    "white": "#FFFFFF",
+    "bg": "#EDE8E2",
+    "cream": "#F5F0EB",
+    "text": "#0B2D8C",
+    "textDark": "#071E5E",
+    "textLight": "#5A6A8A",
+    "textMuted": "#8A96B0"
+  },
+  "heroImage": "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=800&h=1000&fit=crop&crop=face",
+  "aboutImage": "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=700&h=800&fit=crop",
+  "contact": {
+    "email": "hello@glowdent.com",
+    "phone": "(555) 890-1234",
+    "address": "4200 Sunset Blvd, Beverly Hills, CA 90210"
+  },
+  "services": [
+    {
+      "title": "Teeth Whitening",
+      "description": "Brighten your smile safely and effectively with our professional-grade whitening treatments, customized to your comfort and goals.",
+      "icon": "sparkle",
+      "image": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=200&h=200&fit=crop"
+    },
+    {
+      "title": "Dental Recovery",
+      "description": "From implants to full-mouth reconstructions, we restore your teeth's function and appearance using the latest dental technologies.",
+      "icon": "shield",
+      "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=200&h=200&fit=crop"
+    },
+    {
+      "title": "Braces & Aligners",
+      "description": "We offer modern orthodontic solutions — from clear aligners to traditional braces — carefully planned to enhance your smile.",
+      "icon": "align",
+      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=200&h=200&fit=crop"
+    },
+    {
+      "title": "Digital X-Rays",
+      "description": "Advanced digital imaging for faster, safer, and more accurate diagnostics to guide your personalized treatment plan.",
+      "icon": "scan",
+      "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=200&h=200&fit=crop"
+    },
+    {
+      "title": "Pediatric Dentistry",
+      "description": "Gentle, kid-friendly care that builds healthy habits early and makes every visit a positive experience for your child.",
+      "icon": "heart",
+      "image": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=200&h=200&fit=crop"
+    },
+    {
+      "title": "Cosmetic Dentistry",
+      "description": "Veneers, bonding, and smile makeovers designed to give you the confident, natural-looking smile you deserve.",
+      "icon": "star",
+      "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=200&h=200&fit=crop"
+    }
+  ],
+  "marqueeServices": [
+    "Digital X-Rays",
+    "Teeth Whitening",
+    "Pediatric Dentistry",
+    "Braces & Aligners",
+    "Dental Recovery",
+    "Cosmetic Dentistry",
+    "Root Canal Therapy",
+    "Dental Implants"
+  ],
+  "about": {
+    "heading": "Focused on Smiles",
+    "text": "We're a team of passionate dental professionals who combine precision, innovation, and kindness to offer personalized oral care in a calm and trusted environment.",
+    "cta": "About Us"
+  },
+  "stats": [
+    { "value": "15K+", "label": "Happy Patients" },
+    { "value": "98%", "label": "Satisfaction Rate" },
+    { "value": "20+", "label": "Years Experience" },
+    { "value": "50+", "label": "Dental Experts" }
+  ],
+  "testimonials": [
+    {
+      "quote": "GlowDent completely transformed my smile. The team was professional, gentle, and made me feel at ease throughout the entire process.",
+      "author": "Sarah M.",
+      "role": "Cosmetic Patient",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+    },
+    {
+      "quote": "My kids actually look forward to their dental visits now. The pediatric team is incredible with children — patient, fun, and thorough.",
+      "author": "David K.",
+      "role": "Parent",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+    },
+    {
+      "quote": "After years of avoiding the dentist, GlowDent changed everything. The technology they use is impressive and the results speak for themselves.",
+      "author": "Maria L.",
+      "role": "Implant Patient",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80"
+    }
+  ],
+  "team": [
+    {
+      "name": "Dr. Sarah Mitchell",
+      "role": "Lead Cosmetic Dentist",
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=500&fit=crop"
+    },
+    {
+      "name": "Dr. James Park",
+      "role": "Orthodontist",
+      "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=500&fit=crop"
+    },
+    {
+      "name": "Dr. Priya Shah",
+      "role": "Pediatric Specialist",
+      "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=500&fit=crop"
+    }
+  ],
+  "nav": [
+    { "label": "Features", "href": "#features" },
+    { "label": "Technology", "href": "#about" },
+    { "label": "Pricing", "href": "#treatments" },
+    { "label": "Resources", "href": "#testimonials" }
+  ],
+  "cta": {
+    "heading": "Ready for a Healthier Smile?",
+    "subheading": "Book your appointment today and experience dental care that puts your comfort first.",
+    "buttonText": "Book an Appointment",
+    "buttonLink": "#contact"
+  }
+}

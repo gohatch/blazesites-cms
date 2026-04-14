@@ -1,0 +1,98 @@
+---
+import brand from '../../brand.json';
+---
+<header id="home" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="site-header">
+  <div class="bg-white/90 backdrop-blur-md border-b border-[--color-border]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="#home" class="font-serif small-caps text-2xl font-bold tracking-wider" style={`color: ${brand.colors.primary}`}>
+        {brand.businessName}
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8">
+        {brand.nav.map((item: any) => (
+          <a
+            href={item.href}
+            class="text-sm font-light tracking-wide transition-colors duration-200 hover:text-[--color-primary]"
+            style={`color: ${brand.colors.textLight}`}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden lg:block">
+        <a href="#contact" class="btn-primary text-sm">
+          Join Now
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+        <span class="block w-6 h-0.5 bg-current transition-all duration-300 origin-center" id="bar1"></span>
+        <span class="block w-6 h-0.5 bg-current transition-all duration-300" id="bar2"></span>
+        <span class="block w-4 h-0.5 bg-current transition-all duration-300 origin-center" id="bar3"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden fixed inset-0 top-20 bg-white/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+    <nav class="flex flex-col items-center justify-center h-full gap-8">
+      {brand.nav.map((item: any) => (
+        <a
+          href={item.href}
+          class="mobile-nav-link font-serif small-caps text-2xl tracking-wider transition-colors hover:text-[--color-primary]"
+          style={`color: ${brand.colors.text}`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a href="#contact" class="btn-primary mt-4">
+        Join Now
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  let isOpen = false;
+
+  btn?.addEventListener('click', () => {
+    isOpen = !isOpen;
+    menu?.classList.toggle('translate-x-full', !isOpen);
+    menu?.classList.toggle('translate-x-0', isOpen);
+    if (isOpen) {
+      bar1!.style.transform = 'rotate(45deg) translate(3px, 3px)';
+      bar2!.style.opacity = '0';
+      bar3!.style.transform = 'rotate(-45deg) translate(3px, -3px)';
+      bar3!.style.width = '1.5rem';
+    } else {
+      bar1!.style.transform = '';
+      bar2!.style.opacity = '1';
+      bar3!.style.transform = '';
+      bar3!.style.width = '1rem';
+    }
+  });
+
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      isOpen = false;
+      menu?.classList.add('translate-x-full');
+      menu?.classList.remove('translate-x-0');
+      bar1!.style.transform = '';
+      bar2!.style.opacity = '1';
+      bar3!.style.transform = '';
+      bar3!.style.width = '1rem';
+    });
+  });
+</script>

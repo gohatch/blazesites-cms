@@ -1,0 +1,65 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background-color: ${brand.colors.white}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+      <div class="section-label justify-center">Why Yoga</div>
+      <h2 class="font-serif text-4xl sm:text-5xl font-medium leading-tight" style={`color: ${brand.colors.primaryDark}`}>
+        Transform from the inside out
+      </h2>
+    </div>
+
+    <!-- Benefits grid with center image -->
+    <div class="grid lg:grid-cols-3 gap-8 items-center">
+
+      <!-- Left column -->
+      <div class="space-y-8 stagger-children">
+        {brand.benefits.slice(0, 3).map((benefit: any) => (
+          <div class="flex gap-4 text-right flex-row-reverse lg:flex-row lg:text-left group">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110" style={`background-color: ${brand.colors.bgDark}`}>
+              {benefit.icon}
+            </div>
+            <div>
+              <h3 class="font-medium mb-1" style={`color: ${brand.colors.primaryDark}`}>{benefit.title}</h3>
+              <p class="text-sm font-light leading-relaxed" style={`color: ${brand.colors.textLight}`}>{benefit.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Center image -->
+      <div class="animate-on-scroll scale-in relative flex items-center justify-center py-8">
+        <div class="relative overflow-hidden w-72 h-96 mx-auto" style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;">
+          <img
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80"
+            alt="Yoga wellness"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0" style={`background: linear-gradient(to bottom, transparent 60%, ${brand.colors.primaryDark}33)`}></div>
+        </div>
+        <!-- Decorative ring -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="w-80 h-96 rounded-full border-2 border-dashed opacity-20" style={`border-color: ${brand.colors.primary}`}></div>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="space-y-8 stagger-children">
+        {brand.benefits.slice(3).map((benefit: any) => (
+          <div class="flex gap-4 group">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-300 group-hover:scale-110" style={`background-color: ${brand.colors.bgDark}`}>
+              {benefit.icon}
+            </div>
+            <div>
+              <h3 class="font-medium mb-1" style={`color: ${brand.colors.primaryDark}`}>{benefit.title}</h3>
+              <p class="text-sm font-light leading-relaxed" style={`color: ${brand.colors.textLight}`}>{benefit.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

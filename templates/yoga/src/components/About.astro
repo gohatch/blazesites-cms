@@ -1,0 +1,72 @@
+---
+import brand from '../../brand.json';
+---
+<section id="about" class="section-padding" style={`background-color: ${brand.colors.white}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image side -->
+      <div class="animate-on-scroll from-left relative">
+        <!-- Main image with arch shape -->
+        <div class="relative overflow-hidden" style="border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;">
+          <img
+            src={brand.about.image}
+            alt="About PureYoga"
+            class="w-full h-[600px] object-cover"
+          />
+          <!-- Overlay gradient -->
+          <div class="absolute inset-0" style={`background: linear-gradient(to top, ${brand.colors.primaryDark}33, transparent 60%)`}></div>
+        </div>
+
+        <!-- Floating badge -->
+        <div class="absolute -bottom-6 -right-4 sm:right-8 bg-white rounded-2xl p-5 shadow-xl">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl" style={`background-color: ${brand.colors.primary}`}>
+              🌿
+            </div>
+            <div>
+              <p class="text-sm font-semibold" style={`color: ${brand.colors.primaryDark}`}>Est. 2012</p>
+              <p class="text-xs font-light" style={`color: ${brand.colors.textLight}`}>Over a decade of wellness</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative dot pattern -->
+        <div class="absolute -top-6 -left-6 w-24 h-24 opacity-20 pointer-events-none" style="background-image: radial-gradient(#4A7C59 1px, transparent 1px); background-size: 8px 8px;"></div>
+      </div>
+
+      <!-- Text side -->
+      <div class="animate-on-scroll from-right">
+        <div class="section-label">{brand.about.eyebrow}</div>
+        <h2 class="font-serif text-4xl sm:text-5xl font-medium leading-tight mb-6" style={`color: ${brand.colors.primaryDark}`}>
+          {brand.about.heading}
+        </h2>
+        <p class="text-base font-light leading-relaxed mb-10" style={`color: ${brand.colors.textLight}`}>
+          {brand.about.body}
+        </p>
+
+        <!-- Values grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 stagger-children">
+          {brand.about.values.map((val: any) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-xl" style={`background-color: ${brand.colors.bgDark}`}>
+                {val.icon}
+              </div>
+              <div>
+                <h4 class="font-medium text-sm mb-1" style={`color: ${brand.colors.primaryDark}`}>{val.title}</h4>
+                <p class="text-xs font-light leading-relaxed" style={`color: ${brand.colors.textLight}`}>{val.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-10">
+          <a href="#classes" class="btn-primary">
+            Explore Our Classes
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

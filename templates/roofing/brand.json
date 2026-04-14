@@ -1,0 +1,105 @@
+{
+  "businessName": "ApexRoofing",
+  "tagline": "Superior Roofing Solutions",
+  "description": "Protect your most valuable investment with our premium roofing systems. Weather-resistant, energy-efficient, and backed by industry-leading warranties.",
+  "colors": {
+    "primary": "#0F172A",
+    "accent": "#2563EB",
+    "accentLight": "#DBEAFE",
+    "light": "#F8FAFC",
+    "text": "#0F172A",
+    "textLight": "#64748B",
+    "cardBg": "#F1F5F9"
+  },
+  "logoUrl": "",
+  "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+  "aboutImage": "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80",
+  "missionImage": "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=800&q=80",
+  "projectImages": [
+    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80",
+    "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80",
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80"
+  ],
+  "contact": {
+    "email": "info@apexroofing.com",
+    "phone": "(555) 123-4567",
+    "address": "456 Rooftop Drive, Denver, CO 80202"
+  },
+  "services": [
+    {
+      "title": "Residential Roofing",
+      "description": "Complete roof replacement, repair, and installation for your home.",
+      "icon": "home"
+    },
+    {
+      "title": "Commercial Roofing",
+      "description": "Durable and efficient roofing solutions for businesses and industrial properties.",
+      "icon": "building"
+    },
+    {
+      "title": "Storm Damage Repair",
+      "description": "Rapid response and repair for roofs damaged by wind, hail, or storms.",
+      "icon": "shield"
+    }
+  ],
+  "stats": [
+    { "value": "2,800+", "label": "Roofs Installed" },
+    { "value": "4.9★", "label": "Customer Rating" },
+    { "value": "25+", "label": "Years Experience" },
+    { "value": "100%", "label": "Satisfaction Guarantee" }
+  ],
+  "benefits": [
+    {
+      "title": "Lifetime Warranty Protection",
+      "description": "Industry-leading warranties on materials and workmanship. Your investment is protected for decades.",
+      "icon": "shield"
+    },
+    {
+      "title": "Fast & Reliable Service",
+      "description": "Quick response times for emergency repairs and efficient project completion without compromising quality.",
+      "icon": "zap"
+    },
+    {
+      "title": "Quality Guaranteed",
+      "description": "Rigorous quality checks at every stage. We don't consider a job complete until you're 100% satisfied.",
+      "icon": "check"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "ApexRoofing replaced our entire roof in just two days. The crew was professional, clean, and the result is stunning.",
+      "author": "David & Sarah Thompson",
+      "role": "Homeowners, Denver CO"
+    },
+    {
+      "quote": "After the hailstorm, they were at our house within hours. Handled the insurance claim and had our roof looking brand new within a week.",
+      "author": "Michael Chen",
+      "role": "Property Manager"
+    },
+    {
+      "quote": "Three generations of roofing excellence isn't just a tagline — you can see it in every detail of their work.",
+      "author": "Jennifer Walsh",
+      "role": "Real Estate Developer"
+    }
+  ],
+  "about": {
+    "heading": "Three Generations of Roofing Excellence",
+    "accentWord": "Roofing Excellence",
+    "text": "Since 1985, the Johnson family has been protecting homes and businesses across the region with superior roofing craftsmanship. What started as a small family business has grown into the area's most trusted roofing contractor.",
+    "text2": "We combine time-tested techniques with cutting-edge materials and technology. Our team of certified professionals doesn't just install roofs — we build lasting relationships with our clients through exceptional service and unmatched quality.",
+    "mission": "To protect what matters most to you by delivering exceptional roofing solutions that combine traditional craftsmanship with modern innovation. Every roof we install is built to last generations, just like our family business.",
+    "values": ["Licensed & Insured", "Free Inspections", "Financing Available", "Emergency Service"]
+  },
+  "cta": {
+    "heading": "Schedule your roofing consultation",
+    "subheading": "Get a free inspection and detailed estimate for your roof.",
+    "buttonText": "Get a Free Estimate",
+    "buttonLink": "/contact"
+  },
+  "nav": [
+    { "label": "Services", "href": "/services" },
+    { "label": "Materials", "href": "/services" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

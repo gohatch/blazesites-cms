@@ -1,0 +1,98 @@
+---
+import brand from '../../brand.json';
+---
+<section id="home" class="pt-20 min-h-screen" style={`background-color: ${brand.colors.bg}`}>
+  <div class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left: Text Content -->
+      <div class="space-y-8">
+        <div class="hero-animate hero-animate-1">
+          <p
+            class="text-sm font-bold uppercase tracking-[0.2em] mb-4"
+            style={`color: ${brand.colors.accent}`}
+          >Premium Catering Services</p>
+          <h1
+            class="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] uppercase"
+            style={`color: ${brand.colors.text}`}
+          >
+            DISCOVER<br />CULINARY<br />EXCELLENCE
+          </h1>
+        </div>
+        <div class="hero-animate hero-animate-2">
+          <p
+            class="text-xl md:text-2xl italic"
+            style={`color: ${brand.colors.textLight}; font-family: 'DM Serif Display', Georgia, serif;`}
+          >with Feastar</p>
+          <p
+            class="text-base max-w-md mt-4 leading-relaxed"
+            style={`color: ${brand.colors.textLight}`}
+          >{brand.description}</p>
+        </div>
+        <div class="hero-animate hero-animate-3 flex flex-wrap gap-4 items-center">
+          <a href="#offerings" class="btn-primary">Explore Our Offerings</a>
+          <a href="#about" class="btn-outline">Learn More</a>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="hero-animate hero-animate-3 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t" style={`border-color: ${brand.colors.cream}`}>
+          {brand.stats.map((stat: { value: string; label: string }) => (
+            <div>
+              <p class="font-serif text-3xl font-bold" style={`color: ${brand.colors.primary}`} data-counter={stat.value}>{stat.value}</p>
+              <p class="text-xs font-semibold uppercase tracking-wider mt-1" style={`color: ${brand.colors.textLight}`}>{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: Image Grid -->
+      <div class="hero-animate hero-animate-2 relative">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[3/4]">
+              <img
+                src={brand.heroImages[0]}
+                alt="Catering buffet spread"
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
+            <div class="rounded-2xl overflow-hidden aspect-square">
+              <img
+                src={brand.heroImages[1]}
+                alt="Gourmet plated dish"
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
+          </div>
+          <div class="space-y-4 pt-8">
+            <div class="rounded-2xl overflow-hidden aspect-square">
+              <img
+                src={brand.heroImages[2]}
+                alt="Chef preparing food"
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
+            <div class="rounded-2xl overflow-hidden aspect-[3/4]">
+              <img
+                src={brand.heroImages[3]}
+                alt="Elegant table setting"
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Floating CTA on image -->
+        <a
+          href="#offerings"
+          class="absolute bottom-6 left-1/2 -translate-x-1/2 px-6 py-3 rounded-full text-white text-xs font-bold uppercase tracking-wider no-underline transition-all hover:scale-105"
+          style={`background-color: ${brand.colors.accent}`}
+        >
+          Explore Our Offerings &#8594;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

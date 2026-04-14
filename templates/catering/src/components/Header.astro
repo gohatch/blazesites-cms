@@ -1,0 +1,92 @@
+---
+import brand from '../../brand.json';
+---
+<header
+  id="site-header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  style={`background-color: ${brand.colors.bg}`}
+>
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-2 no-underline">
+      <span class="text-2xl">&#127860;</span>
+      <span
+        class="text-xl font-extrabold tracking-widest uppercase"
+        style={`color: ${brand.colors.primary}`}
+      >FEASTAR</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      {brand.nav.map((item: { label: string; href: string }) => (
+        <a
+          href={item.href}
+          class="text-sm font-semibold uppercase tracking-wider no-underline transition-colors duration-200 hover:opacity-70"
+          style={`color: ${brand.colors.text}`}
+        >{item.label}</a>
+      ))}
+    </nav>
+
+    <!-- Login Button -->
+    <div class="hidden md:flex items-center">
+      <a href="#" class="btn-outline text-xs">Login</a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden flex flex-col gap-1.5 p-2"
+      aria-label="Toggle menu"
+    >
+      <span class="block w-6 h-0.5 transition-all duration-300" style={`background-color: ${brand.colors.text}`}></span>
+      <span class="block w-6 h-0.5 transition-all duration-300" style={`background-color: ${brand.colors.text}`}></span>
+      <span class="block w-4 h-0.5 transition-all duration-300" style={`background-color: ${brand.colors.text}`}></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden flex-col gap-4 px-6 pb-6"
+    style={`background-color: ${brand.colors.bg}`}
+  >
+    {brand.nav.map((item: { label: string; href: string }) => (
+      <a
+        href={item.href}
+        class="text-sm font-semibold uppercase tracking-wider no-underline py-2 border-b"
+        style={`color: ${brand.colors.text}; border-color: ${brand.colors.cream}`}
+      >{item.label}</a>
+    ))}
+    <a href="#" class="btn-outline text-xs w-fit mt-2">Login</a>
+  </div>
+</header>
+
+<!-- Header scroll shadow + mobile menu toggle -->
+<script>
+  const header = document.getElementById('site-header');
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  window.addEventListener('scroll', () => {
+    if (header) {
+      if (window.scrollY > 20) {
+        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    }
+  });
+
+  mobileBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    mobileMenu?.classList.toggle('flex');
+  });
+
+  // Close mobile menu on link click
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      mobileMenu?.classList.remove('flex');
+    });
+  });
+</script>

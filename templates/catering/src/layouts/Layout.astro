@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+import brand from '../../brand.json';
+const { title, description } = Astro.props as { title?: string; description?: string };
+const pageTitle = title ? `${title} | ${brand.businessName}` : brand.businessName;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description || brand.description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-serif { font-family: 'DM Serif Display', Georgia, serif; }
+  </style>
+</head>
+<body
+  class="antialiased"
+  style={`color: ${brand.colors.text}; background-color: ${brand.colors.bg}`}
+>
+  <slot />
+
+  <!-- Intersection Observer for scroll animations -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '-40px' });
+    document.querySelectorAll('.animate-on-scroll, .stagger-children').forEach(el => observer.observe(el));
+
+    // Counter animation for stats
+    document.querySelectorAll('[data-counter]').forEach(el => {
+      const target = el.getAttribute('data-counter') || '0';
+      const isNumeric = /^\d+$/.test(target.replace(/[+%]/g, ''));
+      if (!isNumeric) return;
+      const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
+      const suffix = target.replace(/[0-9]/g, '');
+      let current = 0;
+      const duration = 2000;
+      const step = numericValue / (duration / 16);
+
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const animate = () => {
+              current += step;
+              if (current >= numericValue) {
+                el.textContent = target;
+                return;
+              }
+              el.textContent = Math.floor(current) + suffix;
+              requestAnimationFrame(animate);
+            };
+            animate();
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      counterObserver.observe(el);
+    });
+  </script>
+</body>
+</html>

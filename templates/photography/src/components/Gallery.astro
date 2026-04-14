@@ -1,0 +1,35 @@
+---
+import brand from '../../brand.json';
+---
+<section id="portfolio" class="section-padding" style={`background:${brand.colors.bg}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <div class="section-label">Recently Published</div>
+      <h2 class="font-display text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>Portfolio</h2>
+    </div>
+
+    <!-- Portfolio cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 stagger-children">
+      {brand.portfolio.map((item: any) => (
+        <div class="group img-hover relative cursor-pointer">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src={item.image} alt={item.title} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <!-- Overlay -->
+          <div class="absolute inset-0 flex flex-col justify-end p-6" style="background:linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%)">
+            <p class="text-xs tracking-[0.15em] uppercase text-white/60 mb-1">{item.location}</p>
+            <h3 class="font-serif text-xl text-white font-light">{item.title}</h3>
+            <p class="text-sm text-white/70 font-light">{item.subtitle}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Dots -->
+    <div class="flex justify-center gap-2 mt-8">
+      <span class="w-2 h-2 rounded-full" style={`background:${brand.colors.accent}`}></span>
+      <span class="w-2 h-2 rounded-full" style={`background:${brand.colors.border}`}></span>
+      <span class="w-2 h-2 rounded-full" style={`background:${brand.colors.border}`}></span>
+    </div>
+  </div>
+</section>

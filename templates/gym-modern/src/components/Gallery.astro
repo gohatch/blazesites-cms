@@ -1,0 +1,35 @@
+---
+import brand from '../../brand.json';
+---
+
+<section class="section-padding">
+  <div class="container mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-12 fade-up">
+      <div class="section-label mx-auto w-fit">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+        </svg>
+        Gallery
+      </div>
+      <h2 class="section-title">See the Energy, Feel<br/> the Difference</h2>
+      <p class="section-desc mx-auto">
+        Take a look inside our facility and see why our members love training with us.
+      </p>
+    </div>
+
+    <!-- Gallery grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 fade-up">
+      {brand.gallery.map((src, i) => (
+        <div class={`rounded-xl overflow-hidden ${i === 3 || i === 5 ? 'row-span-2' : ''} group`}>
+          <img
+            src={src}
+            alt={`Gym facility ${i + 1}`}
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            style={`min-height: ${i === 3 || i === 5 ? '100%' : '220px'};`}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+---
+import brand from '../../brand.json';
+---
+<section id="team" class="section-padding" style={`background-color: ${brand.colors.bg}`}>
+  <div class="mx-auto max-w-7xl">
+    <!-- Section header -->
+    <div class="animate-on-scroll mb-16 text-center">
+      <div class="mb-4 flex items-center justify-center gap-3">
+        <div class="h-px w-8" style={`background-color: ${brand.colors.accent}`}></div>
+        <span
+          class="text-xs font-semibold uppercase tracking-[0.2em]"
+          style={`color: ${brand.colors.accent}`}
+        >
+          Our Attorneys
+        </span>
+        <div class="h-px w-8" style={`background-color: ${brand.colors.accent}`}></div>
+      </div>
+      <h2
+        class="font-serif text-3xl font-bold sm:text-4xl lg:text-5xl"
+        style={`color: ${brand.colors.primary}; font-family: 'Playfair Display', Georgia, serif`}
+      >
+        Meet Our Legal Team
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+        Our accomplished attorneys bring decades of combined experience and an unwavering commitment to achieving the best possible outcome for every client.
+      </p>
+    </div>
+
+    <!-- Team grid -->
+    <div class="stagger-children grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {brand.team.map((member: { name: string; title: string; bio: string; image: string }) => (
+        <div class="team-card group cursor-pointer">
+          <div class="relative overflow-hidden rounded-xl" style="aspect-ratio: 3/4">
+            <img
+              src={member.image}
+              alt={member.name}
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <!-- Permanent gradient at bottom for name -->
+            <div
+              class="absolute inset-x-0 bottom-0 h-1/2"
+              style={`background: linear-gradient(to top, ${brand.colors.primary} 0%, transparent 100%)`}
+            ></div>
+            <!-- Hover overlay -->
+            <div class="team-card-overlay flex items-end justify-center pb-20">
+              <a
+                href="#contact"
+                class="rounded-full border px-5 py-2 text-sm font-medium text-white/90 transition-colors hover:text-white"
+                style={`border-color: ${brand.colors.accent}; color: ${brand.colors.accent}`}
+              >
+                Contact Attorney
+              </a>
+            </div>
+            <!-- Name and title -->
+            <div class="absolute inset-x-0 bottom-0 p-6">
+              <h3
+                class="font-serif text-lg font-bold text-white"
+                style="font-family: 'Playfair Display', Georgia, serif"
+              >
+                {member.name}
+              </h3>
+              <p class="mt-1 text-sm" style={`color: ${brand.colors.accent}`}>{member.title}</p>
+            </div>
+          </div>
+          <!-- Bio below card -->
+          <p class="mt-4 text-sm leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+            {member.bio}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

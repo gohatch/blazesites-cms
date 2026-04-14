@@ -1,0 +1,83 @@
+{
+  "businessName": "Summit Construction",
+  "tagline": "Building excellence for over 35 years",
+  "description": "Commercial and residential construction you can trust. From ground-breaking to grand opening, we deliver projects on time and on budget.",
+  "colors": {
+    "primary": "#0F172A",
+    "accent": "#D97706",
+    "accentLight": "#FEF3C7",
+    "light": "#F8FAFC",
+    "text": "#0F172A",
+    "textLight": "#64748B"
+  },
+  "logoUrl": "",
+  "heroImage": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80",
+  "aboutImage": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
+  "contact": {
+    "email": "info@summitconstruction.com",
+    "phone": "(555) 234-5678",
+    "address": "1234 Builder's Way, Suite 100, Austin, TX 78701"
+  },
+  "services": [
+    {
+      "title": "Residential Construction",
+      "description": "Custom homes built to your exact specifications. From modern minimalist to traditional craftsmanship.",
+      "icon": "home"
+    },
+    {
+      "title": "Commercial Projects",
+      "description": "Office buildings, retail spaces, and industrial facilities delivered on schedule and within budget.",
+      "icon": "building"
+    },
+    {
+      "title": "Renovations & Remodels",
+      "description": "Transform your existing space with expert renovation services that maximize value and functionality.",
+      "icon": "hammer"
+    },
+    {
+      "title": "Project Management",
+      "description": "End-to-end oversight ensuring quality, timeline adherence, and transparent communication.",
+      "icon": "clipboard"
+    }
+  ],
+  "stats": [
+    { "value": "500+", "label": "Projects Completed" },
+    { "value": "35", "label": "Years Experience" },
+    { "value": "98%", "label": "Client Satisfaction" },
+    { "value": "50+", "label": "Active Team Members" }
+  ],
+  "testimonials": [
+    {
+      "quote": "Summit delivered our office build three weeks ahead of schedule. Their attention to detail and communication throughout the project was exceptional.",
+      "author": "Sarah Mitchell",
+      "role": "CEO, TechFlow Inc."
+    },
+    {
+      "quote": "We've used Summit for three projects now. They're our go-to for any construction work — reliable, professional, and the quality speaks for itself.",
+      "author": "James Rodriguez",
+      "role": "Director, Meridian Properties"
+    },
+    {
+      "quote": "Our home renovation exceeded every expectation. The team was respectful, clean, and incredibly skilled. Can't recommend them enough.",
+      "author": "Lisa & Tom Chen",
+      "role": "Homeowners, Austin TX"
+    }
+  ],
+  "about": {
+    "heading": "Three Decades of Building Trust",
+    "text": "Founded in 1989, Summit Construction has grown from a small family operation into one of the region's most respected construction firms. We combine old-school craftsmanship with modern building technology to deliver projects that stand the test of time. Every project starts with listening — understanding your vision, your constraints, and your timeline. Then we execute with precision.",
+    "values": ["Quality Craftsmanship", "On-Time Delivery", "Transparent Pricing", "Safety First"]
+  },
+  "cta": {
+    "heading": "Ready to Build Something Great?",
+    "subheading": "Get a free consultation and detailed estimate for your project. No obligation, no pressure.",
+    "buttonText": "Get a Free Quote",
+    "buttonLink": "/contact"
+  },
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

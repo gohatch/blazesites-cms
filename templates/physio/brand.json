@@ -1,0 +1,100 @@
+{
+  "businessName": "Healex",
+  "tagline": "Specialized Care for Chronic Pain, Sports Injuries",
+  "description": "We provide expert-led physiotherapy that helps you move better, recover faster, and live pain-free. Our licensed physiotherapists provide personalized care to help.",
+  "colors": {
+    "primary": "#1B5E20",
+    "primaryDark": "#0D3B13",
+    "accent": "#F9A825",
+    "accentLight": "#FFF8E1",
+    "light": "#F5F9F5",
+    "white": "#FFFFFF",
+    "text": "#1a1a1a",
+    "textLight": "#6B7280"
+  },
+  "heroImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+  "heroImage2": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80",
+  "aboutImage": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80",
+  "aboutImage2": "https://images.unsplash.com/photo-1598257006458-087169a1f08d?w=600&q=80",
+  "contact": {
+    "email": "hello@healex.com",
+    "phone": "+1 (555) 678-900",
+    "address": "123 Wellness Blvd, Suite 200, Los Angeles, CA 90001"
+  },
+  "stats": [
+    { "value": "10K+", "label": "Successful Treatments Delivered" },
+    { "value": "99%", "label": "Patient Satisfaction Rate" },
+    { "value": "12+", "label": "Specialties or Conditions" }
+  ],
+  "services": [
+    {
+      "title": "Musculoskeletal Physiotherapy",
+      "description": "Our expert therapists specialize in the diagnosis and treatment of muscle, joint, and bone conditions.",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80"
+    },
+    {
+      "title": "Sports Injury Rehabilitation",
+      "description": "Whether you're a weekend warrior or elite athlete, we help restore peak physical performance.",
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80"
+    },
+    {
+      "title": "Post-Surgical Physiotherapy",
+      "description": "Recovery-aiding physiotherapy after surgical procedures with personalized rehabilitation plans.",
+      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80"
+    }
+  ],
+  "whyUs": [
+    { "title": "Compassionate Care", "description": "Our team provides empathetic, patient-centered care with a holistic commitment to support your recovery.", "icon": "heart" },
+    { "title": "The Support You Need", "description": "We provide consistent follow-up, emotional and material support throughout your healing journey.", "icon": "hands" },
+    { "title": "Families and Patients Trust Us", "description": "We believe trust is earned. That's your first step on your road to recovery & wellness.", "icon": "shield" }
+  ],
+  "benefits": [
+    { "title": "Personalized Treatment Plans", "description": "Programs tailored to your body, health goals, and lifestyle for optimal recovery." },
+    { "title": "Faster Recovery Time", "description": "Evidence-based methods that speed up healing and get you back to full strength." },
+    { "title": "Improved Mobility & Function", "description": "Restore movement, balance, flexibility, strength, and coordination post-injury." },
+    { "title": "Greater Strength & Endurance", "description": "Build lasting resilience through progressive strengthening and conditioning." },
+    { "title": "Prevention of Future Injuries", "description": "We don't just treat the injury — we help you build resilience to prevent it happening again." },
+    { "title": "Holistic Whole-Body Approach", "description": "We treat the body as a whole system, not just the area of pain or dysfunction." }
+  ],
+  "team": [
+    { "name": "Dr. Sarah Mitchell", "role": "Clinical Director", "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80" },
+    { "name": "Dr. James Noll", "role": "CEO, Founder", "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80" },
+    { "name": "Dr. Stephanie", "role": "Pediatric", "image": "https://images.unsplash.com/photo-1594824476967-48c8b964f137?w=300&q=80" },
+    { "name": "Dr. Bella Berry", "role": "Physical Therapy", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" },
+    { "name": "Dr. Justin", "role": "Sports Rehab", "image": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=300&q=80" }
+  ],
+  "testimonials": [
+    {
+      "quote": "After years of chronic back pain, Healex gave me my life back. The personalized treatment plan was exactly what I needed.",
+      "author": "Maria Thompson",
+      "role": "Patient"
+    },
+    {
+      "quote": "As a full-time desk worker, my neck and shoulder pain had become unbearable. Their postural correction program completely changed how I feel day-to-day.",
+      "author": "Dennis Colls",
+      "role": "Patient"
+    }
+  ],
+  "blog": [
+    { "title": "Top Physiotherapy Exercises to Relieve Lower Back Pain", "date": "Jul 15, 2025", "author": "Presly Prescod", "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&q=80" },
+    { "title": "The Truth About Posture: How It Affects Your Health", "date": "Jul 12, 2025", "author": "Karl Harris", "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" },
+    { "title": "What to Expect During Your First Physiotherapy Session", "date": "Jul 8, 2025", "author": "Leona Hall", "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80" }
+  ],
+  "cta": {
+    "heading": "Ready To Take The First Step Toward a Pain-Free Life?",
+    "buttonText": "Schedule It",
+    "buttonLink": "/contact"
+  },
+  "about": {
+    "heading": "We Understand That Recovery Looks Different For Everyone. That's Why We Tailor Each Rehabilitation Journey To Fit",
+    "text": "Providing 200+ patients with effective and personalized rehabilitation services, our team of experienced physiotherapists create individualized treatment plans, compassionate follow-up care."
+  },
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Our Services", "href": "/services" },
+    { "label": "Pages", "href": "/about" },
+    { "label": "Our Blog", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

@@ -1,0 +1,44 @@
+---
+import brand from '../../brand.json';
+---
+<section id="pricing" class="section-padding" style={`background-color: ${brand.colors.cream}`}>
+  <div class="mx-auto max-w-7xl">
+    <div class="animate-on-scroll mx-auto max-w-2xl text-center">
+      <div class="ornament mb-4">
+        <span class="text-xs font-medium uppercase tracking-[0.25em]" style={`color: ${brand.colors.primary}`}>Pricing</span>
+      </div>
+      <h2 class="font-serif text-3xl font-bold sm:text-4xl" style={`color: ${brand.colors.textDark}`}>
+        Our <em>Price Menu</em>
+      </h2>
+    </div>
+
+    <div class="stagger-children mt-14 grid gap-8 md:grid-cols-3">
+      {brand.pricing.map((category) => (
+        <div class="rounded-sm bg-white p-8 shadow-sm">
+          <h3 class="font-serif text-2xl font-semibold text-center" style={`color: ${brand.colors.primary}`}>
+            {category.category}
+          </h3>
+          <div class="mt-1 mx-auto h-px w-12" style={`background-color: ${brand.colors.primary}40`}></div>
+
+          <ul class="mt-8 space-y-5">
+            {category.items.map((item) => (
+              <li class="flex items-baseline justify-between gap-2">
+                <span class="text-sm font-medium" style={`color: ${brand.colors.textDark}`}>{item.name}</span>
+                <span class="flex-1 border-b border-dotted mx-2" style={`border-color: ${brand.colors.border}`}></span>
+                <span class="font-serif text-lg font-semibold whitespace-nowrap" style={`color: ${brand.colors.primary}`}>
+                  {item.price}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <div class="mt-8 text-center">
+            <a href="#contact" class="btn-outline !py-2.5 !px-6 !text-sm">
+              Book Now
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

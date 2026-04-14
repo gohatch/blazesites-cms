@@ -1,0 +1,48 @@
+---
+import brand from '../../brand.json';
+---
+<section id="work" class="section-padding" style={`background-color: ${brand.colors.background}`}>
+  <div class="mx-auto max-w-7xl">
+    <!-- Section Header -->
+    <div class="animate-on-scroll mx-auto mb-16 max-w-2xl text-center">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-widest" style={`color: ${brand.colors.accent}`}>Portfolio</p>
+      <h2 class="heading-font text-3xl font-bold tracking-tight md:text-5xl" style={`color: ${brand.colors.text}`}>
+        {brand.work.heading}
+      </h2>
+      <p class="mt-4 text-lg leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+        {brand.work.subheading}
+      </p>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="stagger-children grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {brand.work.items.map((item: { title: string; category: string; image: string }) => (
+        <div class="portfolio-item group cursor-pointer overflow-hidden rounded-2xl" style={`border: 1px solid ${brand.colors.border}`}>
+          <div class="relative overflow-hidden" style="aspect-ratio: 4/3;">
+            <img
+              src={item.image}
+              alt={item.title}
+              class="h-full w-full object-cover"
+              loading="lazy"
+            />
+            <!-- Hover Overlay -->
+            <div class="portfolio-overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center" style={`background: linear-gradient(to top, ${brand.colors.background}ee 0%, ${brand.colors.accent}88 100%)`}>
+              <p class="text-xs font-semibold uppercase tracking-widest text-white opacity-80">{item.category}</p>
+              <h3 class="heading-font mt-2 text-2xl font-bold text-white">{item.title}</h3>
+              <div class="mt-4 flex h-10 w-10 items-center justify-center rounded-full bg-white">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style={`color: ${brand.colors.accent}`}>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <!-- Card bottom info -->
+          <div class="p-5" style={`background-color: ${brand.colors.card}`}>
+            <p class="text-xs font-medium uppercase tracking-wider" style={`color: ${brand.colors.accent}`}>{item.category}</p>
+            <h3 class="heading-font mt-1 text-lg font-bold" style={`color: ${brand.colors.text}`}>{item.title}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

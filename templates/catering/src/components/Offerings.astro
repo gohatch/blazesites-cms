@@ -1,0 +1,56 @@
+---
+import brand from '../../brand.json';
+---
+<section id="offerings" class="section-padding" style={`background-color: ${brand.colors.bg}`}>
+  <div class="max-w-7xl mx-auto">
+    <!-- Heading Row -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-14 animate-on-scroll">
+      <div>
+        <p
+          class="text-sm font-bold uppercase tracking-[0.2em] mb-3"
+          style={`color: ${brand.colors.accent}`}
+        >What We Offer</p>
+        <h2 class="font-serif text-4xl md:text-5xl uppercase" style={`color: ${brand.colors.text}`}>
+          Our Offerings
+        </h2>
+      </div>
+      <a href="#" class="btn-outline w-fit">View More &#8594;</a>
+    </div>
+
+    <!-- Offerings Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+      {brand.offerings.map((offering: { title: string; description: string; image: string }) => (
+        <div class="card-hover rounded-xl overflow-hidden bg-white">
+          <!-- Orange Title Bar -->
+          <div
+            class="px-5 py-4"
+            style={`background-color: ${brand.colors.accent}`}
+          >
+            <h3 class="text-white font-bold text-sm uppercase tracking-wider">{offering.title}</h3>
+          </div>
+          <!-- Image -->
+          <div class="img-zoom aspect-[4/3]">
+            <img
+              src={offering.image}
+              alt={offering.title}
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- Description -->
+          <div class="p-5">
+            <p class="text-sm leading-relaxed" style={`color: ${brand.colors.textLight}`}>{offering.description}</p>
+            <a
+              href="#"
+              class="inline-flex items-center gap-1 mt-3 text-xs font-bold uppercase tracking-wider no-underline transition-colors"
+              style={`color: ${brand.colors.primary}`}
+            >
+              Learn More
+              <span>&#8594;</span>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+---
+import brand from '../../brand.json';
+---
+<header class="fixed top-0 left-0 right-0 z-50">
+  <div class="backdrop-blur-md" style={`background:rgba(250,251,255,0.9); border-bottom:1px solid ${brand.colors.border}`}>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#" class="font-display text-xl" style={`color:${brand.colors.primary}`}>{brand.name}</a>
+      <nav class="hidden md:flex items-center gap-7">
+        {brand.nav.map((item: any) => (
+          <a href={item.href} class="text-sm font-medium transition-colors hover:opacity-70" style={`color:${brand.colors.text}`}>{item.label}</a>
+        ))}
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#" class="text-sm font-medium" style={`color:${brand.colors.primary}`}>Sign In</a>
+        <a href="#contact" class="btn-primary text-xs py-2.5 px-5">Get Started Free</a>
+      </div>
+      <button id="mob-btn" class="md:hidden p-2" aria-label="Menu">
+        <div class="space-y-1.5"><span class="block w-5 h-0.5 rounded" style={`background:${brand.colors.text}`}></span><span class="block w-4 h-0.5 rounded" style={`background:${brand.colors.text}`}></span></div>
+      </button>
+    </div>
+  </div>
+  <div id="mob-menu" class="md:hidden fixed inset-0 top-16 transform translate-x-full transition-transform duration-300 z-40" style={`background:${brand.colors.white}`}>
+    <nav class="flex flex-col items-center justify-center h-full gap-6">
+      {brand.nav.map((item: any) => (<a href={item.href} class="mob-link text-lg font-semibold" style={`color:${brand.colors.text}`}>{item.label}</a>))}
+      <a href="#contact" class="btn-primary mt-4">Get Started</a>
+    </nav>
+  </div>
+</header>
+<script>
+  const b=document.getElementById('mob-btn'),m=document.getElementById('mob-menu');let o=false;
+  b?.addEventListener('click',()=>{o=!o;m?.classList.toggle('translate-x-full',!o);m?.classList.toggle('translate-x-0',o);});
+  document.querySelectorAll('.mob-link').forEach(l=>l.addEventListener('click',()=>{o=false;m?.classList.add('translate-x-full');m?.classList.remove('translate-x-0');}));
+</script>

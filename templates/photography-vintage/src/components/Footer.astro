@@ -1,0 +1,18 @@
+---
+import brand from '../../brand.json';
+---
+<footer style={`background:${brand.colors.bgDark}`}>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 py-14">
+    <div class="flex flex-col items-center text-center">
+      <a href="#" class="font-script text-3xl text-white mb-3">{brand.name}</a>
+      <p class="text-xs font-light mb-8" style="color:rgba(255,255,255,0.4)">{brand.footer.tagline}</p>
+      <div class="flex gap-6 mb-10">
+        {brand.footer.socials.map((s: any) => (
+          <a href={s.href} class="text-xs tracking-[0.1em] uppercase transition-colors hover:text-white" style={`color:${brand.colors.accent}`}>{s.name}</a>
+        ))}
+      </div>
+      <div class="h-px w-16 mb-6" style="background:rgba(255,255,255,0.15)"></div>
+      <p class="text-[10px]" style="color:rgba(255,255,255,0.25)">&copy; {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

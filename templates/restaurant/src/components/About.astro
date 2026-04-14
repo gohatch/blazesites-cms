@@ -1,0 +1,35 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background-color: ${brand.colors.cream}`}>
+  <div class="mx-auto max-w-7xl">
+    <div class="animate-on-scroll grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+      <div>
+        <span class="badge-pill">Know <strong>About</strong> Us</span>
+        <h2 class="heading-serif mt-6 text-3xl leading-[1.15] sm:text-4xl lg:text-[2.75rem]">
+          {brand.about.heading}
+        </h2>
+        <div class="mt-8 flex flex-wrap items-center gap-6">
+          <a href="/about" class="btn-accent">Read Our Story</a>
+          <div class="flex items-center gap-3">
+            <div class="flex -space-x-2">
+              <div class="h-9 w-9 rounded-full border-2 border-white bg-amber-200"></div>
+              <div class="h-9 w-9 rounded-full border-2 border-white bg-amber-300"></div>
+              <div class="h-9 w-9 rounded-full border-2 border-white bg-amber-400"></div>
+            </div>
+            <div>
+              <p class="text-sm font-semibold">Satisfied Customers</p>
+              <p class="text-xs" style={`color: ${brand.colors.textLight}`}>Thousands of reviews from customers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-right text-sm" style={`color: ${brand.colors.textLight}`}>
+          Experience the perfect <strong style={`color: ${brand.colors.text}`}>harmony</strong> of heritage
+        </p>
+        <img src={brand.aboutImage} alt="About" class="mt-4 rounded-2xl object-cover shadow-lg" style="aspect-ratio: 4/3" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>

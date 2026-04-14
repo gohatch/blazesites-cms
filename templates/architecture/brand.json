@@ -1,0 +1,73 @@
+{
+  "businessName": "DNOIN.INC",
+  "tagline": "Building Beyond",
+  "description": "According to Vitruvius, the architect should strive to fulfill each of these three attributes as well as possible.",
+  "colors": {
+    "primary": "#1a1a1a",
+    "accent": "#8B6914",
+    "accentLight": "#F5F0E8",
+    "light": "#FAFAF7",
+    "text": "#1a1a1a",
+    "textLight": "#6B6B6B",
+    "warm": "#C4A882"
+  },
+  "logoUrl": "",
+  "heroImage": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80",
+  "aboutImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+  "contact": {
+    "email": "studio@dnoin.com",
+    "phone": "(212) 555-0198",
+    "address": "47 West 20th Street, New York, NY 10011"
+  },
+  "projects": [
+    {
+      "title": "The Modern Versailles",
+      "location": "Alexander City, New York",
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
+    },
+    {
+      "title": "Buckingham Palace",
+      "location": "Lake Havasu City, Washington",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
+    },
+    {
+      "title": "Les Palais Bulles",
+      "location": "North Little Rock, California",
+      "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80"
+    }
+  ],
+  "architects": [
+    { "name": "Max Abramovitz", "detail": "Hathor, relief on capitals at Philae Island, southern Egypt.", "image": "" },
+    { "name": "Cameron Williamson", "detail": "Brighton, Brighton and Hove, United Kingdom", "image": "" },
+    { "name": "Pietro Belluschi", "detail": "Cushion capital and early English Gothic foliated capital.", "image": "" }
+  ],
+  "categories": ["Interior design", "Commercial architect", "Landscape architect", "Civic project"],
+  "caseStudies": [
+    {
+      "title": "Fulham Town Hall extension",
+      "description": "Improvement on the floor plan and layout of a loft apartment in Paris to maximise the use of space and additional.",
+      "image": "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600&q=80"
+    },
+    {
+      "title": "The White Apartment",
+      "description": "Redefining Urban Elegance. Bridging Heritage and Modern Living in an Iconic Residential Landmark.",
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80"
+    }
+  ],
+  "about": {
+    "heading": "About Us",
+    "text": "The art and science of designing buildings and nonbuilding structures. The style of design and method of construction of buildings and other physical structures."
+  },
+  "cta": {
+    "heading": "Start your project",
+    "subheading": "Let's create something extraordinary together.",
+    "buttonText": "Contact us",
+    "buttonLink": "/contact"
+  },
+  "nav": [
+    { "label": "Projects", "href": "/projects" },
+    { "label": "About us", "href": "/about" },
+    { "label": "Blog", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

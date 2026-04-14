@@ -1,0 +1,27 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background:${brand.colors.bgLight}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Blog section -->
+    <div class="text-center mb-10 animate-on-scroll">
+      <div class="section-label">Latest Stories</div>
+      <h2 class="font-display text-3xl sm:text-4xl font-medium" style={`color:${brand.colors.text}`}>Blog</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-children">
+      {brand.blog.map((post: any) => (
+        <div class="group cursor-pointer">
+          <div class="img-hover aspect-[16/10] mb-4">
+            <img src={post.image} alt={post.title} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <p class="text-[10px] tracking-[0.15em] uppercase mb-2" style={`color:${brand.colors.accent}`}>{post.date}</p>
+          <h3 class="font-serif text-xl font-light mb-1 group-hover:opacity-70 transition-opacity" style={`color:${brand.colors.text}`}>{post.title}</h3>
+          <p class="text-xs font-light" style={`color:${brand.colors.textMuted}`}>{post.excerpt}</p>
+        </div>
+      ))}
+    </div>
+    <div class="text-center mt-10 animate-on-scroll">
+      <a href="#" class="btn-outline">View All Posts</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,90 @@
+{
+  "name": "Ember & Co",
+  "tagline": "Curated goods for modern living",
+  "description": "A thoughtfully curated collection of artisanal home goods, accessories, and lifestyle essentials designed for the modern home.",
+  "phone": "+1 (555) 482-9910",
+  "email": "hello@emberandco.com",
+  "address": "78 Market Street, Portland, OR 97204",
+  "colors": {
+    "primary": "#1A1A1A",
+    "accent": "#C2703E",
+    "accentLight": "#E8A87C",
+    "bg": "#FAF8F5",
+    "bgDark": "#1A1A1A",
+    "white": "#FFFFFF",
+    "text": "#1A1A1A",
+    "textMuted": "#6B7280",
+    "border": "#E8E4DF"
+  },
+  "nav": [
+    { "label": "Shop", "href": "#products" },
+    { "label": "Collections", "href": "#collections" },
+    { "label": "About", "href": "#about" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "New Season Collection",
+    "heading": "Curated goods for modern living",
+    "subheading": "Handcrafted, sustainable, and designed to last. Discover our latest collection of artisanal home essentials.",
+    "cta": "Shop Now",
+    "ctaSecondary": "View Lookbook",
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80"
+  },
+  "products": [
+    { "name": "Artisan Ceramic Vase", "price": "$68", "category": "Home", "image": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=500&q=80" },
+    { "name": "Linen Throw Blanket", "price": "$120", "category": "Textiles", "image": "https://images.unsplash.com/photo-1616627988170-40b1d44e0e27?w=500&q=80" },
+    { "name": "Hand-Poured Candle Set", "price": "$45", "category": "Candles", "image": "https://images.unsplash.com/photo-1602607455923-67e4e7d80b44?w=500&q=80" },
+    { "name": "Woven Storage Basket", "price": "$55", "category": "Home", "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80" },
+    { "name": "Minimalist Wall Clock", "price": "$89", "category": "Decor", "image": "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=500&q=80" },
+    { "name": "Natural Soap Collection", "price": "$32", "category": "Body", "image": "https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=500&q=80" }
+  ],
+  "collections": [
+    { "name": "The Living Room Edit", "count": "24 pieces", "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" },
+    { "name": "Kitchen Essentials", "count": "18 pieces", "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" },
+    { "name": "Self-Care Ritual", "count": "12 pieces", "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" }
+  ],
+  "about": {
+    "heading": "Made with intention",
+    "body": "Ember & Co was born from a simple idea: everyday objects should bring joy. We partner with independent makers and small workshops to bring you pieces that are beautiful, functional, and made to last. Every product is sourced ethically and crafted sustainably.",
+    "values": [
+      { "icon": "🌿", "title": "Sustainably Sourced", "desc": "Every material chosen with care for the planet." },
+      { "icon": "✋", "title": "Handcrafted", "desc": "Made by skilled artisans, not mass-produced." },
+      { "icon": "🤝", "title": "Fair Trade", "desc": "Supporting makers with fair wages and conditions." },
+      { "icon": "♻️", "title": "Minimal Waste", "desc": "Eco-friendly packaging and carbon-neutral shipping." }
+    ],
+    "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80"
+  },
+  "stats": [
+    { "value": "200", "suffix": "+", "label": "Artisan Products" },
+    { "value": "45", "suffix": "", "label": "Maker Partners" },
+    { "value": "12000", "suffix": "+", "label": "Happy Customers" },
+    { "value": "98", "suffix": "%", "label": "Sustainable Materials" }
+  ],
+  "testimonials": [
+    { "quote": "Every piece from Ember feels special. The quality is incredible and knowing it's sustainably made makes it even better.", "name": "Sarah L.", "role": "Repeat Customer", "avatar": "SL" },
+    { "quote": "My living room was completely transformed with just a few Ember pieces. The curation is impeccable.", "name": "Michael R.", "role": "Interior Designer", "avatar": "MR" },
+    { "quote": "Best online shopping experience I've had. Beautiful packaging, fast delivery, and the products exceed expectations.", "name": "Emma K.", "role": "Loyal Customer", "avatar": "EK" }
+  ],
+  "cta": {
+    "heading": "Join the Ember community",
+    "subheading": "Get early access to new collections, maker stories, and 10% off your first order.",
+    "primary": "Subscribe"
+  },
+  "contact": {
+    "heading": "Say hello",
+    "subheading": "Questions about orders, products, or wholesale? We'd love to hear from you.",
+    "hours": [
+      { "days": "Monday – Friday", "time": "9am – 5pm PST" },
+      { "days": "Saturday", "time": "10am – 3pm PST" },
+      { "days": "Sunday", "time": "Closed" }
+    ]
+  },
+  "footer": {
+    "tagline": "Objects with soul.",
+    "socials": [
+      { "name": "Instagram", "href": "#" },
+      { "name": "Pinterest", "href": "#" },
+      { "name": "TikTok", "href": "#" }
+    ]
+  }
+}

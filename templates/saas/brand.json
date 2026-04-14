@@ -1,0 +1,110 @@
+{
+  "businessName": "Applex",
+  "tagline": "The ultimate project and collaboration tool",
+  "description": "Enhance project discussions and structure information effortlessly with Applex, designed to boost collaboration, clarity, and productivity for teams.",
+  "colors": {
+    "primary": "#1a1a1a",
+    "accent": "#7C3AED",
+    "accentLight": "#F3E8FF",
+    "lavender": "#FAF5FF",
+    "light": "#FAFAFA",
+    "text": "#1a1a1a",
+    "textLight": "#6B7280",
+    "green": "#10B981"
+  },
+  "heroImage": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80",
+  "appMockup": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&q=80",
+  "contact": {
+    "email": "hello@applex.io",
+    "phone": "+1 (555) 000-1234",
+    "address": "100 Innovation Way, San Francisco, CA 94107"
+  },
+  "features": [
+    {
+      "title": "Instant Sync",
+      "description": "Applex creativity, innovation, and advanced technology to craft exceptional.",
+      "icon": "sync"
+    },
+    {
+      "title": "Effortless Management",
+      "description": "Effortlessly organize tasks, projects, and ideas to boost efficiency and stay on track.",
+      "icon": "layout"
+    },
+    {
+      "title": "Seamless Connectivity",
+      "description": "Applex creativity, innovation, and advanced technology to craft exceptional digital solutions.",
+      "icon": "connect"
+    },
+    {
+      "title": "Smart Analytics",
+      "description": "Get real-time insights and data-driven recommendations to optimize your workflow.",
+      "icon": "chart"
+    }
+  ],
+  "detailSections": [
+    {
+      "badge": "Diaries & Notepads",
+      "features": ["Alerts & Schedules", "Customization & Design"],
+      "descriptions": ["Stay organized with smart reminders and automatic notification for daily productivity.", "Personalize your experience with custom themes, layouts, and styling options."],
+      "image": "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=500&q=80"
+    },
+    {
+      "badge": "Assignments & Projects",
+      "features": ["Activity Tracking", "Various Documents & Files"],
+      "descriptions": ["Monitor progress, deadlines, and milestones across all your projects.", "Effortlessly manage documents and files in one place."],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80"
+    }
+  ],
+  "ctaSection": {
+    "heading": "Start with Applex, unlock seamless productivity",
+    "description": "Merging creativity, innovation, and advanced technology to craft exceptional digital solutions."
+  },
+  "testimonials": [
+    {
+      "quote": "Applex transformed our team's collaboration and productivity with its intuitive interface and seamless integrations!",
+      "author": "Thomas Johnson",
+      "role": "Product Manager at InnovateTech",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+    },
+    {
+      "quote": "The smart analytics feature alone has saved us 20 hours per week. Game changer for our remote team.",
+      "author": "Sarah Chen",
+      "role": "Engineering Lead at FlowStack",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Approve Your Design Mockups with Ease",
+      "description": "Fast-track approval on your design mockups with clear review workflows.",
+      "date": "Jun 13, 2025",
+      "tag": "Share Mockup",
+      "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&q=80"
+    },
+    {
+      "title": "Streamline Your Project Timeline",
+      "description": "Learn how to optimize project timelines for better delivery outcomes.",
+      "date": "Jun 10, 2025",
+      "tag": "Productivity",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80"
+    },
+    {
+      "title": "Collaborate Smarter, Not Harder",
+      "description": "Tips and tools for more effective team collaboration in 2025.",
+      "date": "Jun 8, 2025",
+      "tag": "Collaboration",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80"
+    }
+  ],
+  "pricing": [
+    { "name": "Free", "price": "$0", "period": "forever", "features": ["Up to 5 projects", "Basic analytics", "1GB storage", "Community support"] },
+    { "name": "Pro", "price": "$12", "period": "/month", "features": ["Unlimited projects", "Advanced analytics", "50GB storage", "Priority support", "Custom integrations"], "popular": true },
+    { "name": "Enterprise", "price": "Custom", "period": "", "features": ["Everything in Pro", "Dedicated account manager", "SLA guarantee", "SSO & RBAC", "On-premise option"] }
+  ],
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Pricing", "href": "/about" },
+    { "label": "Blog", "href": "/about" }
+  ]
+}

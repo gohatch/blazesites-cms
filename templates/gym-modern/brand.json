@@ -1,0 +1,135 @@
+{
+  "businessName": "Gymastic",
+  "tagline": "Transform Your Body, Unleash Your Potential",
+  "description": "A modern fitness center with 24/7 access, diverse classes, and experienced trainers to help you reach your goals.",
+  "colors": {
+    "bg": "#111111",
+    "card": "#1A1A1A",
+    "accent": "#C8FF00",
+    "text": "#FFFFFF",
+    "textLight": "#A1A1A1",
+    "border": "#2A2A2A"
+  },
+  "heroImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1400&h=800&fit=crop",
+  "highlights": [
+    { "label": "Open 24/7", "icon": "clock" },
+    { "label": "Multiple Classes", "icon": "grid" },
+    { "label": "Experienced Trainers", "icon": "users" }
+  ],
+  "classes": [
+    {
+      "title": "Weightlifting",
+      "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&h=500&fit=crop"
+    },
+    {
+      "title": "Zumba",
+      "image": "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?w=400&h=500&fit=crop"
+    },
+    {
+      "title": "Yoga",
+      "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=500&fit=crop"
+    },
+    {
+      "title": "CrossFit",
+      "image": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=500&fit=crop"
+    },
+    {
+      "title": "Boxing",
+      "image": "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=400&h=500&fit=crop"
+    },
+    {
+      "title": "HIIT",
+      "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=500&fit=crop"
+    }
+  ],
+  "team": [
+    {
+      "name": "Marcus Johnson",
+      "role": "Trainer",
+      "experience": "5 Years",
+      "specialties": ["Strength Training", "CrossFit", "Nutrition"],
+      "image": "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&h=500&fit=crop"
+    },
+    {
+      "name": "Sarah Williams",
+      "role": "Trainer",
+      "experience": "7 Years",
+      "specialties": ["Yoga", "HIIT", "Flexibility"],
+      "image": "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=500&fit=crop"
+    }
+  ],
+  "pricing": [
+    {
+      "name": "Starter Plan",
+      "price": "$29",
+      "period": "/mo",
+      "features": [
+        "Gym Access (6AM - 10PM)",
+        "Basic Equipment Usage",
+        "Locker Room Access",
+        "1 Group Class/Week",
+        "Fitness Assessment"
+      ]
+    },
+    {
+      "name": "Transform Plan",
+      "price": "$49",
+      "period": "/mo",
+      "popular": true,
+      "features": [
+        "24/7 Gym Access",
+        "All Equipment & Zones",
+        "Unlimited Group Classes",
+        "Personal Trainer Session/Month",
+        "Nutrition Consultation",
+        "Sauna & Recovery Zone"
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Gymastic completely changed my approach to fitness. The trainers are incredibly supportive and the facilities are top-notch.",
+      "author": "Alex Rivera",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+    },
+    {
+      "quote": "I've been a member for over a year and the variety of classes keeps me motivated. Best gym experience I've ever had.",
+      "author": "Priya Sharma",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
+    },
+    {
+      "quote": "The 24/7 access is a game-changer for my schedule. Clean, modern equipment and a great community of people.",
+      "author": "James Chen",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop"
+    },
+    {
+      "quote": "From the moment I joined, the staff made me feel welcome. The Transform Plan is worth every penny for the personal training alone.",
+      "author": "Maria Santos",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop"
+    }
+  ],
+  "gallery": [
+    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=600&h=600&fit=crop",
+    "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=600&h=400&fit=crop",
+    "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600&h=600&fit=crop"
+  ],
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "Classes", "href": "#classes" },
+    { "label": "About Us", "href": "#about" }
+  ],
+  "contact": {
+    "email": "info@gymastic.com",
+    "phone": "(555) 987-6543",
+    "address": "450 Iron Street, Los Angeles, CA 90015"
+  },
+  "cta": {
+    "heading": "Ready to Transform Your Fitness?",
+    "description": "Join Gymastic today and take the first step toward a stronger, healthier you. Our team is ready to guide you every step of the way.",
+    "buttonText": "Contact Us",
+    "buttonLink": "#contact"
+  }
+}

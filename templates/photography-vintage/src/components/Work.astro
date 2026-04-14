@@ -1,0 +1,27 @@
+---
+import brand from '../../brand.json';
+---
+<section id="work" class="section-padding" style={`background:${brand.colors.white}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-xs tracking-[0.2em] uppercase mb-3" style={`color:${brand.colors.accent}`}>Selected Work</p>
+      <h2 class="font-script text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>Our Portfolio</h2>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 stagger-children">
+      {brand.work.map((item: any) => (
+        <div class="group img-hover relative rounded-lg cursor-pointer">
+          <div class="aspect-[4/5] overflow-hidden rounded-lg">
+            <img src={item.src} alt={item.title} class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="absolute inset-0 rounded-lg flex items-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style="background:linear-gradient(to top, rgba(44,44,44,0.8) 0%, transparent 50%)">
+            <div>
+              <p class="text-[10px] tracking-[0.15em] uppercase mb-1" style={`color:${brand.colors.accent}`}>Gallery</p>
+              <p class="font-serif text-lg text-white">{item.title}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

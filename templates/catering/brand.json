@@ -1,0 +1,146 @@
+{
+  "businessName": "Feastar Catering",
+  "tagline": "Discover Culinary Excellence",
+  "badge": "Premium Catering Services",
+  "description": "Elevating every occasion with exceptional cuisine, creative presentation, and seamless service that leaves a lasting impression.",
+  "colors": {
+    "primary": "#5C6B1F",
+    "accent": "#E85D26",
+    "cream": "#F5F0E8",
+    "bg": "#FAF7F2",
+    "text": "#2A2A1A",
+    "textLight": "#6B6B5A"
+  },
+  "logoUrl": "",
+  "heroImage": "https://images.unsplash.com/photo-1555244162-803834f70033?w=1400&q=80",
+  "heroImages": [
+    "https://images.unsplash.com/photo-1555244162-803834f70033?w=600&q=80",
+    "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80",
+    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80"
+  ],
+  "aboutImage": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80",
+  "aboutImage2": "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=600&q=80",
+  "galleryImages": [
+    "https://images.unsplash.com/photo-1555244162-803834f70033?w=400&q=80",
+    "https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=400&q=80",
+    "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80",
+    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80",
+    "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&q=80",
+    "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80"
+  ],
+  "contact": {
+    "email": "hello@feastar.com",
+    "phone": "(555) 234-5678",
+    "address": "42 Olive Grove Lane, Portland, OR 97201"
+  },
+  "values": [
+    {
+      "title": "Excellence",
+      "description": "Every dish is crafted to perfection with meticulous attention to detail and presentation.",
+      "icon": "star"
+    },
+    {
+      "title": "Innovation",
+      "description": "We push culinary boundaries with creative flavors, techniques, and modern presentation styles.",
+      "icon": "lightbulb"
+    },
+    {
+      "title": "Quality",
+      "description": "Only the finest seasonal ingredients sourced from trusted local farms and artisan producers.",
+      "icon": "shield"
+    },
+    {
+      "title": "Sustainability",
+      "description": "Committed to eco-friendly practices, zero-waste kitchens, and responsible sourcing.",
+      "icon": "leaf"
+    }
+  ],
+  "offerings": [
+    {
+      "title": "Buffet Catering",
+      "description": "Grand spreads for weddings, galas, and large-scale celebrations.",
+      "image": "https://images.unsplash.com/photo-1555244162-803834f70033?w=500&q=80"
+    },
+    {
+      "title": "Meal Boxes",
+      "description": "Individually portioned gourmet meals for corporate events and private gatherings.",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&q=80"
+    },
+    {
+      "title": "Snack Boxes",
+      "description": "Beautifully curated snack selections for meetings, parties, and gifting.",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=80"
+    },
+    {
+      "title": "Food Stalls",
+      "description": "Interactive live cooking stations that bring excitement to any event.",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80"
+    }
+  ],
+  "stats": [
+    { "value": "500+", "label": "Events Catered" },
+    { "value": "10+", "label": "Years Experience" },
+    { "value": "50+", "label": "Expert Chefs" },
+    { "value": "98%", "label": "Client Satisfaction" }
+  ],
+  "team": [
+    {
+      "name": "Chef Marco Bellini",
+      "role": "Executive Chef",
+      "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=300&q=80",
+      "bio": "Award-winning chef with 15 years of culinary expertise in international cuisine."
+    },
+    {
+      "name": "Chef Amara Osei",
+      "role": "Head Pastry Chef",
+      "image": "https://images.unsplash.com/photo-1583394293214-28ez1c7aa2d1?w=300&q=80",
+      "bio": "Specializing in artisan desserts and creative pastry design for luxury events."
+    },
+    {
+      "name": "Chef Liam Chen",
+      "role": "Sous Chef",
+      "image": "https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=300&q=80",
+      "bio": "Fusion cuisine expert blending Eastern and Western flavors with modern techniques."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Feastar transformed our wedding reception into an unforgettable culinary experience. Every guest raved about the food for weeks afterward. Truly exceptional service from start to finish.",
+      "author": "Sarah Mitchell",
+      "role": "Bride, Summer Wedding 2024",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&q=80",
+      "rating": "5.0"
+    },
+    {
+      "quote": "We hired Feastar for our annual corporate gala and they exceeded every expectation. The presentation was stunning, the flavors were incredible, and the team was so professional.",
+      "author": "James Rodriguez",
+      "role": "CEO, Vertex Technologies",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&q=80",
+      "rating": "5.0"
+    },
+    {
+      "quote": "From the tasting session to the final event, Feastar was a dream to work with. Their attention to detail and passion for food shines through in everything they do.",
+      "author": "Emily Nakamura",
+      "role": "Event Planner, Luxe Events",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80",
+      "rating": "4.9"
+    }
+  ],
+  "about": {
+    "heading": "Your Culinary Journey Starts Here",
+    "tagline": "Crafted with passion, served with pride",
+    "text": "At Feastar, we believe every event deserves extraordinary cuisine. Our team of world-class chefs combines the finest seasonal ingredients with innovative techniques to create dining experiences that delight the senses and bring people together. From intimate gatherings to grand celebrations, we pour our passion into every plate."
+  },
+  "cta": {
+    "heading": "Ready to Elevate Your Culinary Journey?",
+    "buttonText": "Book Now",
+    "buttonLink": "/contact"
+  },
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "About", "href": "#about" },
+    { "label": "Menu", "href": "#offerings" },
+    { "label": "Blog", "href": "#gallery" }
+  ]
+}

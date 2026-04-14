@@ -1,0 +1,118 @@
+{
+  "name": "Celestial Photographs",
+  "tagline": "Crafting love story through photography",
+  "description": "Timeless wedding and portrait photography that captures your most precious moments with elegance and artistry.",
+  "phone": "+1 (555) 742-8890",
+  "email": "hello@celestialphotographs.com",
+  "address": "124 Gallery Lane, Toronto, ON M5V 2T6",
+  "instagram": "@celestialphotographs",
+  "colors": {
+    "primary": "#1A1A1A",
+    "accent": "#8B7E5E",
+    "accentLight": "#C4B896",
+    "bg": "#F5EDE3",
+    "bgLight": "#FAF7F2",
+    "white": "#FFFFFF",
+    "text": "#1A1A1A",
+    "textMuted": "#6B6B6B",
+    "border": "#E5DDD3",
+    "dark": "#0D0D0D",
+    "olive": "#4A5530"
+  },
+  "nav": [
+    { "label": "Portfolio", "href": "#portfolio" },
+    { "label": "About Us", "href": "#about" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Blog", "href": "#blog" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "heading": "Crafting love story through photography",
+    "cta": "View Pricing & Availability",
+    "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&q=80",
+    "socials": ["Facebook", "Instagram", "Pinterest", "TikTok"]
+  },
+  "portfolio": [
+    { "title": "A Day at The Orchard", "subtitle": "Vineyard Wedding", "location": "Niagara, Ontario", "image": "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80" },
+    { "title": "Garden Bliss", "subtitle": "A Whimsical Wedding at The Greenhouse", "location": "Toronto, Ontario", "image": "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80" },
+    { "title": "Timeless Elegance", "subtitle": "The Waterhouse", "location": "Muskoka, Ontario", "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" }
+  ],
+  "featured": {
+    "title": "Featured Wedding",
+    "images": [
+      { "src": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80", "span": "col-span-1 row-span-2" },
+      { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80", "span": "col-span-1" },
+      { "src": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80", "span": "col-span-1" },
+      { "src": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80", "span": "col-span-1 row-span-2" },
+      { "src": "https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=600&q=80", "span": "col-span-1" },
+      { "src": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80", "span": "col-span-1" }
+    ]
+  },
+  "about": {
+    "heading": "About Us",
+    "body": "With a passion for candid wedding photography, we've spent over a decade capturing love stories across the country. Our approach combines artistic vision with an effortless documentary style, ensuring every frame feels authentic and timeless. We believe the best moments happen naturally — our job is simply to be there when they do.",
+    "image": "https://images.unsplash.com/photo-1554080353-a576cf803bda?w=800&q=80",
+    "cta": "More About Our Story",
+    "publications": ["Toronto Life", "Vogue", "Martha Stewart", "The Knot"]
+  },
+  "video": {
+    "heading": "Watch Our Video",
+    "label": "Wedding Film",
+    "thumbnail": "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1200&q=80"
+  },
+  "services": [
+    { "name": "Wedding Photography", "desc": "Full-day coverage capturing every moment from prep to last dance.", "price": "Starting at $4,500", "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" },
+    { "name": "Engagement Sessions", "desc": "Relaxed, natural portrait sessions to tell your love story.", "price": "Starting at $800", "image": "https://images.unsplash.com/photo-1529634597503-139d3726fed5?w=600&q=80" },
+    { "name": "Elopement Packages", "desc": "Intimate coverage for couples who want something different.", "price": "Starting at $2,200", "image": "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80" }
+  ],
+  "stats": [
+    { "value": "500", "suffix": "+", "label": "Weddings Captured" },
+    { "value": "12", "suffix": "", "label": "Years Experience" },
+    { "value": "85", "suffix": "+", "label": "5-Star Reviews" },
+    { "value": "15", "suffix": "", "label": "Awards Won" }
+  ],
+  "testimonials": [
+    { "quote": "From the first consultation to receiving our gallery, every step was absolutely magical. The photos captured emotions we didn't even know were happening — pure, honest, and breathtakingly beautiful.", "name": "Jessica & Ben", "role": "Fall Wedding, 2024", "avatar": "JB" },
+    { "quote": "We've never felt more comfortable in front of a camera. The results are stunning — every image tells a piece of our story that we'll treasure forever.", "name": "Sarah & Marcus", "role": "Summer Wedding, 2024", "avatar": "SM" },
+    { "quote": "The team went above and beyond. They captured moments we didn't even realize were happening, and the final gallery brought us to tears. Absolutely worth every penny.", "name": "Emily & David", "role": "Spring Wedding, 2023", "avatar": "ED" }
+  ],
+  "instagram": [
+    "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80",
+    "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&q=80",
+    "https://images.unsplash.com/photo-1507504031003-b417219a0fde?w=400&q=80",
+    "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&q=80",
+    "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80",
+    "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&q=80"
+  ],
+  "blog": [
+    { "title": "10 Tips for Stunning Wedding Portraits", "excerpt": "Essential posing and lighting advice for your big day.", "image": "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80", "date": "March 2024" },
+    { "title": "How to Choose Your Wedding Photographer", "excerpt": "What to look for beyond just a pretty portfolio.", "image": "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&q=80", "date": "February 2024" }
+  ],
+  "cta": {
+    "heading": "Let's create something beautiful",
+    "subheading": "Every great image starts with a conversation.",
+    "primary": "Get in Touch"
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Let's chat about your special day.",
+    "hours": [
+      { "days": "Monday – Friday", "time": "9:00am – 6:00pm" },
+      { "days": "Saturday", "time": "By appointment" },
+      { "days": "Sunday", "time": "Closed" }
+    ]
+  },
+  "footer": {
+    "tagline": "Every frame tells a love story.",
+    "columns": [
+      { "title": "Shoot", "links": ["Our Work", "Galleries", "Blog", "Testimonials"] },
+      { "title": "Our Work", "links": ["Weddings", "Engagements", "Elopements", "Events"] },
+      { "title": "Socials", "links": ["Instagram", "Facebook", "Pinterest", "TikTok"] }
+    ],
+    "socials": [
+      { "name": "Instagram", "href": "#" },
+      { "name": "Facebook", "href": "#" },
+      { "name": "Pinterest", "href": "#" }
+    ]
+  }
+}

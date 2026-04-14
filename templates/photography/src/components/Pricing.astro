@@ -1,0 +1,39 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background:${brand.colors.bg}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Video section -->
+    <div class="text-center mb-12 animate-on-scroll">
+      <div class="section-label">Wedding Film</div>
+      <h2 class="font-display text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>Watch Our Video</h2>
+    </div>
+
+    <div class="relative img-hover animate-on-scroll cursor-pointer mb-20">
+      <div class="aspect-video overflow-hidden">
+        <img src={brand.video.thumbnail} alt="Wedding film" class="w-full h-full object-cover" />
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center" style="background:rgba(0,0,0,0.25)">
+        <div class="play-btn">
+          <svg class="w-6 h-6 ml-0.5" fill="#1A1A1A" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram grid -->
+    <div class="text-center mb-10 animate-on-scroll">
+      <div class="section-label">Follow Along</div>
+      <h2 class="font-display text-3xl sm:text-4xl font-medium" style={`color:${brand.colors.text}`}>Instagram</h2>
+      <p class="text-xs font-light mt-2" style={`color:${brand.colors.textMuted}`}>
+        Follow us at Instagram for sneak peeks into our latest sessions and behind-the-scenes moments.
+      </p>
+    </div>
+    <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 stagger-children">
+      {brand.instagram.map((src: string) => (
+        <div class="img-hover aspect-square cursor-pointer">
+          <img src={src} alt="" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

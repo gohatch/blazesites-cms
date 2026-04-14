@@ -1,0 +1,61 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding bg-white">
+  <div class="mx-auto max-w-7xl">
+    <!-- Section Header -->
+    <div class="animate-on-scroll mx-auto max-w-2xl text-center">
+      <span class="badge-green">
+        <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clip-rule="evenodd"/>
+        </svg>
+        Our Blog
+      </span>
+      <h2 class="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl" style={`color: ${brand.colors.text}`}>
+        Everything You Need to Know About
+        <span style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--color-primary)"> Recovery & Wellness</span>
+      </h2>
+    </div>
+
+    <!-- Blog Cards -->
+    <div class="stagger-children mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {brand.blog.map((post) => (
+        <article class="card-hover group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
+          <!-- Image -->
+          <div class="relative overflow-hidden">
+            <img
+              src={post.image}
+              alt={post.title}
+              class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+          <!-- Content -->
+          <div class="p-6">
+            <!-- Meta -->
+            <div class="flex items-center gap-3 text-xs" style={`color: ${brand.colors.textLight}`}>
+              <span class="flex items-center gap-1">
+                <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                {post.date}
+              </span>
+              <span>by {post.author}</span>
+            </div>
+            <!-- Title -->
+            <h3 class="mt-3 text-base font-bold leading-snug" style={`color: ${brand.colors.text}`}>
+              {post.title}
+            </h3>
+            <!-- Read More -->
+            <a href="#" class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold transition-colors hover:opacity-80" style={`color: ${brand.colors.primary}`}>
+              Read More
+              <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

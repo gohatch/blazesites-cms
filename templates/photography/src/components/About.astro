@@ -1,0 +1,35 @@
+---
+import brand from '../../brand.json';
+---
+<section id="about" class="section-padding" style={`background:${brand.colors.bgLight}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <div class="section-label">Our Story</div>
+      <h2 class="font-display text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>About Us</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Text -->
+      <div class="animate-on-scroll">
+        <p class="text-sm font-light leading-[2] mb-8" style={`color:${brand.colors.textMuted}`}>
+          {brand.about.body}
+        </p>
+        <a href="#contact" class="btn-outline">{brand.about.cta}</a>
+      </div>
+      <!-- Image -->
+      <div class="animate-on-scroll img-hover">
+        <img src={brand.about.image} alt="About us" class="w-full h-[450px] object-cover" />
+      </div>
+    </div>
+
+    <!-- As Seen In -->
+    <div class="mt-16 pt-10 animate-on-scroll" style={`border-top:1px solid ${brand.colors.border}`}>
+      <p class="text-center text-[10px] tracking-[0.2em] uppercase mb-6" style={`color:${brand.colors.textMuted}`}>As Seen In</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
+        {brand.about.publications.map((pub: string) => (
+          <span class="font-serif italic text-2xl font-light opacity-30" style={`color:${brand.colors.text}`}>{pub}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

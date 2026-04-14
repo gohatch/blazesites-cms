@@ -1,0 +1,78 @@
+---
+import brand from '../../brand.json';
+---
+<section class="relative min-h-screen pt-20 overflow-hidden" style={`background-color: ${brand.colors.bg}`}>
+  <!-- Decorative background leaf -->
+  <div class="absolute top-0 right-0 w-[55%] h-full overflow-hidden pointer-events-none">
+    <div class="absolute inset-0" style={`background-color: ${brand.colors.bgDark}`}></div>
+    <!-- Arch clip -->
+    <div class="absolute inset-0 overflow-hidden" style="border-radius: 0 0 0 60%;">
+      <img
+        src={brand.hero.image}
+        alt="Yoga practice"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(244,247,240,0.25), transparent 50%)"></div>
+    </div>
+  </div>
+
+  <!-- Decorative circles -->
+  <div class="absolute top-32 left-8 w-48 h-48 rounded-full pointer-events-none" style={`background-color: ${brand.colors.primary}; opacity: 0.05`}></div>
+  <div class="absolute bottom-24 left-16 w-24 h-24 rounded-full pointer-events-none" style={`background-color: ${brand.colors.primary}; opacity: 0.08`}></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[calc(100vh-5rem)] flex items-center">
+    <div class="max-w-xl lg:max-w-2xl py-20">
+
+      <!-- Eyebrow -->
+      <div class="hero-animate hero-animate-1 section-label mb-4">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+        </svg>
+        {brand.hero.eyebrow}
+      </div>
+
+      <!-- Heading -->
+      <h1 class="hero-animate hero-animate-2 font-serif text-5xl sm:text-6xl lg:text-7xl font-medium leading-[1.1] mb-6" style={`color: ${brand.colors.primaryDark}`}>
+        Find stillness<br/>
+        <em class="not-italic" style={`color: ${brand.colors.primary}`}>within</em> movement
+      </h1>
+
+      <!-- Subheading -->
+      <p class="hero-animate hero-animate-3 text-base sm:text-lg font-light leading-relaxed mb-10 max-w-lg" style={`color: ${brand.colors.textLight}`}>
+        {brand.hero.subheading}
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero-animate hero-animate-4 flex flex-col sm:flex-row gap-4">
+        <a href="#classes" class="btn-primary">
+          {brand.hero.cta}
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+        <a href="#contact" class="btn-outline">
+          {brand.hero.ctaSecondary}
+        </a>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="hero-animate hero-animate-4 flex items-center gap-6 mt-12">
+        <div class="flex -space-x-2">
+          {['#C4A882','#4A7C59','#6B9E7A','#A8C5B5'].map((c) => (
+            <div class="w-9 h-9 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-medium" style={`background-color: ${c}`}>
+              ✦
+            </div>
+          ))}
+        </div>
+        <div>
+          <p class="text-sm font-medium" style={`color: ${brand.colors.primaryDark}`}>2,400+ students</p>
+          <p class="text-xs font-light" style={`color: ${brand.colors.textLight}`}>joined our community</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+    <span class="text-xs font-light tracking-widest uppercase" style={`color: ${brand.colors.textLight}`}>Scroll</span>
+    <div class="w-px h-10" style={`background: linear-gradient(to bottom, ${brand.colors.primary}, transparent)`}></div>
+  </div>
+</section>

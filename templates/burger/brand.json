@@ -1,0 +1,66 @@
+{
+  "businessName": "BJORBUN",
+  "tagline": "Crafted Burgers with Premium Taste",
+  "description": "We don't just make burgers — we craft unforgettable flavor experiences using premium ingredients, bold recipes, and perfectly grilled patties in every bite.",
+  "colors": {
+    "primary": "#0D4A4A",
+    "accent": "#C5A23E",
+    "accentLight": "#FDF6E3",
+    "cream": "#F5ECD7",
+    "text": "#0D4A4A",
+    "textLight": "#5A7A7A",
+    "dark": "#0A3535"
+  },
+  "heroImage": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1400&q=80",
+  "burgerHeroImage": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&q=80",
+  "contact": {
+    "email": "eat@bjorbun.com",
+    "phone": "(555) BURG-ERS",
+    "address": "42 Grill Street, Brooklyn, NY 11201"
+  },
+  "marqueeItems": ["FLAT 20% OFF ON YOUR FIRST VISIT", "BJORBUN", "ONE BITE ADDICTED", "BURGERS", "TASTEY", "SUPER JUICY"],
+  "signatures": [
+    {
+      "name": "Cheese Lava Beast",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80"
+    },
+    {
+      "name": "Ultimate Drip Stack",
+      "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80"
+    },
+    {
+      "name": "Smoky Black Bun",
+      "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&q=80"
+    }
+  ],
+  "menuPreview": [
+    { "name": "Fries & Sides", "image": "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=300&q=80" },
+    { "name": "Burger", "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=300&q=80" },
+    { "name": "Drink", "image": "https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=300&q=80" }
+  ],
+  "whyUs": [
+    { "title": "Fresh and Premium", "description": "We carefully select fresh, high-quality ingredients every day — from premium beef patties and crisp vegetables to soft freshly baked buns." },
+    { "title": "Perfectly Grilled Every Time", "description": "Each burger is grilled to perfection using special techniques to lock in juiciness and create a delicious smoky aroma." },
+    { "title": "Fast & Friendly Service", "description": "Enjoy quick preparation without compromising quality, served by a team that cares about your experience." }
+  ],
+  "testimonials": [
+    {
+      "quote": "Hands down the best burger in town! The patties are super juicy and the cheese melts perfectly. I'm officially addicted.",
+      "author": "Dekatama Aditya Yapeo",
+      "image": ""
+    }
+  ],
+  "cta": {
+    "heading": "Come Enjoy With Us",
+    "subheading": "Come enjoy juicy handcrafted burgers made with premium ingredients, served hot and fresh in a comfortable and welcoming space.",
+    "buttonText": "Order Now",
+    "buttonLink": "/contact"
+  },
+  "nav": [
+    { "label": "Menu", "href": "/menu" },
+    { "label": "Testimonial", "href": "/about" },
+    { "label": "Services", "href": "/about" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

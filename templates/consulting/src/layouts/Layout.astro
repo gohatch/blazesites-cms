@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+import brand from '../../brand.json';
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title ? `${title} | ${brand.name}` : brand.name}</title>
+  <meta name="description" content={description || brand.description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body class="antialiased font-body" style={`background:${brand.colors.bg}; color:${brand.colors.text}; font-family:'Inter',sans-serif; font-weight:400;`}>
+  <slot />
+  <script>
+    const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}}),{threshold:0.1});
+    document.querySelectorAll('.animate-on-scroll,.stagger-children').forEach(el=>obs.observe(el));
+    const cObs = new IntersectionObserver(e => e.forEach(x => { if(!x.isIntersecting)return; const el=x.target,t=(el.getAttribute('data-target')||'0').replace(/,/g,''),m=t.match(/^([^0-9]*)([\d.]+)(.*)$/); if(!m){el.textContent=t;return;} const[,p,n,s]=m,num=parseFloat(n),st=performance.now(); (function u(now:number){const pr=Math.min((now-st)/2000,1),v=1-Math.pow(1-pr,3);el.textContent=p+(num>=100?Math.round(v*num).toLocaleString():num>=10?Math.round(v*num)+'':Number.isInteger(num)?Math.round(v*num)+'':(v*num).toFixed(1))+s;if(pr<1)requestAnimationFrame(u);})(st);cObs.unobserve(el);}),{threshold:0.3});
+    document.querySelectorAll('[data-counter]').forEach(el=>cObs.observe(el));
+  </script>
+</body>
+</html>

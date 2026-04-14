@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #4A7C59;
+  --color-primary-light: #6B9B7A;
+  --color-accent: #4A7C59;
+  --color-cream: #F4F7F0;
+  --color-bg: #F9FBF7;
+  --color-white: #FFFFFF;
+  --color-text: #1A2E1A;
+  --color-text-light: #5C6B5C;
+  --color-border: #D4E4D4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+/* Serif heading font */
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Small caps utility */
+.small-caps {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll.from-left {
+  transform: translateX(-40px);
+}
+.animate-on-scroll.from-left.visible {
+  transform: translateX(0);
+}
+.animate-on-scroll.from-right {
+  transform: translateX(40px);
+}
+.animate-on-scroll.from-right.visible {
+  transform: translateX(0);
+}
+.animate-on-scroll.scale-in {
+  transform: scale(0.92);
+}
+.animate-on-scroll.scale-in.visible {
+  transform: scale(1);
+}
+
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.12s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.24s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.36s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.48s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; }
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero entrance */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-animate {
+  opacity: 0;
+  animation: heroFadeUp 0.8s ease forwards;
+}
+.hero-animate-1 { animation-delay: 0.15s; }
+.hero-animate-2 { animation-delay: 0.3s; }
+.hero-animate-3 { animation-delay: 0.45s; }
+.hero-animate-4 { animation-delay: 0.6s; }
+
+/* Card hover with sage green shadow */
+.card-hover {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(74, 124, 89, 0.12);
+}
+
+/* Primary button — sage green pill */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2.25rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #3D6A4B;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.3);
+}
+
+/* Outline button — sage green border pill */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2.25rem;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Divider ornament (green dash + text + green dash) */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.ornament::before,
+.ornament::after {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background-color: var(--color-primary);
+  opacity: 0.35;
+}
+
+/* Section spacing */
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .section-padding { padding: 7rem 2rem; }
+}
+
+/* Section label (green arrow + text) */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Organic shape clip path */
+.organic-shape {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+/* Gentle float animation */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.float-animation {
+  animation: gentleFloat 6s ease-in-out infinite;
+}

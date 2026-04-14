@@ -1,0 +1,23 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background:${brand.colors.bg}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2" style={`color:${brand.colors.primary}`}>Student Success</p>
+      <h2 class="font-display text-3xl sm:text-4xl" style={`color:${brand.colors.text}`}>What Our Students Say</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 stagger-children">
+      {brand.testimonials.map((t: any) => (
+        <div class="p-6 rounded-2xl card-hover" style={`background:${brand.colors.white}; border:1px solid ${brand.colors.border}`}>
+          <div class="flex gap-1 mb-4">{Array(5).fill(0).map(() => (<span style={`color:${brand.colors.accent}`}>★</span>))}</div>
+          <p class="text-sm font-light leading-[1.8] mb-5" style={`color:${brand.colors.textMuted}`}>"{t.quote}"</p>
+          <div class="flex items-center gap-3" style={`border-top:1px solid ${brand.colors.border}; padding-top:1rem`}>
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-white" style={`background:${brand.colors.primary}`}>{t.avatar}</div>
+            <div><p class="text-sm font-semibold" style={`color:${brand.colors.text}`}>{t.name}</p><p class="text-xs" style={`color:${brand.colors.textMuted}`}>{t.role}</p></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

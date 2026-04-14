@@ -1,0 +1,71 @@
+---
+import brand from '../../brand.json';
+---
+
+<section id="testimonials" style="padding: 6rem 1.5rem; background-color: #F9F7F2;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <!-- Header -->
+    <div class="fade-up" style="text-align: center; margin-bottom: 4rem;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+        <span style="font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A68B3C;">Testimonials</span>
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+      </div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 500; color: #2A2A1E; margin-bottom: 1rem;">
+        What Our Clients Say
+      </h2>
+      <p style="font-size: 1rem; font-weight: 300; color: #6B6B5A; max-width: 500px; margin: 0 auto;">
+        Hear from homeowners and investors who trusted Nestora with their real estate journey.
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="stagger-children" style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" id="testimonials-grid">
+      {brand.testimonials.map((testimonial) => (
+        <div class="card-hover" style="background-color: #ffffff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 12px rgba(42, 42, 30, 0.05); position: relative;">
+          <!-- Quote mark -->
+          <div style="position: absolute; top: 1.5rem; right: 1.5rem; font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1; color: rgba(166, 139, 60, 0.12);">
+            &ldquo;
+          </div>
+
+          <!-- Stars -->
+          <div style="display: flex; gap: 0.125rem; margin-bottom: 1.25rem;">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#A68B3C" stroke="none">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            ))}
+          </div>
+
+          <!-- Quote -->
+          <p style="font-size: 1rem; font-weight: 300; color: #2A2A1E; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; position: relative; z-index: 1;">
+            &ldquo;{testimonial.quote}&rdquo;
+          </p>
+
+          <!-- Author -->
+          <div style="display: flex; align-items: center; gap: 0.875rem; padding-top: 1.25rem; border-top: 1px solid rgba(42, 42, 30, 0.06);">
+            <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+              <img src={testimonial.image} alt={testimonial.name} style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            </div>
+            <div>
+              <p style="font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: #2A2A1E; margin-bottom: 0.125rem;">
+                {testimonial.name}
+              </p>
+              <p style="font-size: 0.8125rem; font-weight: 400; color: #6B6B5A;">
+                {testimonial.role}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 768px) {
+    #testimonials-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+</style>

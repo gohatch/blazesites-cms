@@ -1,0 +1,32 @@
+---
+import brand from '../../brand.json';
+---
+<section class="relative px-4 sm:px-6 lg:px-8 pt-24 pb-0" style={`background:${brand.colors.bg}`}>
+  <div class="max-w-6xl mx-auto">
+    <!-- Rounded hero container -->
+    <div class="hero-rounded relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center film-grain">
+      <img src={brand.hero.image} alt="" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(44,44,44,0.3) 0%, rgba(44,44,44,0.55) 100%)"></div>
+
+      <div class="relative z-10 text-center max-w-3xl mx-auto px-6 py-20">
+        <h1 class="hero-animate hero-animate-1 font-script text-5xl sm:text-6xl lg:text-7xl font-medium leading-[1.1] text-white mb-6">
+          {brand.hero.heading}
+        </h1>
+        <p class="hero-animate hero-animate-2 text-sm font-light leading-relaxed text-white/80 max-w-lg mx-auto mb-8">
+          {brand.hero.subheading}
+        </p>
+        <div class="hero-animate hero-animate-3 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#contact" class="btn-accent-filled">{brand.hero.cta}</a>
+          <a href="#work" class="btn-accent">{brand.hero.ctaSecondary}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wavy divider -->
+  <div class="wave-divider" style="margin-top:-1px">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill={brand.colors.white} />
+    </svg>
+  </div>
+</section>

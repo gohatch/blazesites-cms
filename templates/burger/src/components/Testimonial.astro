@@ -1,0 +1,51 @@
+---
+import brand from '../../brand.json';
+const t = brand.testimonials[0];
+---
+<section class="section-padding text-center" style={`background-color: ${brand.colors.cream}`}>
+  <div class="mx-auto max-w-4xl">
+    <div class="animate-on-scroll">
+      <p class="heading-display text-sm tracking-[0.2em]" style={`color: ${brand.colors.accent}`}>
+        Testimonials
+      </p>
+      <h2 class="heading-display mt-3 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl" style={`color: ${brand.colors.primary}`}>
+        What Our<br />
+        <span class="text-outline">Customers</span> Say
+      </h2>
+
+      <!-- Large customer / food photo -->
+      <div class="relative mx-auto mt-12 h-72 w-72 overflow-hidden rounded-3xl shadow-2xl sm:h-80 sm:w-80">
+        <img
+          src={brand.signatures[0].image}
+          alt="Satisfied customer's burger"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+        <!-- Decorative gold corner accent -->
+        <div class="absolute -bottom-1 -right-1 h-20 w-20 rounded-tl-3xl" style={`background-color: ${brand.colors.accent}33`}></div>
+      </div>
+
+      <!-- Star rating -->
+      <div class="mt-8 flex items-center justify-center gap-1">
+        {[1,2,3,4,5].map(() => (
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill={brand.colors.accent}>
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+
+      <!-- Quote -->
+      <p class="mx-auto mt-6 max-w-2xl text-lg font-bold leading-relaxed sm:text-xl lg:text-2xl" style={`color: ${brand.colors.primary}`}>
+        "{t.quote}"
+      </p>
+      <p class="mt-5 heading-display text-sm tracking-wider" style={`color: ${brand.colors.textLight}`}>{t.author}</p>
+
+      <!-- Navigation dots -->
+      <div class="mt-8 flex items-center justify-center gap-3">
+        <div class="h-3 w-3 rounded-full" style={`background-color: ${brand.colors.primary}`}></div>
+        <div class="h-3 w-3 rounded-full" style={`background-color: ${brand.colors.primary}33`}></div>
+        <div class="h-3 w-3 rounded-full" style={`background-color: ${brand.colors.primary}33`}></div>
+      </div>
+    </div>
+  </div>
+</section>

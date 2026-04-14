@@ -1,0 +1,17 @@
+---
+import brand from '../../brand.json';
+---
+<section class="py-16" style={`background:${brand.colors.primary}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+      {brand.stats.map((s: any) => (
+        <div class="text-center">
+          <div class="font-display text-4xl sm:text-5xl text-white mb-1">
+            <span data-counter data-target={s.value + s.suffix}>{s.value}{s.suffix}</span>
+          </div>
+          <p class="text-xs font-light text-white/60">{s.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

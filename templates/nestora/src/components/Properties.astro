@@ -1,0 +1,96 @@
+---
+import brand from '../../brand.json';
+---
+
+<section id="properties" style="padding: 6rem 1.5rem; background-color: #F9F7F2;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <!-- Header -->
+    <div class="fade-up" style="text-align: center; margin-bottom: 4rem;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+        <span style="font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A68B3C;">Featured Listings</span>
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+      </div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 500; color: #2A2A1E; margin-bottom: 1rem;">
+        Explore Our Property
+      </h2>
+      <p style="font-size: 1rem; font-weight: 300; color: #6B6B5A; max-width: 500px; margin: 0 auto;">
+        Handpicked luxury properties in the most sought-after locations.
+      </p>
+    </div>
+
+    <!-- Property Grid -->
+    <div class="stagger-children" style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" id="properties-grid">
+      {brand.properties.map((property) => (
+        <div class="card-hover" style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(42, 42, 30, 0.06);">
+          <!-- Image -->
+          <div class="img-zoom" style="position: relative; height: 240px; overflow: hidden;">
+            <img src={property.image} alt={property.name} style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            <div style="position: absolute; top: 1rem; left: 1rem; background-color: rgba(42, 42, 30, 0.85); color: #ffffff; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em;">
+              For Sale
+            </div>
+          </div>
+          <!-- Details -->
+          <div style="padding: 1.5rem;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #2A2A1E; margin-bottom: 0.5rem;">
+              {property.name}
+            </h3>
+            <div style="display: flex; align-items: center; gap: 0.375rem; margin-bottom: 1rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A68B3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span style="font-size: 0.8125rem; font-weight: 300; color: #6B6B5A;">{property.location}</span>
+            </div>
+            <!-- Meta -->
+            <div style="display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(42, 42, 30, 0.08);">
+              <span style="font-size: 0.75rem; color: #6B6B5A; display: flex; align-items: center; gap: 0.25rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6B5A" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M5 11V7a7 7 0 0 1 14 0v4"/></svg>
+                {property.beds} Beds
+              </span>
+              <span style="font-size: 0.75rem; color: #6B6B5A; display: flex; align-items: center; gap: 0.25rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B6B5A" stroke-width="1.5"><path d="M4 12h16v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-5z"/><path d="M6 12V5a2 2 0 0 1 2-2h1"/></svg>
+                {property.baths} Baths
+              </span>
+              <span style="font-size: 0.75rem; color: #6B6B5A;">{property.sqft} sqft</span>
+            </div>
+            <!-- Price & CTA -->
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: #A68B3C;">{property.price}</span>
+              <a href="#" style="display: inline-flex; align-items: center; gap: 0.375rem; padding: 0.5rem 1.25rem; border: 1.5px solid #A68B3C; color: #A68B3C; font-size: 0.8125rem; font-weight: 500; border-radius: 4px; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#A68B3C'; this.style.color='#ffffff'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#A68B3C'">
+                Details
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- View All -->
+    <div class="fade-up" style="text-align: center; margin-top: 3rem;">
+      <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2.25rem; border: 1.5px solid #A68B3C; color: #A68B3C; font-size: 0.9375rem; font-weight: 500; border-radius: 4px; text-decoration: none; transition: all 0.3s ease; letter-spacing: 0.02em;" onmouseover="this.style.backgroundColor='#A68B3C'; this.style.color='#ffffff'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#A68B3C'">
+        View All Properties
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 640px) {
+    #properties-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    #properties-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+</style>

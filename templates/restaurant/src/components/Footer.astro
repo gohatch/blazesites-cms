@@ -1,0 +1,25 @@
+---
+import brand from '../../brand.json';
+---
+<footer style={`background-color: ${brand.colors.primary}`} class="text-white">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid items-start gap-12 lg:grid-cols-2">
+      <!-- Left: Big logo -->
+      <div>
+        <p class="heading-serif-bold text-5xl sm:text-7xl">{brand.businessName}</p>
+      </div>
+      <!-- Right: Newsletter -->
+      <div>
+        <h3 class="text-lg font-semibold">Get tasty news straight to your inbox</h3>
+        <p class="mt-2 text-sm text-white/60">No spam — just fresh updates, special offers, and mouthwatering news.</p>
+        <form class="mt-4 flex gap-2" onsubmit="event.preventDefault()">
+          <input type="email" placeholder="Write your email ..." class="flex-1 rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm text-white placeholder-white/40 outline-none" />
+          <button type="submit" class="btn-accent !rounded-full">Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+    <div class="mt-12 border-t border-white/10 pt-6 text-center text-xs text-white/40">
+      &copy; {new Date().getFullYear()} {brand.businessName} All rights reserved.
+    </div>
+  </div>
+</footer>

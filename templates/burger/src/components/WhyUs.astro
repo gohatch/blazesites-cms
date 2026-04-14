@@ -1,0 +1,54 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding overflow-hidden" style={`background-color: ${brand.colors.primary}`}>
+  <div class="mx-auto max-w-7xl">
+    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <!-- Left: heading with overlapping burger image -->
+      <div class="animate-on-scroll relative">
+        <p class="heading-display text-sm tracking-[0.2em]" style={`color: ${brand.colors.accent}`}>
+          Why Choose Us
+        </p>
+        <div class="relative mt-4">
+          <h2 class="heading-display text-5xl text-white sm:text-6xl lg:text-7xl xl:text-8xl" style="line-height: 0.85">
+            Why People<br />Love Our<br />
+            <span class="text-outline">Burgers</span>
+          </h2>
+
+          <!-- Burger image overlapping heading at an angle -->
+          <img
+            src={brand.signatures[1].image}
+            alt="Our signature burger"
+            class="absolute -right-4 -top-4 w-44 rotate-6 rounded-3xl object-cover shadow-2xl ring-4 ring-white/10 sm:w-56 lg:-right-8 lg:w-72"
+            style="aspect-ratio: 3/4"
+            loading="lazy"
+          />
+        </div>
+
+        <p class="mt-8 max-w-md text-sm leading-relaxed text-white/60 sm:text-base">
+          {brand.description}
+        </p>
+      </div>
+
+      <!-- Right: numbered reasons with gold accent borders -->
+      <div class="animate-on-scroll space-y-6">
+        {brand.whyUs.map((reason, i) => (
+          <div class="group relative flex gap-5 rounded-2xl border border-white/10 p-5 transition-all duration-300 hover:border-[var(--color-accent)]/30 hover:bg-white/5 sm:p-6">
+            <!-- Gold left accent border -->
+            <div class="absolute left-0 top-4 bottom-4 w-1 rounded-full transition-all duration-300 group-hover:top-2 group-hover:bottom-2" style={`background-color: ${brand.colors.accent}`}></div>
+
+            <!-- Numbered icon -->
+            <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl" style={`background-color: ${brand.colors.accent}22`}>
+              <span class="heading-display text-lg" style={`color: ${brand.colors.accent}`}>0{i + 1}</span>
+            </div>
+
+            <div>
+              <h3 class="heading-display text-lg text-white sm:text-xl">{reason.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-white/50">{reason.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

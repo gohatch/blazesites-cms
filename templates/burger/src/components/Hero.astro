@@ -1,0 +1,93 @@
+---
+import brand from '../../brand.json';
+---
+<section class="relative overflow-hidden pt-20 pb-0" style={`background-color: ${brand.colors.primary}`}>
+  <!-- Subtle bg texture -->
+  <div class="absolute inset-0 opacity-[0.07]">
+    <img src={brand.heroImage} alt="" class="h-full w-full object-cover blur-sm" />
+  </div>
+
+  <!-- Decorative scattered ingredients -->
+  <div class="pointer-events-none absolute inset-0 z-10">
+    <div class="absolute left-[5%] top-[15%] text-5xl opacity-50 rotate-12 lg:text-7xl">🍋</div>
+    <div class="absolute right-[8%] top-[20%] text-4xl opacity-40 -rotate-12 lg:text-6xl">🌿</div>
+    <div class="absolute left-[15%] bottom-[25%] text-3xl opacity-35 rotate-45 lg:text-5xl">🍅</div>
+    <div class="absolute right-[12%] bottom-[30%] text-3xl opacity-30 -rotate-6 lg:text-5xl">🫒</div>
+    <div class="absolute left-[40%] top-[8%] text-2xl opacity-25 rotate-[30deg] lg:text-4xl">🌶️</div>
+    <div class="absolute right-[25%] bottom-[15%] text-4xl opacity-30 rotate-[60deg] lg:text-5xl">🧅</div>
+  </div>
+
+  <div class="relative z-20 mx-auto max-w-7xl px-6 pt-8 pb-0">
+    <div class="relative flex min-h-[75vh] items-center justify-center">
+      <!-- Main hero text block -->
+      <div class="hero-animate hero-animate-1 relative w-full text-center">
+        <!-- CRAFTED -->
+        <h1 class="heading-display text-[3.5rem] text-white sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem]" style="line-height: 0.85">
+          Crafted
+        </h1>
+
+        <!-- BU___RS line with burger image overlaid -->
+        <div class="relative">
+          <h1 class="heading-display text-[3.5rem] text-white sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem]" style="line-height: 0.85">
+            Bu<span class="invisible inline-block sm:tracking-[0.2em]">rge</span>rs
+          </h1>
+
+          <!-- Real burger photo — absolutely centered, overlapping text -->
+          <div class="absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2">
+            <div class="hero-animate hero-animate-2 relative h-[200px] w-[200px] sm:h-[280px] sm:w-[280px] md:h-[340px] md:w-[340px] lg:h-[420px] lg:w-[420px] xl:h-[480px] xl:w-[480px]">
+              <div class="absolute inset-0 rounded-full" style="background: radial-gradient(circle, rgba(13,74,74,0.3) 0%, transparent 70%)"></div>
+              <img
+                src={brand.burgerHeroImage}
+                alt="Premium crafted burger"
+                class="h-full w-full rounded-full object-cover shadow-2xl"
+                style="filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5)); border: 4px solid rgba(197,162,62,0.3)"
+              />
+              <!-- Gold ring glow -->
+              <div class="absolute -inset-2 rounded-full" style="border: 2px solid rgba(197,162,62,0.2)"></div>
+              <div class="absolute -inset-4 rounded-full" style="border: 1px solid rgba(197,162,62,0.1)"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WITH PREMIUM -->
+        <h1 class="heading-display text-[3.5rem] text-white sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem]" style="line-height: 0.85">
+          With <span class="text-outline">Premium</span>
+        </h1>
+
+        <!-- TASTE -->
+        <h1 class="heading-display text-[3.5rem] text-white sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem]" style="line-height: 0.85">
+          Taste
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-animate hero-animate-2 mx-auto mt-6 max-w-md text-sm leading-relaxed text-white/60 sm:text-base lg:mt-8 lg:max-w-lg">
+          {brand.description}
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="hero-animate hero-animate-2 mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact" class="btn-pill !px-8 !py-4 !text-base">
+            Order Now
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="/menu" class="btn-pill !border-white/30 !bg-transparent !text-white hover:!bg-white/10 !px-8 !py-4 !text-base">
+            View Menu
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee ticker bar -->
+  <div class="hero-animate hero-animate-3 relative z-20 mt-8 overflow-hidden py-5" style={`background-color: ${brand.colors.accent}`}>
+    <div class="marquee-track">
+      {[...brand.marqueeItems, ...brand.marqueeItems, ...brand.marqueeItems, ...brand.marqueeItems].map((item) => (
+        <span class="heading-display mx-8 whitespace-nowrap text-base sm:text-lg" style={`color: ${brand.colors.primary}`}>
+          ✦ {item}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

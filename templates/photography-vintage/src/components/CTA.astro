@@ -1,0 +1,13 @@
+---
+import brand from '../../brand.json';
+---
+<section class="relative py-24 overflow-hidden" style={`background:${brand.colors.bgDark}`}>
+  <div class="absolute inset-0 opacity-10" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1600&q=30'); background-size:cover; background-position:center; filter:grayscale(1)"></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center animate-on-scroll">
+    <h2 class="font-script text-4xl sm:text-5xl lg:text-6xl font-medium text-white leading-tight mb-6">
+      {brand.cta.heading}
+    </h2>
+    <p class="text-sm font-light text-white/60 mb-8">{brand.cta.subheading}</p>
+    <a href="#contact" class="btn-accent-filled">{brand.cta.primary}</a>
+  </div>
+</section>

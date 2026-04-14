@@ -1,0 +1,85 @@
+{
+  "businessName": "Drizzle.",
+  "tagline": "Experience the Language of Taste",
+  "badge": "Made with Love, Served with Joy",
+  "description": "Blending tradition & innovation to create unforgettable dining experiences.",
+  "colors": {
+    "primary": "#1a1a1a",
+    "accent": "#B91C1C",
+    "accentLight": "#FEF2F2",
+    "cream": "#FAF7F2",
+    "warm": "#F5EDE3",
+    "text": "#1a1a1a",
+    "textLight": "#6B6B6B"
+  },
+  "logoUrl": "",
+  "heroImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400&q=80",
+  "aboutImage": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
+  "galleryImages": [
+    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80",
+    "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=80",
+    "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80",
+    "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400&q=80",
+    "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&q=80",
+    "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&q=80"
+  ],
+  "contact": {
+    "email": "hello@drizzle.com",
+    "phone": "(555) 867-5309",
+    "address": "128 Heritage Lane, Portland, OR 97201"
+  },
+  "menuCategories": [
+    { "title": "Main Course", "subtitle": "Where bold flavors and perfect meet", "icon": "utensils" },
+    { "title": "Soups & Salads", "subtitle": "Light, healthy, and packed with flavor", "icon": "leaf" },
+    { "title": "Vegan & Vegetarian", "subtitle": "Colorful creations inspired by nature", "icon": "plant" },
+    { "title": "Beverages / Drinks", "subtitle": "Sip, savor, and refresh your senses", "icon": "glass" }
+  ],
+  "menuHighlights": [
+    "Seafood Delights",
+    "Pasta & Risotto",
+    "Classic Favorites",
+    "Wraps & Sandwiches",
+    "Light & Healthy",
+    "Vegan Desserts",
+    "Mocktails & Specialty Drinks",
+    "Juices & Smoothies"
+  ],
+  "testimonials": [
+    {
+      "quote": "Every bite was a burst of flavor! The ambiance, service, and presentation were flawless. Definitely one of the best dining experiences I've had in a long time.",
+      "author": "Daniel Johnson",
+      "location": "California, USA",
+      "rating": "4.9"
+    },
+    {
+      "quote": "The staff was incredibly welcoming, and the dishes were beautifully prepared. You can tell they use the freshest ingredients. Highly recommend the chef's special.",
+      "author": "Sophia Lee",
+      "location": "New York, USA",
+      "rating": "5.0"
+    },
+    {
+      "quote": "We celebrated my parents' anniversary here, and everything was perfect. From the decor to the desserts, it was an unforgettable evening.",
+      "author": "Emily Carter",
+      "location": "Texas, USA",
+      "rating": "5.0"
+    }
+  ],
+  "about": {
+    "heading": "Blending tradition & innovation to create unforgettable dining experiences",
+    "tagline": "Experience the perfect harmony of heritage",
+    "text": "At Drizzle, every dish tells a story. We source the finest seasonal ingredients from local farms and artisan producers, transforming them into culinary experiences that honor tradition while embracing innovation."
+  },
+  "cta": {
+    "heading": "Reserve your spot! ultimate joy of dining done right",
+    "buttonText": "Reserve Your Table",
+    "buttonLink": "/contact"
+  },
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Our Menu", "href": "/menu" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Gallery", "href": "/about" },
+    { "label": "Reservations", "href": "/contact" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

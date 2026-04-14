@@ -1,0 +1,33 @@
+---
+import brand from '../../brand.json';
+---
+<footer style={`background:${brand.colors.dark}; color:${brand.colors.white}`}>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <!-- Brand -->
+      <div>
+        <a href="#" class="font-script text-2xl tracking-wide text-white">{brand.name}</a>
+        <p class="text-xs font-light mt-3 leading-relaxed" style="color:rgba(255,255,255,0.5)">{brand.footer.tagline}</p>
+      </div>
+      <!-- Link columns -->
+      {brand.footer.columns.map((col: any) => (
+        <div>
+          <h4 class="text-xs tracking-[0.15em] uppercase font-medium mb-4" style="color:rgba(255,255,255,0.7)">{col.title}</h4>
+          <ul class="space-y-2">
+            {col.links.map((link: string) => (
+              <li><a href="#" class="text-xs font-light transition-colors hover:text-white" style="color:rgba(255,255,255,0.4)">{link}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="mt-14 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4" style="border-top:1px solid rgba(255,255,255,0.1)">
+      <p class="text-[10px] tracking-[0.1em]" style="color:rgba(255,255,255,0.3)">&copy; {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
+      <div class="flex gap-4">
+        {brand.footer.socials.map((s: any) => (
+          <a href={s.href} class="text-[10px] tracking-[0.1em] uppercase hover:text-white transition-colors" style="color:rgba(255,255,255,0.4)">{s.name}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,42 @@
+---
+import brand from '../../brand.json';
+---
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <img src={brand.hero.image} alt="" class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0" style="background:linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.6) 100%)"></div>
+
+  <div class="relative z-10 text-center max-w-4xl mx-auto px-6 pt-24">
+    <h1 class="hero-animate hero-animate-2 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-[0.04em] text-white">
+      {brand.hero.heading}
+    </h1>
+    <div class="hero-animate hero-animate-3 mt-10">
+      <a href="#contact" class="btn-primary" style="background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.3); color:white;">
+        {brand.hero.cta}
+      </a>
+    </div>
+  </div>
+
+  <!-- Bottom bar: social icons + call to action links -->
+  <div class="absolute bottom-0 left-0 right-0 hero-animate hero-animate-4">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex items-center justify-between" style="border-top:1px solid rgba(255,255,255,0.2)">
+      <div class="flex items-center gap-6">
+        <a href="#" class="flex items-center gap-2 text-[10px] tracking-[0.15em] uppercase text-white/70 hover:text-white transition-colors">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Call Us
+        </a>
+        <a href="#" class="flex items-center gap-2 text-[10px] tracking-[0.15em] uppercase text-white/70 hover:text-white transition-colors">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Live Preview
+        </a>
+      </div>
+      <div class="flex items-center gap-2 text-[10px] tracking-[0.15em] uppercase text-white/70">
+        Follow Us
+        <div class="flex gap-3 ml-2">
+          {brand.hero.socials.map((s: string) => (
+            <a href="#" class="text-white/50 hover:text-white transition-colors text-[10px]">{s.charAt(0)}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

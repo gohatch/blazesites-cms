@@ -1,0 +1,104 @@
+{
+  "name": "Meridian Consulting",
+  "tagline": "Strategic excellence, measurable results",
+  "description": "Premium consulting firm delivering transformative strategy, operations, and digital solutions for forward-thinking enterprises.",
+  "phone": "+1 (212) 555-0187",
+  "email": "contact@meridianconsulting.com",
+  "address": "One World Trade Center, Suite 8500, New York, NY 10007",
+  "colors": {
+    "primary": "#1E293B",
+    "primaryDark": "#0F172A",
+    "primaryLight": "#334155",
+    "accent": "#D97706",
+    "accentLight": "#F59E0B",
+    "bg": "#F8FAFC",
+    "bgDark": "#0F172A",
+    "white": "#FFFFFF",
+    "text": "#0F172A",
+    "textMuted": "#64748B",
+    "border": "#E2E8F0"
+  },
+  "nav": [
+    { "label": "Services", "href": "#services" },
+    { "label": "About", "href": "#about" },
+    { "label": "Team", "href": "#team" },
+    { "label": "Pricing", "href": "#pricing" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "Trusted by Fortune 500 Leaders",
+    "heading": "Transform your business with strategic clarity",
+    "subheading": "We partner with ambitious organizations to solve complex challenges, unlock growth, and build lasting competitive advantage through data-driven strategy and execution.",
+    "cta": "Schedule a Consultation",
+    "ctaSecondary": "View Case Studies",
+    "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80",
+    "stats": [
+      { "value": "500+", "label": "Projects Delivered" },
+      { "value": "$2.4B", "label": "Client Value Created" },
+      { "value": "98%", "label": "Client Retention" }
+    ]
+  },
+  "services": [
+    { "name": "Strategy", "desc": "Define winning strategies with market analysis, competitive positioning, and roadmaps that drive measurable growth.", "icon": "chess", "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" },
+    { "name": "Operations", "desc": "Optimize processes, reduce costs, and build resilient supply chains that scale with your ambitions.", "icon": "cog", "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" },
+    { "name": "Digital Transformation", "desc": "Modernize your technology stack, automate workflows, and create seamless digital experiences.", "icon": "lightning", "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" },
+    { "name": "Financial Advisory", "desc": "Navigate M&A, restructuring, and capital strategy with rigorous financial modeling and due diligence.", "icon": "chart", "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80" },
+    { "name": "Growth", "desc": "Accelerate revenue through market expansion, pricing optimization, and go-to-market excellence.", "icon": "trending", "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" },
+    { "name": "Change Management", "desc": "Lead organizational transformation with stakeholder alignment, culture design, and adoption programs.", "icon": "people", "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" }
+  ],
+  "about": {
+    "heading": "Trusted advisors for transformative outcomes",
+    "body": "For over two decades, Meridian has been the strategic partner of choice for enterprises navigating complexity. Our consultants combine deep industry expertise with rigorous analytical frameworks to deliver solutions that are both visionary and actionable. We don't just advise — we embed alongside your teams to ensure execution excellence.",
+    "values": [
+      { "icon": "target", "title": "Results-Driven", "desc": "Every engagement is measured by tangible business impact." },
+      { "icon": "shield", "title": "Trusted Partners", "desc": "Confidential, ethical, and deeply committed to your success." },
+      { "icon": "globe", "title": "Global Reach", "desc": "Offices in 12 countries with expertise across every major market." },
+      { "icon": "lightbulb", "title": "Innovation First", "desc": "Proprietary frameworks and cutting-edge methodologies." }
+    ],
+    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80"
+  },
+  "stats": [
+    { "value": "500", "suffix": "+", "label": "Projects Delivered" },
+    { "value": "98", "suffix": "%", "label": "Client Retention" },
+    { "value": "12", "suffix": "", "label": "Global Offices" },
+    { "value": "2.4", "suffix": "B+", "label": "Value Created" }
+  ],
+  "team": [
+    { "name": "Victoria Harrington", "role": "Managing Partner & CEO", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" },
+    { "name": "James Whitfield", "role": "Head of Strategy", "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
+    { "name": "Amara Osei", "role": "Director of Operations", "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" },
+    { "name": "David Chen", "role": "Head of Digital", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" }
+  ],
+  "testimonials": [
+    { "quote": "Meridian helped us navigate a complex merger that doubled our market share. Their strategic clarity and hands-on approach made all the difference during a critical transformation.", "name": "Robert Kellner", "role": "CEO, Apex Industries", "avatar": "RK" },
+    { "quote": "The digital transformation roadmap they built saved us $18M annually and positioned us as the technology leader in our sector. Exceptional execution from day one.", "name": "Sarah Mitchell", "role": "CTO, Vanguard Health", "avatar": "SM" },
+    { "quote": "Working with Meridian was a turning point. Their operations team identified inefficiencies we'd overlooked for years and delivered results within the first quarter.", "name": "Marcus Thompson", "role": "COO, Sterling Logistics", "avatar": "MT" }
+  ],
+  "pricing": [
+    { "name": "Advisory", "price": "5,000", "period": "per month", "desc": "Strategic guidance for growing businesses ready to scale.", "features": ["Monthly strategy sessions", "Market analysis reports", "Quarterly business review", "Email support"], "cta": "Get Started", "highlight": false },
+    { "name": "Partnership", "price": "15,000", "period": "per month", "desc": "Full-service consulting with embedded team support.", "features": ["Dedicated consultant team", "Weekly strategy sessions", "Custom frameworks & tools", "Priority support", "Stakeholder presentations"], "cta": "Schedule Call", "highlight": true },
+    { "name": "Enterprise", "price": "Custom", "period": "engagement", "desc": "Tailored solutions for large-scale transformations.", "features": ["Everything in Partnership", "C-suite advisory board", "Global team deployment", "Change management", "Ongoing optimization", "Board-level reporting"], "cta": "Contact Us", "highlight": false }
+  ],
+  "cta": {
+    "heading": "Ready to transform your organization?",
+    "subheading": "Schedule a confidential consultation with our senior partners. No obligation, no pressure — just strategic clarity.",
+    "primary": "Book Your Consultation"
+  },
+  "contact": {
+    "heading": "Let's start a conversation",
+    "subheading": "Tell us about your challenge. Our team will respond within 24 hours with a tailored approach.",
+    "hours": [
+      { "days": "Monday - Friday", "time": "8:00 AM - 7:00 PM EST" },
+      { "days": "Saturday", "time": "By appointment" },
+      { "days": "Sunday", "time": "Closed" }
+    ]
+  },
+  "footer": {
+    "tagline": "Strategy. Execution. Results.",
+    "socials": [
+      { "name": "LinkedIn", "href": "#" },
+      { "name": "Twitter", "href": "#" },
+      { "name": "Instagram", "href": "#" }
+    ]
+  }
+}

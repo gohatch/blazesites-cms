@@ -1,0 +1,28 @@
+---
+import brand from '../../brand.json';
+---
+<section id="courses" class="section-padding" style={`background:${brand.colors.white}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2" style={`color:${brand.colors.primary}`}>Browse Categories</p>
+      <h2 class="font-display text-3xl sm:text-4xl" style={`color:${brand.colors.text}`}>Explore Our Courses</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children">
+      {brand.services.map((svc: any) => (
+        <div class="group card-hover overflow-hidden cursor-pointer" style={`background:${brand.colors.bg}; border:1px solid ${brand.colors.border}`}>
+          <div class="h-44 overflow-hidden">
+            <img src={svc.image} alt={svc.name} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xl">{svc.icon}</span>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style={`background:${brand.colors.primary}10; color:${brand.colors.primary}`}>{svc.count}</span>
+            </div>
+            <h3 class="font-display text-lg mb-1" style={`color:${brand.colors.text}`}>{svc.name}</h3>
+            <p class="text-xs font-light leading-relaxed" style={`color:${brand.colors.textMuted}`}>{svc.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

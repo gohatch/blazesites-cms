@@ -1,0 +1,30 @@
+---
+import brand from '../../brand.json';
+---
+<section class="relative overflow-hidden py-20" style={`background-color: ${brand.colors.accent}`}>
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute -left-20 -top-20 h-60 w-60 rounded-full bg-white blur-3xl"></div>
+    <div class="absolute -bottom-20 -right-20 h-60 w-60 rounded-full bg-white blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-6">
+    <div class="stagger-children grid grid-cols-2 gap-8 md:grid-cols-4">
+      {brand.stats.map((stat: { value: number; suffix: string; label: string }) => (
+        <div class="text-center">
+          <p
+            class="heading-font text-4xl font-bold text-white md:text-5xl"
+            data-counter
+            data-target={stat.value}
+            data-suffix={stat.suffix}
+          >
+            0{stat.suffix}
+          </p>
+          <p class="mt-2 text-sm font-medium text-white opacity-80">
+            {stat.label}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

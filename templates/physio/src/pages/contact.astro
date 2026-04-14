@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+import brand from '../../brand.json';
+---
+<Layout title="Contact" description={`Get in touch with ${brand.businessName} for a free estimate`}>
+  <Header />
+  <Hero
+    heading="Let's Talk About Your Project"
+    subheading="Get a free, no-obligation estimate. We'll walk you through the process and answer every question."
+    ctaText="Call Us Now"
+    ctaLink={`tel:${brand.contact.phone}`}
+  />
+  <ContactForm />
+  <Footer />
+</Layout>

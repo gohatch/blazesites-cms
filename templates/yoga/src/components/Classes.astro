@@ -1,0 +1,57 @@
+---
+import brand from '../../brand.json';
+---
+<section id="classes" class="section-padding" style={`background-color: ${brand.colors.bg}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+      <div class="section-label justify-center">Our Offerings</div>
+      <h2 class="font-serif text-4xl sm:text-5xl font-medium leading-tight" style={`color: ${brand.colors.primaryDark}`}>
+        Classes for every journey
+      </h2>
+      <p class="mt-4 text-base font-light" style={`color: ${brand.colors.textLight}`}>
+        From your very first sun salutation to advanced flow sequences, we have a class that meets you where you are.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
+      {brand.classes.map((cls: any) => (
+        <div class="group bg-white rounded-2xl overflow-hidden card-hover">
+          <!-- Arch image -->
+          <div class="relative h-64 overflow-hidden">
+            <div class="absolute inset-0" style="border-radius: 0 0 50% 50% / 0 0 30% 30%;">
+              <img
+                src={cls.image}
+                alt={cls.name}
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 50%, rgba(255,255,255,0.15))"></div>
+            </div>
+            <!-- Level badge -->
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-medium text-white" style="background-color: rgba(74,124,89,0.85); backdrop-filter: blur(4px);">
+              {cls.level}
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-serif text-xl font-medium" style={`color: ${brand.colors.primaryDark}`}>{cls.name}</h3>
+              <span class="text-xs font-light flex items-center gap-1" style={`color: ${brand.colors.textLight}`}>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                {cls.duration}
+              </span>
+            </div>
+            <p class="text-sm font-light leading-relaxed" style={`color: ${brand.colors.textLight}`}>{cls.desc}</p>
+            <a href="#contact" class="mt-5 inline-flex items-center gap-1.5 text-sm font-medium transition-colors" style={`color: ${brand.colors.primary}`}>
+              Book class
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

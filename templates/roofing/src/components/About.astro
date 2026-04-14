@@ -1,0 +1,63 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding bg-white">
+  <div class="mx-auto max-w-7xl">
+    <!-- About Section -->
+    <div class="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+      <div class="animate-on-scroll from-left">
+        <p class="text-sm font-semibold" style={`color: ${brand.colors.accent}`}>Our About</p>
+        <h2 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Three Generations of<br />
+          <span style={`color: ${brand.colors.accent}; font-style: italic`}>{brand.about.accentWord}</span>
+        </h2>
+        <p class="mt-6 text-base leading-relaxed" style={`color: ${brand.colors.textLight}`}>{brand.about.text}</p>
+        <p class="mt-4 text-base leading-relaxed" style={`color: ${brand.colors.textLight}`}>{brand.about.text2}</p>
+
+        <a href="/about" class="mt-6 inline-flex items-center gap-2 rounded-lg border-2 px-5 py-2.5 text-sm font-semibold transition-colors" style={`border-color: ${brand.colors.text}; color: ${brand.colors.text}`}>
+          Read More
+        </a>
+      </div>
+      <div class="animate-on-scroll from-right">
+        <img
+          src={brand.aboutImage}
+          alt="About us"
+          class="rounded-2xl object-cover shadow-lg"
+          style="aspect-ratio: 4/5"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mt-24 grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <div class="animate-on-scroll from-left order-2 lg:order-1">
+        <div class="grid grid-cols-2 gap-4">
+          <img
+            src={brand.missionImage}
+            alt="Our mission"
+            class="rounded-2xl object-cover shadow-lg"
+            style="aspect-ratio: 3/4"
+            loading="lazy"
+          />
+          <img
+            src={brand.aboutImage}
+            alt="Our work"
+            class="mt-8 rounded-2xl object-cover shadow-lg"
+            style="aspect-ratio: 3/4"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div class="animate-on-scroll from-right order-1 lg:order-2">
+        <div class="flex h-12 w-12 items-center justify-center rounded-xl" style={`background-color: ${brand.colors.accentLight}`}>
+          <svg class="h-6 w-6" style={`color: ${brand.colors.accent}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h2 class="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Our Mission</h2>
+        <p class="mt-6 text-base leading-relaxed" style={`color: ${brand.colors.textLight}`}>{brand.about.mission}</p>
+      </div>
+    </div>
+  </div>
+</section>

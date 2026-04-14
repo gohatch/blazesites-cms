@@ -1,0 +1,73 @@
+---
+import brand from '../../brand.json';
+---
+
+<section id="team" style="padding: 6rem 1.5rem; background-color: #FDFCF8;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <!-- Header -->
+    <div class="fade-up" style="text-align: center; margin-bottom: 4rem;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+        <span style="font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A68B3C;">The Team</span>
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+      </div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 500; color: #2A2A1E; margin-bottom: 1rem;">
+        Meet Our Experienced Team
+      </h2>
+      <p style="font-size: 1rem; font-weight: 300; color: #6B6B5A; max-width: 500px; margin: 0 auto;">
+        Dedicated professionals committed to delivering exceptional real estate experiences.
+      </p>
+    </div>
+
+    <!-- Team Grid -->
+    <div class="stagger-children" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;" id="team-grid">
+      {brand.team.map((member) => (
+        <div class="card-hover" style="text-align: center; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(42, 42, 30, 0.05);">
+          <!-- Photo -->
+          <div class="img-zoom" style="height: 300px; overflow: hidden; position: relative;">
+            <img src={member.image} alt={member.name} style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+            <!-- Overlay on hover -->
+            <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(42, 42, 30, 0.6) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s ease;" class="team-overlay"></div>
+            <!-- Social icons -->
+            <div style="position: absolute; bottom: 1rem; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 0.75rem; opacity: 0; transform: translateY(10px); transition: all 0.3s ease;" class="team-social">
+              <a href="#" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.9); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='#A68B3C'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.9)'" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#2A2A1E" stroke="none">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a href="#" style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.9); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='#A68B3C'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.9)'" aria-label="Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A2A1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Info -->
+          <div style="padding: 1.5rem;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.125rem; font-weight: 600; color: #2A2A1E; margin-bottom: 0.25rem;">
+              {member.name}
+            </h3>
+            <p style="font-size: 0.8125rem; font-weight: 400; color: #A68B3C; letter-spacing: 0.03em;">
+              {member.role}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 768px) {
+    #team-grid {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+  }
+  .card-hover:hover .team-overlay {
+    opacity: 1 !important;
+  }
+  .card-hover:hover .team-social {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>

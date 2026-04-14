@@ -1,0 +1,120 @@
+{
+  "businessName": "Realest",
+  "tagline": "Your Real Estate Journey Starts Here",
+  "description": "Trusted real estate agency helping people find their dream homes with personalized service and expert market knowledge.",
+  "colors": {
+    "primary": "#0F1D2E",
+    "accent": "#3B82F6",
+    "light": "#F8FAFC",
+    "text": "#1A1A2E",
+    "textLight": "#64748B"
+  },
+  "logoUrl": "",
+  "heroImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1400&q=80",
+  "aboutImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+  "propertyImages": [
+    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80",
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+    "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80",
+    "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=600&q=80",
+    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80",
+    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80"
+  ],
+  "properties": [
+    { "title": "Modern Villa Estate", "location": "Beverly Hills, CA", "price": "$2,450,000", "beds": 5, "baths": 4, "sqft": "4,200" },
+    { "title": "Luxury Penthouse Suite", "location": "Manhattan, NY", "price": "$3,800,000", "beds": 4, "baths": 3, "sqft": "3,100" },
+    { "title": "Coastal Beach House", "location": "Malibu, CA", "price": "$1,950,000", "beds": 3, "baths": 3, "sqft": "2,800" },
+    { "title": "Urban Loft Residence", "location": "Brooklyn, NY", "price": "$1,200,000", "beds": 2, "baths": 2, "sqft": "1,800" },
+    { "title": "Hillside Retreat", "location": "Aspen, CO", "price": "$4,100,000", "beds": 6, "baths": 5, "sqft": "5,500" },
+    { "title": "Lakefront Cottage", "location": "Lake Tahoe, NV", "price": "$1,750,000", "beds": 4, "baths": 3, "sqft": "3,200" }
+  ],
+  "contact": {
+    "email": "hello@realest.com",
+    "phone": "(555) 234-5678",
+    "address": "450 Park Avenue, Suite 200, New York, NY 10022"
+  },
+  "services": [
+    {
+      "title": "Property Buying & Selling",
+      "description": "Expert guidance through every step of buying or selling your property with market insights and negotiation expertise.",
+      "icon": "home"
+    },
+    {
+      "title": "Rental Solutions",
+      "description": "Find the perfect rental property or list your property with our comprehensive rental management services.",
+      "icon": "key"
+    },
+    {
+      "title": "Property Management",
+      "description": "Full-service property management including maintenance, tenant relations, and financial reporting.",
+      "icon": "building"
+    },
+    {
+      "title": "Real Estate Consulting",
+      "description": "Strategic advice on real estate investments, market analysis, and portfolio optimization for maximum returns.",
+      "icon": "chart"
+    }
+  ],
+  "stats": [
+    { "value": "1200+", "label": "Properties Sold", "numericValue": 1200 },
+    { "value": "250+", "label": "Happy Clients", "numericValue": 250 },
+    { "value": "$10M+", "label": "In Total Sales", "numericValue": 10, "prefix": "$", "suffix": "M+" },
+    { "value": "90%", "label": "Client Retention", "numericValue": 90, "suffix": "%" }
+  ],
+  "team": [
+    { "name": "James Mitchell", "role": "Senior Real Estate Agent", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+    { "name": "Sarah Chen", "role": "Property Consultant", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" },
+    { "name": "David Okafor", "role": "Investment Advisor", "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
+    { "name": "Emily Rodriguez", "role": "Rental Specialist", "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" }
+  ],
+  "testimonials": [
+    {
+      "quote": "Realest made finding our dream home an absolute breeze. Their team was professional, responsive, and truly understood what we were looking for.",
+      "name": "Michael & Lisa Thompson",
+      "role": "Homeowners, Beverly Hills"
+    },
+    {
+      "quote": "The investment advice from the Realest team helped us build a property portfolio that consistently delivers strong returns. Highly recommended.",
+      "name": "Robert Nakamura",
+      "role": "Property Investor"
+    },
+    {
+      "quote": "From the first viewing to handing over the keys, the entire experience was seamless. Realest truly cares about their clients.",
+      "name": "Amanda Foster",
+      "role": "First-Time Buyer, Manhattan"
+    }
+  ],
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "Properties", "href": "#properties" },
+    { "label": "Services", "href": "#services" },
+    { "label": "About", "href": "#about" },
+    { "label": "FAQs", "href": "#faq" }
+  ],
+  "faqs": [
+    {
+      "question": "How do I start my property search?",
+      "answer": "Simply browse our property listings or contact one of our agents to discuss your requirements. We'll match you with properties that fit your budget, location preferences, and lifestyle needs."
+    },
+    {
+      "question": "What are the costs involved in buying a home?",
+      "answer": "Beyond the purchase price, buyers should budget for closing costs (typically 2-5% of the purchase price), home inspection fees, appraisal costs, and potential moving expenses. Our team will provide a detailed breakdown tailored to your situation."
+    },
+    {
+      "question": "Do you help with mortgage pre-approval?",
+      "answer": "While we don't directly provide mortgages, we work closely with trusted lending partners who offer competitive rates. We'll connect you with the right lender and guide you through the pre-approval process."
+    },
+    {
+      "question": "How long does it take to sell a property?",
+      "answer": "The timeline varies based on market conditions, pricing, and location. On average, our listings sell within 30-60 days. Our marketing strategies and extensive buyer network help achieve faster sales at optimal prices."
+    },
+    {
+      "question": "What property management services do you offer?",
+      "answer": "Our property management covers tenant screening, rent collection, maintenance coordination, financial reporting, and legal compliance. We handle everything so you can enjoy passive income without the hassle."
+    },
+    {
+      "question": "Can you help with real estate investment strategy?",
+      "answer": "Absolutely. Our consulting team provides market analysis, investment property identification, ROI projections, and portfolio diversification strategies to help you build wealth through real estate."
+    }
+  ]
+}

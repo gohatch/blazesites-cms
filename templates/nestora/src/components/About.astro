@@ -1,0 +1,83 @@
+---
+import brand from '../../brand.json';
+---
+
+<section id="about" style="padding: 7rem 1.5rem 4rem; background-color: #FDFCF8;">
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+    <!-- Label -->
+    <div class="fade-up" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 2rem;">
+      <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+      <span style="font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A68B3C;">{brand.about.label}</span>
+      <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+    </div>
+
+    <!-- Heading with mixed weights -->
+    <h2 class="fade-up" style="font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.3; color: #2A2A1E; max-width: 750px; margin: 0 auto 1.5rem;">
+      <span style="font-weight: 400;">We are a team of </span>
+      <span style="font-weight: 700;">passionate expert</span>
+      <span style="font-weight: 400;"> creating </span>
+      <span style="font-weight: 700;">thoughtful, sustainable,</span>
+      <span style="font-weight: 400;"> and </span>
+      <span style="font-weight: 700;">inspiring spaces.</span>
+    </h2>
+
+    <p class="fade-up" style="font-size: 1rem; font-weight: 300; color: #6B6B5A; max-width: 600px; margin: 0 auto 3rem; line-height: 1.8;">
+      {brand.about.description}
+    </p>
+
+    <!-- Team Avatars -->
+    <div class="fade-up" style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+      <div style="display: flex; align-items: center;">
+        {brand.team.map((member, i) => (
+          <div style={`width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 3px solid #FDFCF8; margin-left: ${i === 0 ? '0' : '-12px'}; position: relative; z-index: ${4 - i};`}>
+            <img src={member.image} alt={member.name} style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
+          </div>
+        ))}
+        <div style="width: 52px; height: 52px; border-radius: 50%; background-color: #A68B3C; display: flex; align-items: center; justify-content: center; margin-left: -12px; position: relative; z-index: 0; border: 3px solid #FDFCF8;">
+          <span style="color: #ffffff; font-size: 0.75rem; font-weight: 500;">20+</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="fade-up" style="font-size: 0.8125rem; font-weight: 400; color: #6B6B5A; letter-spacing: 0.02em;">
+      Trusted by <span style="font-weight: 600; color: #2A2A1E;">500+</span> happy homeowners
+    </p>
+  </div>
+</section>
+
+<!-- Achievements Section -->
+<section style="padding: 4rem 1.5rem 6rem; background-color: #FDFCF8;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="fade-up" style="text-align: center; margin-bottom: 3.5rem;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+        <span style="font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A68B3C;">Our Track Record</span>
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+      </div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 500; color: #2A2A1E;">
+        Our Achievements
+      </h2>
+    </div>
+
+    <div class="stagger-children" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;" id="stats-grid">
+      {brand.stats.map((stat) => (
+        <div style="text-align: center; padding: 2rem 1rem;">
+          <div style="font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 600; color: #A68B3C; margin-bottom: 0.5rem; line-height: 1;">
+            <span class="counter" data-target={stat.value.toString()} data-suffix={stat.suffix}>0{stat.suffix}</span>
+          </div>
+          <p style="font-size: 0.9375rem; font-weight: 400; color: #6B6B5A; letter-spacing: 0.02em;">
+            {stat.label}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 768px) {
+    #stats-grid {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+  }
+</style>

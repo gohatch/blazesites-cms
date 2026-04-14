@@ -1,0 +1,231 @@
+---
+import brand from '../../brand.json';
+
+const caseTypes = [
+  'Corporate Law',
+  'Family Law',
+  'Criminal Defense',
+  'Real Estate Law',
+  'Employment Law',
+  'Personal Injury',
+  'Other',
+];
+---
+<section id="contact" class="section-padding" style={`background-color: ${brand.colors.bg}`}>
+  <div class="mx-auto max-w-7xl">
+    <!-- Section header -->
+    <div class="animate-on-scroll mb-16 text-center">
+      <div class="mb-4 flex items-center justify-center gap-3">
+        <div class="h-px w-8" style={`background-color: ${brand.colors.accent}`}></div>
+        <span
+          class="text-xs font-semibold uppercase tracking-[0.2em]"
+          style={`color: ${brand.colors.accent}`}
+        >
+          Contact Us
+        </span>
+        <div class="h-px w-8" style={`background-color: ${brand.colors.accent}`}></div>
+      </div>
+      <h2
+        class="font-serif text-3xl font-bold sm:text-4xl lg:text-5xl"
+        style={`color: ${brand.colors.primary}; font-family: 'Playfair Display', Georgia, serif`}
+      >
+        Get in Touch
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+        Ready to discuss your case? Fill out the form below or contact us directly. All consultations are confidential.
+      </p>
+    </div>
+
+    <!-- Two-column layout -->
+    <div class="grid gap-12 lg:grid-cols-5 lg:gap-16">
+      <!-- Form column (wider) -->
+      <div class="animate-on-scroll from-left lg:col-span-3">
+        <form class="space-y-6">
+          <div class="grid gap-6 sm:grid-cols-2">
+            <!-- Name -->
+            <div>
+              <label class="mb-2 block text-sm font-medium" style={`color: ${brand.colors.primary}`}>
+                Full Name *
+              </label>
+              <input
+                type="text"
+                placeholder="John Smith"
+                class="form-input"
+                required
+              />
+            </div>
+            <!-- Email -->
+            <div>
+              <label class="mb-2 block text-sm font-medium" style={`color: ${brand.colors.primary}`}>
+                Email Address *
+              </label>
+              <input
+                type="email"
+                placeholder="john@example.com"
+                class="form-input"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="grid gap-6 sm:grid-cols-2">
+            <!-- Phone -->
+            <div>
+              <label class="mb-2 block text-sm font-medium" style={`color: ${brand.colors.primary}`}>
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                placeholder="(555) 123-4567"
+                class="form-input"
+              />
+            </div>
+            <!-- Case type -->
+            <div>
+              <label class="mb-2 block text-sm font-medium" style={`color: ${brand.colors.primary}`}>
+                Case Type
+              </label>
+              <select class="form-input">
+                <option value="">Select a practice area</option>
+                {caseTypes.map(type => (
+                  <option value={type}>{type}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label class="mb-2 block text-sm font-medium" style={`color: ${brand.colors.primary}`}>
+              Tell Us About Your Case
+            </label>
+            <textarea
+              rows="5"
+              placeholder="Please provide a brief description of your legal matter..."
+              class="form-input resize-none"
+            ></textarea>
+          </div>
+
+          <!-- Disclaimer -->
+          <p class="text-xs leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+            By submitting this form, you agree to our privacy policy. All information shared is strictly confidential and protected by attorney-client privilege.
+          </p>
+
+          <!-- Submit -->
+          <button type="submit" class="btn-primary w-full sm:w-auto">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Info column -->
+      <div class="animate-on-scroll from-right lg:col-span-2">
+        <div class="space-y-8">
+          <!-- Office address -->
+          <div>
+            <div class="mb-3 flex items-center gap-3">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-lg"
+                style={`background-color: rgba(201, 168, 76, 0.1); color: ${brand.colors.accent}`}
+              >
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold uppercase tracking-wider" style={`color: ${brand.colors.primary}`}>
+                Office Address
+              </h3>
+            </div>
+            <p class="text-sm leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+              {brand.contact.address}
+            </p>
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <div class="mb-3 flex items-center gap-3">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-lg"
+                style={`background-color: rgba(201, 168, 76, 0.1); color: ${brand.colors.accent}`}
+              >
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold uppercase tracking-wider" style={`color: ${brand.colors.primary}`}>
+                Phone
+              </h3>
+            </div>
+            <a
+              href={`tel:${brand.contact.phone.replace(/[^0-9+]/g, '')}`}
+              class="text-sm font-medium transition-colors hover:opacity-80"
+              style={`color: ${brand.colors.accent}; text-decoration: none`}
+            >
+              {brand.contact.phone}
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <div class="mb-3 flex items-center gap-3">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-lg"
+                style={`background-color: rgba(201, 168, 76, 0.1); color: ${brand.colors.accent}`}
+              >
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold uppercase tracking-wider" style={`color: ${brand.colors.primary}`}>
+                Email
+              </h3>
+            </div>
+            <a
+              href={`mailto:${brand.contact.email}`}
+              class="text-sm font-medium transition-colors hover:opacity-80"
+              style={`color: ${brand.colors.accent}; text-decoration: none`}
+            >
+              {brand.contact.email}
+            </a>
+          </div>
+
+          <!-- Office hours -->
+          <div>
+            <div class="mb-3 flex items-center gap-3">
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-lg"
+                style={`background-color: rgba(201, 168, 76, 0.1); color: ${brand.colors.accent}`}
+              >
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-sm font-semibold uppercase tracking-wider" style={`color: ${brand.colors.primary}`}>
+                Office Hours
+              </h3>
+            </div>
+            <p class="text-sm leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+              {brand.contact.hours}
+            </p>
+          </div>
+
+          <!-- Map placeholder -->
+          <div
+            class="overflow-hidden rounded-xl"
+            style={`background-color: ${brand.colors.white}; border: 1px solid ${brand.colors.border}; aspect-ratio: 16/9`}
+          >
+            <div class="flex h-full w-full items-center justify-center">
+              <div class="text-center">
+                <svg class="mx-auto h-8 w-8 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+                </svg>
+                <p class="mt-2 text-xs" style={`color: ${brand.colors.textLight}`}>Map Location</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

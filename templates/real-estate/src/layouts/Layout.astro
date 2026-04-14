@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import brand from '../../brand.json';
+const { title, description } = Astro.props as { title?: string; description?: string };
+const pageTitle = title ? `${title} | ${brand.businessName}` : brand.businessName;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description || brand.description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style define:vars={{
+    colorPrimary: brand.colors.primary,
+    colorAccent: brand.colors.accent,
+    colorLight: brand.colors.light,
+    colorText: brand.colors.text,
+    colorTextLight: brand.colors.textLight
+  }}>
+    :root {
+      --color-primary: var(--colorPrimary);
+      --color-accent: var(--colorAccent);
+      --color-light: var(--colorLight);
+      --color-text: var(--colorText);
+      --color-text-light: var(--colorTextLight);
+    }
+  </style>
+</head>
+<body class="antialiased" style={`color: ${brand.colors.text}; background-color: #ffffff;`}>
+  <slot />
+  <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '-40px' });
+    document.querySelectorAll('.animate-on-scroll, .stagger-children').forEach(el => observer.observe(el));
+
+    // Counter animation
+    function animateCounters() {
+      document.querySelectorAll('[data-counter]').forEach(el => {
+        const target = parseInt(el.getAttribute('data-counter') || '0');
+        const prefix = el.getAttribute('data-prefix') || '';
+        const suffix = el.getAttribute('data-suffix') || '';
+        let current = 0;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          el.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+        }, 20);
+      });
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const statsSection = document.getElementById('stats-section');
+    if (statsSection) counterObserver.observe(statsSection);
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "Nestora - Discover Homes Built on Trust & Elegance", description = "Premium real estate brand specializing in luxury homes and properties." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --color-primary: #2A2A1E;
+        --color-accent: #A68B3C;
+        --color-cream: #F9F7F2;
+        --color-bg: #FDFCF8;
+        --color-text: #2A2A1E;
+        --color-text-light: #6B6B5A;
+        --color-accent-hover: #8F7732;
+        --color-dark-footer: #1A1A12;
+      }
+    </style>
+  </head>
+  <body style="font-family: 'Poppins', sans-serif; font-weight: 300; color: #2A2A1E; background-color: #FDFCF8; line-height: 1.7; -webkit-font-smoothing: antialiased;">
+    <slot />
+
+    <script>
+      // IntersectionObserver for scroll animations
+      document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              // Don't unobserve stagger-children so they animate each time?
+              // Actually, let's just do it once:
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Observe all animated elements
+        const animatedElements = document.querySelectorAll('.fade-up, .fade-in, .slide-left, .slide-right, .stagger-children');
+        animatedElements.forEach((el) => observer.observe(el));
+
+        // Counter animation
+        const counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const target = parseInt(el.getAttribute('data-target') || '0', 10);
+              const suffix = el.getAttribute('data-suffix') || '';
+              const duration = 2000;
+              const step = Math.max(1, Math.floor(target / (duration / 16)));
+              let current = 0;
+
+              const updateCounter = () => {
+                current += step;
+                if (current >= target) {
+                  current = target;
+                  el.textContent = current + suffix;
+                  return;
+                }
+                el.textContent = current + suffix;
+                requestAnimationFrame(updateCounter);
+              };
+
+              requestAnimationFrame(updateCounter);
+              counterObserver.unobserve(el);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach((el) => counterObserver.observe(el));
+
+        // FAQ accordion
+        const accordionBtns = document.querySelectorAll('.accordion-btn');
+        accordionBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling as HTMLElement;
+            const icon = btn.querySelector('.accordion-icon') as HTMLElement;
+            const isOpen = content.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.accordion-content').forEach((c) => c.classList.remove('open'));
+            document.querySelectorAll('.accordion-icon').forEach((i) => {
+              (i as HTMLElement).style.transform = 'rotate(0deg)';
+            });
+
+            if (!isOpen) {
+              content.classList.add('open');
+              if (icon) icon.style.transform = 'rotate(45deg)';
+            }
+          });
+        });
+
+        // Mobile menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+          // Close on link click
+          mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

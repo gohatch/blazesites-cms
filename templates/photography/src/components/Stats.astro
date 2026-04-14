@@ -1,0 +1,17 @@
+---
+import brand from '../../brand.json';
+---
+<section class="py-14" style={`background:${brand.colors.bg}; border-top:1px solid ${brand.colors.border}; border-bottom:1px solid ${brand.colors.border}`}>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+      {brand.stats.map((stat: any) => (
+        <div class="text-center">
+          <div class="font-display text-4xl sm:text-5xl font-medium mb-1" style={`color:${brand.colors.accent}`}>
+            <span data-counter data-target={stat.value + stat.suffix}>{stat.value}{stat.suffix}</span>
+          </div>
+          <div class="text-[10px] tracking-[0.2em] uppercase font-medium" style={`color:${brand.colors.textMuted}`}>{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

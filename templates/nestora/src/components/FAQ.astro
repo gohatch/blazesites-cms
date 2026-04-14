@@ -1,0 +1,46 @@
+---
+import brand from '../../brand.json';
+---
+
+<section id="faq" style="padding: 6rem 1.5rem; background-color: #F9F7F2;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    <!-- Header -->
+    <div class="fade-up" style="text-align: center; margin-bottom: 4rem;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+        <span style="font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A68B3C;">FAQs</span>
+        <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+      </div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 500; color: #2A2A1E; margin-bottom: 1rem;">
+        Frequently Asked Questions
+      </h2>
+      <p style="font-size: 1rem; font-weight: 300; color: #6B6B5A; max-width: 500px; margin: 0 auto;">
+        Find answers to the most common questions about our services and processes.
+      </p>
+    </div>
+
+    <!-- Accordion -->
+    <div class="fade-up" style="display: flex; flex-direction: column; gap: 0.75rem;">
+      {brand.faq.map((item, i) => (
+        <div style="background-color: #ffffff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 6px rgba(42, 42, 30, 0.04); border: 1px solid rgba(42, 42, 30, 0.06);">
+          <button class="accordion-btn" style="width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; background: none; border: none; cursor: pointer; text-align: left; gap: 1rem;">
+            <span style="font-family: 'Playfair Display', serif; font-size: 1.0625rem; font-weight: 600; color: #2A2A1E; line-height: 1.4;">
+              {item.question}
+            </span>
+            <span class="accordion-icon" style="flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background-color: rgba(166, 139, 60, 0.1); display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease, background-color 0.3s ease;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A68B3C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </span>
+          </button>
+          <div class={`accordion-content${i === 0 ? ' open' : ''}`} style={i === 0 ? 'max-height: 500px;' : ''}>
+            <div style="padding: 0 1.5rem 1.5rem; color: #6B6B5A; font-size: 0.9375rem; font-weight: 300; line-height: 1.8;">
+              {item.answer}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

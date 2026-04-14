@@ -1,0 +1,60 @@
+---
+import brand from '../../brand.json';
+---
+
+<section class="section-padding">
+  <div class="container mx-auto">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      <div class="fade-up">
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Testimonials
+        </div>
+        <h2 class="section-title">What our Members say</h2>
+        <p class="section-desc">
+          Hear from the people who have transformed their lives with Gymastic.
+        </p>
+      </div>
+
+      <a href="#contact" class="btn-primary fade-up shrink-0">
+        Contact Us
+      </a>
+    </div>
+
+    <!-- Testimonial cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {brand.testimonials.map((t, i) => (
+        <div class={`card p-6 fade-up fade-up-delay-${(i % 4) + 1}`}>
+          <!-- Quote icon -->
+          <div class="mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="text-[var(--color-accent)] opacity-40">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" fill="currentColor"/>
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <!-- Quote text -->
+          <p class="text-[var(--color-text-light)] text-sm leading-relaxed mb-6">
+            {t.quote}
+          </p>
+
+          <!-- Author -->
+          <div class="flex items-center gap-3">
+            <img
+              src={t.image}
+              alt={t.author}
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div>
+              <p class="text-sm font-semibold text-white">{t.author}</p>
+              <p class="text-xs text-[var(--color-text-light)]">Member</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

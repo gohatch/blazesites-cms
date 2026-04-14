@@ -1,0 +1,38 @@
+---
+import brand from '../../brand.json';
+---
+<section id="about" class="section-padding" style={`background:${brand.colors.white}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-[1fr_2fr_1fr] gap-8 items-center">
+      <!-- Left: vintage film images -->
+      <div class="hidden lg:block animate-on-scroll from-left">
+        <div class="space-y-4">
+          <div class="img-hover rounded-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?w=400&q=80" alt="" class="w-full h-48 object-cover" style="filter:sepia(0.3)" />
+          </div>
+          <div class="img-hover rounded-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&q=80" alt="" class="w-full h-48 object-cover" style="filter:sepia(0.2)" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Center: text -->
+      <div class="text-center animate-on-scroll">
+        <h2 class="font-script text-4xl sm:text-5xl font-medium mb-6" style={`color:${brand.colors.text}`}>
+          {brand.about.heading}
+        </h2>
+        <p class="text-sm font-light leading-[1.9] mb-6" style={`color:${brand.colors.textMuted}`}>
+          {brand.about.body}
+        </p>
+        <a href="#contact" class="btn-dark">Learn More About Us</a>
+      </div>
+
+      <!-- Right: portrait -->
+      <div class="hidden lg:block animate-on-scroll from-right">
+        <div class="img-hover rounded-lg overflow-hidden">
+          <img src={brand.about.sideImage} alt="" class="w-full h-[420px] object-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

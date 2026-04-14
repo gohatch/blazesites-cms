@@ -1,0 +1,75 @@
+---
+const features = [
+  {
+    title: "Nutrition Guidance",
+    description: "Personalized meal plans and dietary advice tailored to your fitness goals and body type.",
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="m9 12 2 2 4-4"/></svg>`
+  },
+  {
+    title: "Expert Trainers",
+    description: "Certified professionals with years of experience helping athletes reach peak performance.",
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="m9 12 2 2 4-4"/></svg>`
+  },
+  {
+    title: "Progress Tracking",
+    description: "Advanced analytics and real-time metrics to monitor your gains and optimize every workout.",
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="m9 12 2 2 4-4"/></svg>`
+  },
+  {
+    title: "Premium Membership",
+    description: "Exclusive access to state-of-the-art equipment, spa facilities, and VIP training zones.",
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="m9 12 2 2 4-4"/></svg>`
+  },
+  {
+    title: "Community Support",
+    description: "Join a motivated network of fitness enthusiasts who inspire and challenge each other daily.",
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="m9 12 2 2 4-4"/></svg>`
+  },
+  {
+    title: "Next-Level Fitness Studio",
+    description: "A fully equipped, modern training environment designed for maximum performance output.",
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="m9 12 2 2 4-4"/></svg>`
+  }
+];
+---
+
+<section id="features" class="section-padding" style="background-color: #0A0A0A;">
+  <div style="max-width: 1280px; margin: 0 auto;">
+
+    <!-- Section Header -->
+    <div class="fade-up" style="text-align: center; margin-bottom: 4rem;">
+      <span style="color: #B5FF00; font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em;" class="font-heading">Why Choose Us</span>
+      <h2 class="font-heading" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: #FFFFFF; margin-top: 0.75rem; line-height: 1.15;">
+        Inspired to Inspire <span style="color: #B5FF00;">Your Best Self</span>
+      </h2>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="stagger-children" style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem;">
+      {features.map((feature) => (
+        <div class="card-hover" style="background-color: #141414; border-radius: 16px; padding: 2rem; display: flex; align-items: flex-start; gap: 1.25rem;">
+          <div style="flex-shrink: 0; width: 48px; height: 48px; background-color: rgba(181, 255, 0, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+            <Fragment set:html={feature.icon} />
+          </div>
+          <div>
+            <h3 class="font-heading" style="font-size: 1.125rem; font-weight: 600; color: #FFFFFF; margin-bottom: 0.5rem;">{feature.title}</h3>
+            <p style="font-size: 0.9375rem; color: #9CA3AF; line-height: 1.6;">{feature.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 768px) {
+    .stagger-children {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .stagger-children {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+</style>

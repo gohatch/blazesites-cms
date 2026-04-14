@@ -1,0 +1,100 @@
+---
+import '../styles/global.css';
+import brand from '../../brand.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} | ${brand.businessName}` : brand.businessName;
+const pageDesc = description || brand.description;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDesc} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style define:vars={{
+    primary: brand.colors.primary,
+    accent: brand.colors.accent,
+    accentLight: brand.colors.accentLight,
+    light: brand.colors.light,
+    text: brand.colors.text,
+    textLight: brand.colors.textLight,
+  }}>
+    :root {
+      --color-primary: var(--primary);
+      --color-accent: var(--accent);
+      --color-accent-light: var(--accentLight);
+      --color-light: var(--light);
+      --color-text: var(--text);
+      --color-text-light: var(--textLight);
+    }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="antialiased" style={`color: ${brand.colors.text}`}>
+  <slot />
+
+  <script>
+    // Scroll-triggered animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '-40px' });
+
+    document.querySelectorAll('.animate-on-scroll, .stagger-children').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Animated counters
+    function animateCounter(el: Element) {
+      const target = el.getAttribute('data-target') || '0';
+      const match = target.replace(/,/g, '').match(/^([^0-9]*)([\d.]+)(.*)$/);
+      if (!match) { el.textContent = target; return; }
+
+      const prefix = match[1];
+      const num = parseFloat(match[2]);
+      const suffix = match[3];
+      const duration = 2000;
+      const start = performance.now();
+
+      function update(now: number) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        const current = num >= 100 ? Math.round(eased * num).toLocaleString() :
+                       Number.isInteger(num) ? Math.round(eased * num).toString() :
+                       (eased * num).toFixed(1);
+        el.textContent = `${prefix}${current}${suffix}`;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('[data-counter]').forEach(el => {
+      counterObserver.observe(el);
+    });
+  </script>
+</body>
+</html>

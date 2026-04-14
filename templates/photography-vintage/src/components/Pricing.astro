@@ -1,0 +1,38 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background:${brand.colors.white}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-xs tracking-[0.2em] uppercase mb-3" style={`color:${brand.colors.accent}`}>Investment</p>
+      <h2 class="font-script text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>Our Packages</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
+      {brand.pricing.map((plan: any) => (
+        <div class={`relative p-7 rounded-xl transition-all duration-300 hover:-translate-y-1 ${plan.highlight ? '' : ''}`} style={plan.highlight ? `background:${brand.colors.bgDark}; color:${brand.colors.white}` : `background:${brand.colors.bg}; border:1px solid ${brand.colors.border}`}>
+          {plan.highlight && (
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-[10px] tracking-[0.1em] uppercase font-medium" style={`background:${brand.colors.accent}; color:${brand.colors.bgDark}`}>
+              Most Popular
+            </div>
+          )}
+          <h3 class="text-xs tracking-[0.15em] uppercase font-medium mb-4" style={plan.highlight ? 'color:rgba(255,255,255,0.6)' : `color:${brand.colors.textMuted}`}>{plan.name}</h3>
+          <div class="flex items-baseline gap-1 mb-2">
+            <span class="font-serif text-4xl font-medium">${plan.price}</span>
+            <span class="text-xs" style={plan.highlight ? 'color:rgba(255,255,255,0.5)' : `color:${brand.colors.textMuted}`}>{plan.period}</span>
+          </div>
+          <p class="text-xs font-light leading-relaxed mb-6" style={plan.highlight ? 'color:rgba(255,255,255,0.6)' : `color:${brand.colors.textMuted}`}>{plan.desc}</p>
+          <ul class="space-y-2.5 mb-6">
+            {plan.features.map((f: string) => (
+              <li class="flex items-center gap-2 text-sm font-light" style={plan.highlight ? 'color:rgba(255,255,255,0.8)' : `color:${brand.colors.textMuted}`}>
+                <span class="w-1.5 h-1.5 rounded-full flex-shrink-0" style={`background:${brand.colors.accent}`}></span>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a href="#contact" class={plan.highlight ? 'btn-accent-filled w-full justify-center' : 'btn-dark w-full justify-center'}>{plan.cta}</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

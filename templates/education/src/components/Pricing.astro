@@ -1,0 +1,33 @@
+---
+import brand from '../../brand.json';
+---
+<section id="pricing" class="section-padding" style={`background:${brand.colors.white}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2" style={`color:${brand.colors.primary}`}>Simple Pricing</p>
+      <h2 class="font-display text-3xl sm:text-4xl" style={`color:${brand.colors.text}`}>Choose Your Plan</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 stagger-children">
+      {brand.pricing.map((p: any) => (
+        <div class={`relative p-7 rounded-2xl transition-all ${p.highlight ? '' : 'card-hover'}`} style={p.highlight ? `background:${brand.colors.primary}; color:white; transform:scale(1.02); box-shadow:0 20px 40px rgba(30,64,175,0.2)` : `background:${brand.colors.bg}; border:1px solid ${brand.colors.border}`}>
+          {p.highlight && <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold" style={`background:${brand.colors.accent}; color:${brand.colors.text}`}>Most Popular</div>}
+          <h3 class="font-display text-lg mb-1" style={p.highlight ? 'color:white' : `color:${brand.colors.text}`}>{p.name}</h3>
+          <div class="flex items-baseline gap-1 mb-3">
+            <span class="font-display text-4xl">{p.price === '0' ? 'Free' : `$${p.price}`}</span>
+            {p.price !== '0' && <span class="text-xs opacity-60">/{p.period.split(' ').pop()}</span>}
+          </div>
+          <p class="text-xs font-light mb-5" style={p.highlight ? 'color:rgba(255,255,255,0.7)' : `color:${brand.colors.textMuted}`}>{p.desc}</p>
+          <ul class="space-y-2.5 mb-6">
+            {p.features.map((f: string) => (
+              <li class="flex items-center gap-2 text-sm font-light" style={p.highlight ? 'color:rgba(255,255,255,0.85)' : `color:${brand.colors.textMuted}`}>
+                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={`color:${p.highlight ? '#F59E0B' : brand.colors.primary}`}><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a href="#contact" class={p.highlight ? 'btn-accent w-full justify-center' : 'btn-outline w-full justify-center'}>{p.cta}</a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+import brand from '../../brand.json';
+---
+<section class="py-16 sm:py-20" style={`background-color: ${brand.colors.primary}`}>
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="stagger-children grid grid-cols-2 gap-8 md:grid-cols-4">
+      {brand.stats.map((stat, i) => (
+        <div class={`text-center ${i < brand.stats.length - 1 ? 'md:border-r md:border-white/10' : ''}`}>
+          <p
+            class="text-3xl font-extrabold tracking-tight text-white sm:text-5xl"
+            data-counter
+            data-target={stat.value}
+          >
+            0
+          </p>
+          <p class="mt-2 text-xs font-semibold uppercase tracking-widest text-white/50 sm:text-sm">
+            {stat.label}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

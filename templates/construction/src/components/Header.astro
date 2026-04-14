@@ -1,0 +1,71 @@
+---
+import brand from '../../brand.json';
+---
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <a href="/" class="flex items-center gap-3">
+      {brand.logoUrl ? (
+        <img src={brand.logoUrl} alt={brand.businessName} class="h-8 max-w-[140px] object-contain" />
+      ) : (
+        <span class="text-xl font-extrabold tracking-tight text-white">
+          {brand.businessName}
+        </span>
+      )}
+    </a>
+
+    <nav class="hidden items-center gap-8 md:flex">
+      {brand.nav.map(link => (
+        <a href={link.href} class="text-sm font-medium text-white/80 transition-colors hover:text-white">
+          {link.label}
+        </a>
+      ))}
+      <a href="/contact" class="btn-accent !py-2.5 !px-5 !text-sm">
+        Get a Quote
+      </a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button class="text-white md:hidden" id="mobile-menu-btn" aria-label="Menu">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="hidden border-t border-white/10 bg-[var(--color-primary)]/95 backdrop-blur-lg md:hidden" id="mobile-menu">
+    <div class="flex flex-col gap-1 px-6 py-4">
+      {brand.nav.map(link => (
+        <a href={link.href} class="rounded-lg px-4 py-3 text-sm font-medium text-white/80 transition-colors hover:bg-white/10 hover:text-white">
+          {link.label}
+        </a>
+      ))}
+      <a href="/contact" class="btn-accent mt-2 text-center !text-sm">
+        Get a Quote
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Header scroll effect
+  const header = document.getElementById('header')!;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.style.backgroundColor = 'rgba(15, 23, 42, 0.95)';
+      header.style.backdropFilter = 'blur(12px)';
+      header.style.boxShadow = '0 1px 3px rgba(0,0,0,0.2)';
+    } else {
+      header.style.backgroundColor = 'transparent';
+      header.style.backdropFilter = 'none';
+      header.style.boxShadow = 'none';
+    }
+  });
+
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn')!;
+  const menu = document.getElementById('mobile-menu')!;
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>

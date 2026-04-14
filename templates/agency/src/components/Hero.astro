@@ -1,0 +1,56 @@
+---
+import brand from '../../brand.json';
+---
+<section id="home" class="relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-32" style={`background-color: ${brand.colors.background}`}>
+  <!-- Background gradient orbs -->
+  <div class="absolute top-0 left-1/4 h-96 w-96 rounded-full opacity-20 blur-3xl" style={`background-color: ${brand.colors.accent}`}></div>
+  <div class="absolute bottom-0 right-1/4 h-80 w-80 rounded-full opacity-10 blur-3xl" style={`background-color: ${brand.colors.accentLight}`}></div>
+
+  <div class="relative mx-auto max-w-7xl px-6">
+    <!-- Badge -->
+    <div class="hero-animate hero-animate-1 mb-8 flex justify-center">
+      <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium" style={`background-color: ${brand.colors.accent}18; color: ${brand.colors.accentLight}; border: 1px solid ${brand.colors.accent}33`}>
+        <span class="inline-block h-2 w-2 rounded-full" style={`background-color: ${brand.colors.accent}`}></span>
+        Creative Agency
+      </div>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="hero-animate hero-animate-2 heading-font mx-auto max-w-5xl text-center text-4xl font-bold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl" style={`color: ${brand.colors.text}`}>
+      {brand.hero.heading}
+      <span class="gradient-text"> {brand.hero.accentWord}</span>
+    </h1>
+
+    <!-- Subheading -->
+    <p class="hero-animate hero-animate-3 mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed md:text-xl" style={`color: ${brand.colors.textLight}`}>
+      {brand.hero.subheading}
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-animate hero-animate-4 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <a href="#contact" class="btn-primary" style={`background-color: ${brand.colors.accent}; box-shadow: 0 4px 20px ${brand.colors.accent}44`}>
+        {brand.hero.cta}
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+        </svg>
+      </a>
+      <a href="#work" class="btn-outline">
+        {brand.hero.ctaSecondary}
+      </a>
+    </div>
+
+    <!-- Client Logos -->
+    <div class="hero-animate hero-animate-5 mt-20">
+      <p class="mb-6 text-center text-xs font-semibold uppercase tracking-widest" style={`color: ${brand.colors.textLight}`}>
+        Trusted by leading brands
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 opacity-40">
+        {brand.hero.clientLogos.map((logo: string) => (
+          <span class="heading-font text-lg font-bold tracking-tight md:text-xl" style={`color: ${brand.colors.text}`}>
+            {logo}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

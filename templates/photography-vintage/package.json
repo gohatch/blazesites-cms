@@ -1,0 +1,14 @@
+{
+  "name": "photography-vintage-template",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^5.7.10",
+    "tailwindcss": "^4.1.4"
+  }
+}

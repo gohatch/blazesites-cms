@@ -1,0 +1,35 @@
+---
+import brand from '../../brand.json';
+---
+<section id="contact" class="section-padding relative overflow-hidden" style={`background-color: ${brand.colors.primary}`}>
+  <!-- Decorative elements -->
+  <div class="absolute top-0 left-0 h-64 w-64 rounded-full opacity-10" style={`background-color: ${brand.colors.accent}; filter: blur(100px);`}></div>
+  <div class="absolute bottom-0 right-0 h-64 w-64 rounded-full opacity-10" style={`background-color: ${brand.colors.accent}; filter: blur(100px);`}></div>
+
+  <div class="relative mx-auto max-w-3xl text-center">
+    <div class="animate-on-scroll">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl lg:text-5xl">
+        Stay Updated on<br />Latest Properties
+      </h2>
+      <p class="mt-4 text-base text-white/70 md:text-lg">
+        Subscribe to receive the latest property listings, market insights, and exclusive deals directly in your inbox.
+      </p>
+
+      <!-- Email form -->
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          class="rounded-full border border-white/20 bg-white/10 px-6 py-4 text-sm text-white placeholder-white/50 backdrop-blur-sm outline-none transition-colors focus:border-white/40 sm:w-80"
+        />
+        <button class="btn-primary px-8 py-4 text-base" style={`background-color: ${brand.colors.accent}`}>
+          Subscribe
+        </button>
+      </div>
+
+      <p class="mt-4 text-xs text-white/40">
+        No spam, unsubscribe at any time. We respect your privacy.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,104 @@
+{
+  "name": "LearnSpace Academy",
+  "tagline": "Unlock your potential",
+  "description": "Modern online learning platform offering expert-led courses in technology, business, design, and personal development.",
+  "phone": "+1 (555) 920-3340",
+  "email": "hello@learnspace.com",
+  "address": "500 Innovation Drive, San Francisco, CA 94107",
+  "colors": {
+    "primary": "#1E40AF",
+    "primaryDark": "#1E3A5F",
+    "primaryLight": "#3B82F6",
+    "accent": "#F59E0B",
+    "bg": "#FAFBFF",
+    "bgDark": "#0F172A",
+    "white": "#FFFFFF",
+    "text": "#0F172A",
+    "textMuted": "#64748B",
+    "border": "#E2E8F0"
+  },
+  "nav": [
+    { "label": "Courses", "href": "#courses" },
+    { "label": "About", "href": "#about" },
+    { "label": "Instructors", "href": "#team" },
+    { "label": "Pricing", "href": "#pricing" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "Start Learning Today",
+    "heading": "Unlock your potential with expert-led courses",
+    "subheading": "Join thousands of learners mastering new skills in technology, business, and design with courses created by industry professionals.",
+    "cta": "Browse Courses",
+    "ctaSecondary": "Free Trial",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80",
+    "stats": [
+      { "value": "50K+", "label": "Students" },
+      { "value": "200+", "label": "Courses" },
+      { "value": "4.9", "label": "Rating" }
+    ]
+  },
+  "services": [
+    { "name": "Web Development", "desc": "Master modern frameworks — React, Next.js, Node.js and full-stack development.", "icon": "💻", "count": "32 courses", "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&q=80" },
+    { "name": "UI/UX Design", "desc": "Learn design thinking, Figma, prototyping and user research from top designers.", "icon": "🎨", "count": "24 courses", "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80" },
+    { "name": "Data Science", "desc": "Python, machine learning, analytics and AI — the skills employers want most.", "icon": "📊", "count": "28 courses", "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" },
+    { "name": "Digital Marketing", "desc": "SEO, social media, paid ads and content strategy to grow any brand.", "icon": "📱", "count": "18 courses", "image": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80" },
+    { "name": "Business & Leadership", "desc": "Strategy, management, entrepreneurship and negotiation skills.", "icon": "📈", "count": "22 courses", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" },
+    { "name": "Creative Arts", "desc": "Photography, video production, illustration and motion graphics.", "icon": "🎬", "count": "15 courses", "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" }
+  ],
+  "about": {
+    "heading": "Education that works for you",
+    "body": "LearnSpace was built on a simple belief: world-class education should be accessible to everyone. Our courses combine practical, project-based learning with mentorship from industry leaders — so you don't just learn theory, you build real skills that employers value.",
+    "values": [
+      { "icon": "🎯", "title": "Project-Based Learning", "desc": "Build real projects, not just watch lectures." },
+      { "icon": "👥", "title": "Expert Instructors", "desc": "Learn from professionals working at top companies." },
+      { "icon": "📱", "title": "Learn Anywhere", "desc": "Mobile-friendly courses you can take on the go." },
+      { "icon": "🏆", "title": "Certificates", "desc": "Earn credentials recognized by employers worldwide." }
+    ],
+    "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80"
+  },
+  "stats": [
+    { "value": "50000", "suffix": "+", "label": "Active Students" },
+    { "value": "200", "suffix": "+", "label": "Expert Courses" },
+    { "value": "98", "suffix": "%", "label": "Completion Rate" },
+    { "value": "45", "suffix": "+", "label": "Countries" }
+  ],
+  "team": [
+    { "name": "Dr. Sarah Chen", "role": "Data Science Lead", "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" },
+    { "name": "Marcus Rivera", "role": "Web Dev Instructor", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+    { "name": "Priya Sharma", "role": "Design Director", "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80" },
+    { "name": "James Okafor", "role": "Marketing Expert", "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" }
+  ],
+  "testimonials": [
+    { "quote": "LearnSpace completely changed my career trajectory. I went from a junior role to a senior developer in 8 months thanks to their project-based curriculum.", "name": "Alex Kim", "role": "Software Engineer at Stripe", "avatar": "AK" },
+    { "quote": "The design courses are incredible — practical, well-structured, and taught by real professionals. I landed my dream job three months after completing the program.", "name": "Maya Torres", "role": "UX Designer at Figma", "avatar": "MT" },
+    { "quote": "As a career changer, I needed flexible learning. LearnSpace delivered — I studied evenings and weekends and now work full-time in data science.", "name": "Daniel Obi", "role": "Data Analyst at Shopify", "avatar": "DO" }
+  ],
+  "pricing": [
+    { "name": "Free", "price": "0", "period": "forever", "desc": "Explore with free courses and community access.", "features": ["10 free courses", "Community forum", "Course previews", "Mobile app"], "cta": "Get Started", "highlight": false },
+    { "name": "Pro", "price": "29", "period": "per month", "desc": "Full access to all courses and learning tools.", "features": ["All 200+ courses", "Certificates", "Project reviews", "Priority support", "Offline access"], "cta": "Start Free Trial", "highlight": true },
+    { "name": "Teams", "price": "79", "period": "per seat/mo", "desc": "Train your entire team with dedicated support.", "features": ["Everything in Pro", "Team analytics", "Admin dashboard", "Custom learning paths", "Dedicated manager", "Invoice billing"], "cta": "Contact Sales", "highlight": false }
+  ],
+  "cta": {
+    "heading": "Start learning today — for free",
+    "subheading": "Join 50,000+ learners already building their future. No credit card required.",
+    "primary": "Create Free Account"
+  },
+  "contact": {
+    "heading": "Questions?",
+    "subheading": "Our team is here to help you find the right learning path.",
+    "hours": [
+      { "days": "Monday – Friday", "time": "8am – 8pm EST" },
+      { "days": "Saturday", "time": "10am – 4pm EST" },
+      { "days": "Sunday", "time": "Closed" }
+    ]
+  },
+  "footer": {
+    "tagline": "Learn. Build. Grow.",
+    "socials": [
+      { "name": "Twitter", "href": "#" },
+      { "name": "LinkedIn", "href": "#" },
+      { "name": "YouTube", "href": "#" },
+      { "name": "Instagram", "href": "#" }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "name": "FiTusion",
+  "tagline": "Sculpt Your Body, Elevate Your Spirit",
+  "description": "Premium dark-themed fitness center delivering world-class training, expert coaching, and a community that pushes you to your peak performance.",
+  "colors": {
+    "background": "#0A0A0A",
+    "card": "#141414",
+    "accent": "#B5FF00",
+    "text": "#FFFFFF",
+    "textLight": "#9CA3AF",
+    "border": "#222222"
+  },
+  "fonts": {
+    "heading": "Space Grotesk",
+    "body": "Inter"
+  },
+  "nav": [
+    { "label": "Home", "href": "#home" },
+    { "label": "Programs", "href": "#programs", "highlight": true },
+    { "label": "Trainers", "href": "#trainers" },
+    { "label": "Pricing", "href": "#pricing" }
+  ],
+  "hero": {
+    "heading": "Sculpt Your Body, Elevate Your Spirit",
+    "subheading": "Transform your physique with cutting-edge training programs, expert coaches, and a community that pushes your limits.",
+    "cta": "Let's Start",
+    "stat": "12K+ Happy Clients",
+    "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&q=80"
+  },
+  "features": {
+    "heading": "Inspired to Inspire Your Best Self",
+    "items": [
+      { "title": "Nutrition Guidance", "description": "Personalized meal plans and dietary advice tailored to your fitness goals and body type.", "icon": "nutrition" },
+      { "title": "Expert Trainers", "description": "Certified professionals with years of experience helping athletes reach peak performance.", "icon": "trainer" },
+      { "title": "Progress Tracking", "description": "Advanced analytics and real-time metrics to monitor your gains and optimize every workout.", "icon": "tracking" },
+      { "title": "Premium Membership", "description": "Exclusive access to state-of-the-art equipment, spa facilities, and VIP training zones.", "icon": "membership" },
+      { "title": "Community Support", "description": "Join a motivated network of fitness enthusiasts who inspire and challenge each other daily.", "icon": "community" },
+      { "title": "Next-Level Fitness Studio", "description": "A fully equipped, modern training environment designed for maximum performance output.", "icon": "studio" }
+    ]
+  },
+  "categories": {
+    "heading": "Discover What Sets Us Apart",
+    "items": [
+      { "title": "Cardio Training", "description": "High-intensity cardiovascular workouts designed to boost endurance and torch calories.", "icon": "heart" },
+      { "title": "Strength Build", "description": "Progressive overload programs to build raw power, muscle mass, and functional strength.", "icon": "dumbbell" },
+      { "title": "Fat Loss", "description": "Targeted fat-burning routines combining LISS and HIIT for maximum metabolic impact.", "icon": "fire" },
+      { "title": "HIIT Workouts", "description": "Explosive interval training sessions that maximize results in minimal time.", "icon": "bolt" }
+    ]
+  },
+  "programs": {
+    "heading": "Train Smarter, Unleash Your Potential",
+    "items": [
+      { "title": "Barbell Basics", "description": "Master the fundamentals of barbell training for a solid strength foundation.", "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" },
+      { "title": "Kettlebell Masterclass", "description": "Dynamic kettlebell flows for explosive power and total-body conditioning.", "image": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=600&q=80" },
+      { "title": "Cardio Power Boost", "description": "Heart-pumping cardio sessions to elevate your endurance and stamina.", "image": "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=600&q=80" },
+      { "title": "Hypertrophy", "description": "Volume-based training protocols designed to maximize muscle growth.", "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80" },
+      { "title": "Rope Climbing", "description": "Build grip strength, upper body power, and mental toughness.", "image": "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=600&q=80" },
+      { "title": "TRX Suspension", "description": "Suspension training for core stability, balance, and lean muscle.", "image": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80" }
+    ]
+  },
+  "about": {
+    "heading": "Experience Fitness Like Never Before",
+    "programs": [
+      { "title": "Endurance Evolution", "description": "A progressive endurance program that systematically builds your cardiovascular capacity through phased training cycles.", "image": "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=600&q=80" },
+      { "title": "Speed Surge", "description": "Explosive speed and agility training combining plyometrics, sprint drills, and reactive movement patterns.", "image": "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80" }
+    ]
+  },
+  "team": [
+    { "name": "Marcus Stone", "specialty": "Strength & Conditioning", "image": "https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80" },
+    { "name": "Alexa Rivera", "specialty": "HIIT & Cardio Specialist", "image": "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&q=80" },
+    { "name": "James Chen", "specialty": "Nutrition & Wellness Coach", "image": "https://images.unsplash.com/photo-1583468982228-19f19164aee2?w=400&q=80" }
+  ],
+  "testimonials": [
+    {
+      "quote": "FiTusion completely transformed my approach to fitness. The trainers are incredibly knowledgeable and the atmosphere pushes you to give your absolute best every single session.",
+      "name": "David Harmon",
+      "role": "Lost 30kg in 8 months",
+      "image": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=200&q=80"
+    },
+    {
+      "quote": "I've tried dozens of gyms over the years, but nothing comes close to the experience at FiTusion. The combination of expert coaching and premium facilities is unmatched.",
+      "name": "Sarah Mitchell",
+      "role": "Competitive Athlete",
+      "image": "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=200&q=80"
+    }
+  ],
+  "stats": [
+    { "value": 12000, "suffix": "+", "label": "Happy Clients" },
+    { "value": 50, "suffix": "+", "label": "Expert Trainers" },
+    { "value": 98, "suffix": "%", "label": "Success Rate" },
+    { "value": 15, "suffix": "+", "label": "Years Experience" }
+  ],
+  "brands": ["Nike", "Under Armour", "Puma", "Reebok", "Adidas", "New Balance"],
+  "contact": {
+    "phone": "+1 (800) 555-FITU",
+    "email": "hello@fitusion.com",
+    "address": "456 Iron Avenue, Los Angeles, CA 90012"
+  },
+  "social": {
+    "instagram": "#",
+    "facebook": "#",
+    "twitter": "#",
+    "youtube": "#"
+  }
+}

@@ -1,0 +1,77 @@
+---
+import brand from '../../brand.json';
+---
+<section id="about" class="section-padding" style={`background-color: ${brand.colors.cream}`}>
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Left: Images -->
+      <div class="animate-on-scroll from-left relative">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden aspect-[3/4]">
+            <img
+              src={brand.aboutImage}
+              alt="Chef in kitchen preparing dishes"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-[3/4] mt-12">
+            <img
+              src={brand.aboutImage2}
+              alt="Beautifully plated gourmet dish"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <!-- Experience Badge -->
+        <div
+          class="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-4 rounded-xl shadow-lg text-center"
+          style={`background-color: ${brand.colors.primary}`}
+        >
+          <p class="font-serif text-3xl text-white font-bold">10+</p>
+          <p class="text-xs text-white/80 uppercase tracking-wider font-semibold">Years of Excellence</p>
+        </div>
+      </div>
+
+      <!-- Right: Text Content -->
+      <div class="animate-on-scroll from-right space-y-6">
+        <p
+          class="text-sm font-bold uppercase tracking-[0.2em]"
+          style={`color: ${brand.colors.accent}`}
+        >About Feastar</p>
+        <h2 class="font-serif text-4xl md:text-5xl leading-tight" style={`color: ${brand.colors.text}`}>
+          {brand.about.heading}
+        </h2>
+        <p
+          class="text-base leading-relaxed"
+          style={`color: ${brand.colors.textLight}`}
+        >{brand.about.text}</p>
+
+        <!-- Feature List -->
+        <div class="space-y-4 pt-2">
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center mt-0.5 shrink-0" style={`background-color: ${brand.colors.accent}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <p class="text-sm" style={`color: ${brand.colors.textLight}`}>Farm-to-table seasonal ingredients sourced from local producers</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center mt-0.5 shrink-0" style={`background-color: ${brand.colors.accent}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <p class="text-sm" style={`color: ${brand.colors.textLight}`}>Custom menus tailored to your event theme and dietary preferences</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center mt-0.5 shrink-0" style={`background-color: ${brand.colors.accent}`}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <p class="text-sm" style={`color: ${brand.colors.textLight}`}>Full-service setup, presentation, and cleanup at your venue</p>
+          </div>
+        </div>
+
+        <a href="#" class="btn-outline w-fit mt-4 inline-flex">Read More &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>

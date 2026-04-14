@@ -1,0 +1,27 @@
+---
+import brand from '../../brand.json';
+---
+<section id="services" class="section-padding" style={`background:${brand.colors.white}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Featured wedding bento grid -->
+    <div class="text-center mb-12 animate-on-scroll">
+      <div class="section-label">Timeless Moments</div>
+      <h2 class="font-display text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>Featured Wedding</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 stagger-children auto-rows-[180px] sm:auto-rows-[220px]">
+      {brand.featured.images.map((img: any, i: number) => (
+        <div class={`img-hover ${img.span} ${i % 3 === 1 ? 'grayscale' : ''}`}>
+          <img src={img.src} alt="" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      ))}
+      <!-- Accent card -->
+      <div class="flex items-center justify-center p-6" style={`background:${brand.colors.olive}; color:${brand.colors.white}`}>
+        <div class="text-center">
+          <p class="font-serif italic text-lg mb-2">View Full Gallery</p>
+          <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

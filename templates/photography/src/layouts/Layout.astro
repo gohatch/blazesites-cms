@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+import brand from '../../brand.json';
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} | ${brand.name}` : brand.name;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description || brand.description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body class="antialiased" style={`background:${brand.colors.bg}; color:${brand.colors.text}; font-family:'DM Sans',sans-serif; font-weight:300;`}>
+  <slot />
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '-20px' });
+    document.querySelectorAll('.animate-on-scroll, .stagger-children').forEach(el => observer.observe(el));
+
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = el.getAttribute('data-target') || '0';
+          const match = target.replace(/,/g,'').match(/^([^0-9]*)([\d.]+)(.*)$/);
+          if (!match) { el.textContent = target; return; }
+          const [, pre, numStr, suf] = match;
+          const num = parseFloat(numStr);
+          const start = performance.now();
+          function update(now: number) {
+            const p = Math.min((now - start) / 2000, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            const cur = num >= 100 ? Math.round(eased * num).toLocaleString() : Math.round(eased * num).toString();
+            el.textContent = `${pre}${cur}${suf}`;
+            if (p < 1) requestAnimationFrame(update);
+          }
+          requestAnimationFrame(update);
+          counterObs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('[data-counter]').forEach(el => counterObs.observe(el));
+  </script>
+</body>
+</html>

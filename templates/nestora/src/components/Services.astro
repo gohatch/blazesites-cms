@@ -1,0 +1,67 @@
+---
+import brand from '../../brand.json';
+
+const iconMap: Record<string, string> = {
+  home: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A68B3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  key: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A68B3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>`,
+  building: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A68B3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>`,
+  chart: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A68B3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>`,
+};
+---
+
+<section id="services" style="padding: 6rem 1.5rem; background-color: #FDFCF8;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    <!-- Header row -->
+    <div class="fade-up" style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 4rem; align-items: end;" id="services-header">
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+          <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+          <span style="font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A68B3C;">Our Expertise</span>
+          <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+        </div>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 500; color: #2A2A1E; line-height: 1.2;">
+          What Services We Provide?
+        </h2>
+      </div>
+      <p style="font-size: 1rem; font-weight: 300; color: #6B6B5A; line-height: 1.8; max-width: 500px;">
+        From finding your dream home to managing your investments, our comprehensive services cover every aspect of the real estate journey.
+      </p>
+    </div>
+
+    <!-- Service Cards -->
+    <div class="stagger-children" style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" id="services-grid">
+      {brand.services.map((service, i) => (
+        <div class="card-hover" style="background-color: #ffffff; border: 1px solid rgba(42, 42, 30, 0.08); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.borderColor='#A68B3C'" onmouseout="this.style.borderColor='rgba(42, 42, 30, 0.08)'">
+          <div style="display: flex; align-items: flex-start; gap: 1.25rem;">
+            <div style="flex-shrink: 0; width: 60px; height: 60px; background-color: rgba(166, 139, 60, 0.08); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+              <Fragment set:html={iconMap[service.icon]} />
+            </div>
+            <div>
+              <h3 style="font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; color: #2A2A1E; margin-bottom: 0.75rem;">
+                {service.title}
+              </h3>
+              <p style="font-size: 0.9375rem; font-weight: 300; color: #6B6B5A; line-height: 1.7;">
+                {service.description}
+              </p>
+            </div>
+          </div>
+          <!-- Number -->
+          <div style="position: absolute; top: 1.25rem; right: 1.5rem; font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: rgba(166, 139, 60, 0.08); line-height: 1;">
+            0{i + 1}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 768px) {
+    #services-header {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    #services-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+</style>

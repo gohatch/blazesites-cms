@@ -1,0 +1,29 @@
+---
+import brand from '../../brand.json';
+---
+<section class="section-padding" style={`background:${brand.colors.bg}`}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-xs tracking-[0.2em] uppercase mb-3" style={`color:${brand.colors.accent}`}>Client Love</p>
+      <h2 class="font-script text-4xl sm:text-5xl font-medium" style={`color:${brand.colors.text}`}>Testimonials</h2>
+    </div>
+
+    <div class="space-y-10 stagger-children">
+      {brand.testimonials.map((t: any) => (
+        <div class="text-center p-8 rounded-xl" style={`background:${brand.colors.white}; border:1px solid ${brand.colors.border}`}>
+          <div class="font-script text-5xl leading-none mb-3" style={`color:${brand.colors.accentDark}; opacity:0.3`}>"</div>
+          <blockquote class="font-serif italic text-lg leading-relaxed mb-6" style={`color:${brand.colors.text}`}>
+            {t.quote}
+          </blockquote>
+          <div class="flex items-center justify-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-xs font-medium" style={`background:${brand.colors.accent}; color:${brand.colors.bgDark}`}>{t.avatar}</div>
+            <div class="text-left">
+              <p class="font-serif text-sm font-medium" style={`color:${brand.colors.text}`}>{t.name}</p>
+              <p class="text-xs" style={`color:${brand.colors.textMuted}`}>{t.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

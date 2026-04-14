@@ -1,0 +1,38 @@
+---
+import brand from '../../brand.json';
+---
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-7xl px-6 py-16">
+    <div class="grid gap-12 lg:grid-cols-4">
+      <div class="lg:col-span-2">
+        <p class="text-base font-bold tracking-wider uppercase">{brand.businessName}</p>
+        <p class="mt-3 max-w-sm text-sm leading-relaxed" style={`color: ${brand.colors.textLight}`}>
+          {brand.about.text}
+        </p>
+      </div>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wider">Navigation</p>
+        <ul class="mt-4 space-y-3">
+          {brand.nav.map(link => (
+            <li>
+              <a href={link.href} class="text-sm transition-opacity hover:opacity-60" style={`color: ${brand.colors.textLight}`}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wider">Contact</p>
+        <div class="mt-4 space-y-3 text-sm" style={`color: ${brand.colors.textLight}`}>
+          {brand.contact.email && <p>{brand.contact.email}</p>}
+          {brand.contact.phone && <p>{brand.contact.phone}</p>}
+          {brand.contact.address && <p>{brand.contact.address}</p>}
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 border-t border-gray-100 pt-6 text-center text-xs" style={`color: ${brand.colors.textLight}`}>
+      &copy; {new Date().getFullYear()} {brand.businessName}. All rights reserved.
+    </div>
+  </div>
+</footer>

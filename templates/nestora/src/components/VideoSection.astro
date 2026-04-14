@@ -1,0 +1,59 @@
+---
+import brand from '../../brand.json';
+---
+
+<section style="position: relative; padding: 0; overflow: hidden;">
+  <!-- Background Image -->
+  <div style="position: relative; min-height: 500px; display: flex; align-items: center; justify-content: center;">
+    <img
+      src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1920&q=80"
+      alt="Modern luxury home interior"
+      style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"
+      loading="lazy"
+    />
+    <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(42, 42, 30, 0.8) 0%, rgba(42, 42, 30, 0.5) 100%);"></div>
+
+    <!-- Content -->
+    <div style="position: relative; z-index: 10; text-align: center; padding: 4rem 1.5rem; max-width: 700px;">
+      <div class="fade-up">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 2rem;">
+          <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+          <span style="font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A68B3C;">Watch Our Story</span>
+          <span style="width: 2rem; height: 1px; background-color: #A68B3C;"></span>
+        </div>
+      </div>
+
+      <h2 class="fade-up" style="font-family: 'Playfair Display', serif; font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 500; color: #ffffff; margin-bottom: 2rem; line-height: 1.3;">
+        Get to Know Nestora?
+      </h2>
+
+      <!-- Play Button -->
+      <div class="fade-up" style="margin-bottom: 2rem;">
+        <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; border-radius: 50%; background-color: rgba(166, 139, 60, 0.9); transition: all 0.4s ease; text-decoration: none; position: relative;" onmouseover="this.style.backgroundColor='#A68B3C'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 0 20px rgba(166, 139, 60, 0.15)'" onmouseout="this.style.backgroundColor='rgba(166, 139, 60, 0.9)'; this.style.transform='scale(1)'; this.style.boxShadow='none'" aria-label="Play video">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff" stroke="none">
+            <polygon points="6,3 20,12 6,21"/>
+          </svg>
+          <!-- Pulse ring -->
+          <span style="position: absolute; inset: -8px; border-radius: 50%; border: 1px solid rgba(166, 139, 60, 0.4); animation: pulse-ring 2s ease-out infinite;"></span>
+        </a>
+      </div>
+
+      <p class="fade-up" style="font-size: 1rem; font-weight: 300; color: rgba(255, 255, 255, 0.75); line-height: 1.8; max-width: 520px; margin: 0 auto;">
+        Discover how Nestora has been transforming the luxury real estate landscape for over a decade. Our passion for excellence drives every property we represent.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.4);
+      opacity: 0;
+    }
+  }
+</style>

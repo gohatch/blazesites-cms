@@ -1,0 +1,180 @@
+{
+  "name": "PureYoga",
+  "tagline": "Find your balance. Discover your strength.",
+  "description": "A sanctuary of movement and mindfulness in the heart of the city.",
+  "phone": "+1 (555) 234-5678",
+  "email": "hello@pureyoga.com",
+  "address": "48 Serenity Lane, Portland, OR 97201",
+  "colors": {
+    "primary": "#4A7C59",
+    "primaryDark": "#1A2E1A",
+    "primaryLight": "#6B9E7A",
+    "accent": "#C4A882",
+    "bg": "#F4F7F0",
+    "bgDark": "#E8EDE4",
+    "white": "#FFFFFF",
+    "text": "#1A2E1A",
+    "textLight": "#4A5568",
+    "border": "#D4DDD0"
+  },
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Classes", "href": "#classes" },
+    { "label": "Pricing", "href": "#pricing" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "Welcome to PureYoga",
+    "heading": "Find stillness within movement",
+    "subheading": "Expert-led yoga classes for all levels — from gentle restorative sessions to dynamic vinyasa flows.",
+    "cta": "Explore Classes",
+    "ctaSecondary": "Book a Free Trial",
+    "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80"
+  },
+  "about": {
+    "eyebrow": "Our Philosophy",
+    "heading": "Yoga as a way of life",
+    "body": "At PureYoga, we believe yoga is more than a practice — it's a path. Whether you're stepping onto the mat for the first time or deepening a lifelong journey, our studio offers a space to breathe, move, and connect.",
+    "values": [
+      { "icon": "🌿", "title": "Holistic Wellness", "desc": "Mind, body, and spirit in harmony through mindful practice." },
+      { "icon": "🤝", "title": "Community First", "desc": "A welcoming space for every body, background, and ability level." },
+      { "icon": "✨", "title": "Expert Guidance", "desc": "Certified instructors with decades of combined teaching experience." },
+      { "icon": "🕊️", "title": "Inner Peace", "desc": "Stress reduction and emotional balance through breath and movement." }
+    ],
+    "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80"
+  },
+  "stats": [
+    { "value": "12", "suffix": "+", "label": "Years of practice" },
+    { "value": "2400", "suffix": "+", "label": "Happy students" },
+    { "value": "38", "suffix": "", "label": "Weekly classes" },
+    { "value": "14", "suffix": "", "label": "Expert instructors" }
+  ],
+  "classes": [
+    {
+      "name": "Vinyasa Flow",
+      "level": "All Levels",
+      "duration": "60 min",
+      "desc": "Dynamic sequences linking breath to movement for strength and flexibility.",
+      "image": "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600&q=80"
+    },
+    {
+      "name": "Yin Yoga",
+      "level": "All Levels",
+      "duration": "75 min",
+      "desc": "Long-held poses targeting deep connective tissue for profound release.",
+      "image": "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600&q=80"
+    },
+    {
+      "name": "Hatha Basics",
+      "level": "Beginner",
+      "duration": "60 min",
+      "desc": "Foundational postures and alignment principles for new practitioners.",
+      "image": "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=600&q=80"
+    },
+    {
+      "name": "Power Yoga",
+      "level": "Intermediate",
+      "duration": "60 min",
+      "desc": "A vigorous, fitness-based approach building core strength and endurance.",
+      "image": "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&q=80"
+    },
+    {
+      "name": "Restorative",
+      "level": "All Levels",
+      "duration": "75 min",
+      "desc": "Deeply restful practice using props for complete nervous system reset.",
+      "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80"
+    },
+    {
+      "name": "Meditation",
+      "level": "All Levels",
+      "duration": "45 min",
+      "desc": "Guided mindfulness and breathwork to cultivate inner stillness.",
+      "image": "https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?w=600&q=80"
+    }
+  ],
+  "benefits": [
+    { "icon": "🧘", "title": "Flexibility", "desc": "Increase range of motion and ease of movement in daily life." },
+    { "icon": "💪", "title": "Strength", "desc": "Build functional muscle tone through bodyweight resistance." },
+    { "icon": "🌬️", "title": "Breathwork", "desc": "Master pranayama techniques for calm and focus." },
+    { "icon": "😴", "title": "Better Sleep", "desc": "Regulate your nervous system for deeper, more restful nights." },
+    { "icon": "🧠", "title": "Mental Clarity", "desc": "Reduce anxiety and sharpen focus through mindful practice." },
+    { "icon": "❤️", "title": "Community", "desc": "Find your tribe in a supportive, judgment-free environment." }
+  ],
+  "pricing": [
+    {
+      "name": "Drop-In",
+      "price": "22",
+      "period": "per class",
+      "desc": "Perfect for visitors or those exploring different styles.",
+      "features": ["Single class access", "All class types", "Mat rental available", "Digital schedule"],
+      "cta": "Book Now",
+      "highlight": false,
+      "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80"
+    },
+    {
+      "name": "Monthly Unlimited",
+      "price": "99",
+      "period": "per month",
+      "desc": "Our most popular option for dedicated practitioners.",
+      "features": ["Unlimited classes", "Priority booking", "1 guest pass/month", "Workshop discounts", "Online classes included"],
+      "cta": "Get Started",
+      "highlight": true,
+      "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80"
+    },
+    {
+      "name": "Class Pack",
+      "price": "180",
+      "period": "10 classes",
+      "desc": "Flexible access that fits your schedule and lifestyle.",
+      "features": ["10 class credits", "Valid for 6 months", "All class types", "Shareable with family"],
+      "cta": "Buy Pack",
+      "highlight": false,
+      "image": "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=400&q=80"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah M.",
+      "role": "Member since 2021",
+      "quote": "PureYoga transformed my relationship with my body. The instructors are incredible — patient, knowledgeable, and genuinely caring.",
+      "avatar": "SM"
+    },
+    {
+      "name": "James L.",
+      "role": "Member since 2022",
+      "quote": "I was skeptical at first, but after three months of weekly classes I've never felt better. My back pain is gone and my mind is clearer.",
+      "avatar": "JL"
+    },
+    {
+      "name": "Priya R.",
+      "role": "Member since 2020",
+      "quote": "The community here is unlike anything I've experienced. It feels like a second home — welcoming, warm, and always uplifting.",
+      "avatar": "PR"
+    }
+  ],
+  "cta": {
+    "heading": "Begin your journey today",
+    "subheading": "Your first class is on us. No experience needed — just show up and breathe.",
+    "primary": "Claim Free Class",
+    "secondary": "View Schedule"
+  },
+  "contact": {
+    "heading": "Come find us",
+    "subheading": "We'd love to welcome you to our studio. Drop us a message or just show up.",
+    "image": "https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=800&q=80",
+    "hours": [
+      { "days": "Monday – Friday", "time": "6:00am – 9:00pm" },
+      { "days": "Saturday", "time": "7:00am – 6:00pm" },
+      { "days": "Sunday", "time": "8:00am – 5:00pm" }
+    ]
+  },
+  "footer": {
+    "tagline": "Movement is medicine.",
+    "socials": [
+      { "name": "Instagram", "href": "#" },
+      { "name": "Facebook", "href": "#" },
+      { "name": "YouTube", "href": "#" }
+    ]
+  }
+}

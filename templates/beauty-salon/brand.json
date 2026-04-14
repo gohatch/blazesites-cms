@@ -1,0 +1,154 @@
+{
+  "businessName": "Bloom Beauty",
+  "tagline": "Where Beauty Meets Artistry",
+  "description": "Premium hair, skin, and beauty services crafted to reveal your natural radiance in a luxurious, welcoming environment.",
+  "colors": {
+    "primary": "#C28566",
+    "primaryDark": "#A86E52",
+    "primaryLight": "#D4A48E",
+    "cream": "#F9F4F1",
+    "white": "#FFFFFF",
+    "bg": "#FDF9F6",
+    "text": "#3D3D3D",
+    "textDark": "#2A2A2A",
+    "textLight": "#7A7A7A",
+    "textMuted": "#B0A8A2",
+    "border": "#EDE4DD"
+  },
+  "heroImage": "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400&h=800&fit=crop",
+  "aboutImage": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=700&h=900&fit=crop",
+  "contact": {
+    "email": "hello@bloombeauty.com",
+    "phone": "(555) 234-5678",
+    "address": "128 Rose Lane, Beverly Hills, CA 90210"
+  },
+  "services": [
+    {
+      "title": "Hair Artistry",
+      "description": "From precision cuts to hand-painted balayage, our master colorists and stylists create looks that are uniquely you.",
+      "image": "https://images.unsplash.com/photo-1562322140-8baeacacf3df?w=400&h=400&fit=crop"
+    },
+    {
+      "title": "Skincare & Facials",
+      "description": "Advanced facials, peels, and treatments using premium products to restore your skin's natural glow and vitality.",
+      "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=400&fit=crop"
+    },
+    {
+      "title": "Nail Studio",
+      "description": "Luxurious manicures, pedicures, and bespoke nail art in a serene space dedicated to detail and relaxation.",
+      "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=400&fit=crop"
+    },
+    {
+      "title": "Bridal & Events",
+      "description": "Complete beauty packages for your most memorable moments — from trial to the big day, we've got you covered.",
+      "image": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=400&fit=crop"
+    },
+    {
+      "title": "Massage & Wellness",
+      "description": "Therapeutic and relaxation massages to ease tension and rejuvenate your body from head to toe.",
+      "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=400&fit=crop"
+    },
+    {
+      "title": "Makeup",
+      "description": "Editorial and everyday makeup artistry using luxury products for flawless, camera-ready looks.",
+      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=400&fit=crop"
+    }
+  ],
+  "about": {
+    "heading": "Crafting Beauty Since 2012",
+    "text": "At Bloom Beauty, we believe beauty is deeply personal. Our team of internationally trained stylists, aestheticians, and wellness specialists work together to create bespoke experiences that enhance your natural beauty. Every visit is designed to be a moment of calm, luxury, and transformation.",
+    "stats": [
+      { "value": "12+", "label": "Years of Excellence" },
+      { "value": "30K", "label": "Happy Clients" },
+      { "value": "45+", "label": "Expert Stylists" },
+      { "value": "98%", "label": "5-Star Reviews" }
+    ]
+  },
+  "team": [
+    {
+      "name": "Isabella Moreau",
+      "role": "Creative Director",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop"
+    },
+    {
+      "name": "Sophia Chen",
+      "role": "Lead Colorist",
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=500&fit=crop"
+    },
+    {
+      "name": "Aria Patel",
+      "role": "Skincare Specialist",
+      "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=500&fit=crop"
+    },
+    {
+      "name": "Luna Rivera",
+      "role": "Nail Artist",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Bloom Beauty transformed my hair completely. The balayage was absolutely stunning and the atmosphere is so relaxing. I'll never go anywhere else.",
+      "author": "Natalie K.",
+      "role": "Color Client",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop"
+    },
+    {
+      "quote": "The facial I had was the best I've ever experienced. My skin was glowing for weeks. The team truly understands skincare on a whole other level.",
+      "author": "Emma S.",
+      "role": "Skincare Client",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop"
+    },
+    {
+      "quote": "My bridal package was absolutely perfect. From the trial to the big day, every detail was thought of. I felt like the most beautiful version of myself.",
+      "author": "Jessica T.",
+      "role": "Bridal Client",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+    }
+  ],
+  "pricing": [
+    {
+      "category": "Hair",
+      "items": [
+        { "name": "Women's Cut & Style", "price": "$85+" },
+        { "name": "Balayage / Highlights", "price": "$180+" },
+        { "name": "Keratin Treatment", "price": "$250+" },
+        { "name": "Blowout", "price": "$55+" }
+      ]
+    },
+    {
+      "category": "Skin",
+      "items": [
+        { "name": "Signature Facial", "price": "$120" },
+        { "name": "Chemical Peel", "price": "$150" },
+        { "name": "Microdermabrasion", "price": "$140" },
+        { "name": "LED Light Therapy", "price": "$95" }
+      ]
+    },
+    {
+      "category": "Nails",
+      "items": [
+        { "name": "Classic Manicure", "price": "$35" },
+        { "name": "Gel Manicure", "price": "$55" },
+        { "name": "Spa Pedicure", "price": "$65" },
+        { "name": "Nail Art (per nail)", "price": "$10+" }
+      ]
+    }
+  ],
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Team", "href": "#team" },
+    { "label": "Pricing", "href": "#pricing" },
+    { "label": "Reviews", "href": "#testimonials" }
+  ],
+  "cta": {
+    "heading": "Treat Yourself Today",
+    "subheading": "Book your appointment and experience the art of beauty in a space designed for you.",
+    "buttonText": "Book Appointment",
+    "buttonLink": "#contact"
+  }
+}

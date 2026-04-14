@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+/* Brand CSS Variables */
+:root {
+  --color-primary: #0C1B33;
+  --color-primary-light: #1A2D4D;
+  --color-accent: #C9A84C;
+  --color-bg: #F8F6F2;
+  --color-text: #1A1A2E;
+  --color-text-light: #6B7280;
+  --color-white: #FFFFFF;
+  --color-border: #E5E0D8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Serif heading font */
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-on-scroll.from-left {
+  transform: translateX(-40px);
+}
+.animate-on-scroll.from-left.visible {
+  transform: translateX(0);
+}
+.animate-on-scroll.from-right {
+  transform: translateX(40px);
+}
+.animate-on-scroll.from-right.visible {
+  transform: translateX(0);
+}
+
+/* Stagger children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s; }
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero entrance animations */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-animate {
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease forwards;
+}
+.hero-animate-1 { animation-delay: 0.1s; }
+.hero-animate-2 { animation-delay: 0.3s; }
+.hero-animate-3 { animation-delay: 0.5s; }
+.hero-animate-4 { animation-delay: 0.7s; }
+
+/* Primary button — gold bg, dark text, pill shape */
+.btn-primary {
+  display: inline-block;
+  padding: 0.875rem 2.25rem;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.3);
+  text-decoration: none;
+  letter-spacing: 0.025em;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.45);
+  filter: brightness(1.08);
+}
+
+/* Outline button — gold border, gold text */
+.btn-outline {
+  display: inline-block;
+  padding: 0.875rem 2.25rem;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  letter-spacing: 0.025em;
+}
+.btn-outline:hover {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+}
+
+/* Dark button */
+.btn-dark {
+  display: inline-block;
+  padding: 0.875rem 2.25rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  letter-spacing: 0.025em;
+}
+.btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(12, 27, 51, 0.4);
+  background-color: var(--color-primary-light);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(12, 27, 51, 0.12);
+}
+
+/* Gold accent bar on left */
+.accent-bar-left {
+  position: relative;
+}
+.accent-bar-left::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.accent-bar-left:hover::before {
+  background-color: var(--color-accent);
+}
+
+/* Gold ornament decorator */
+.gold-ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.gold-ornament::before,
+.gold-ornament::after {
+  content: '';
+  height: 1px;
+  width: 2rem;
+  background-color: var(--color-accent);
+}
+
+/* Section padding */
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .section-padding { padding: 6rem 2rem; }
+}
+@media (min-width: 1024px) {
+  .section-padding { padding: 7rem 2rem; }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Subtle pattern overlay for hero */
+.pattern-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(201, 168, 76, 0.03) 1px, transparent 0);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+/* Team card overlay */
+.team-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12, 27, 51, 0.9) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.team-card:hover .team-card-overlay {
+  opacity: 1;
+}
+
+/* Quote marks decoration */
+.quote-mark {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.3;
+}
+
+/* Form input styling */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+
+/* Star rating */
+.star-filled {
+  color: var(--color-accent);
+}

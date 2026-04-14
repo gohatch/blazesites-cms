@@ -1,0 +1,53 @@
+---
+import brand from '../../brand.json';
+---
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="backdrop-blur-md" style={`background:rgba(245,237,227,0.92); border-bottom:1px solid ${brand.colors.border}`}>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Logo centered -->
+      <div class="flex items-center justify-center py-4">
+        <a href="#" class="font-script text-2xl sm:text-3xl tracking-wide" style={`color:${brand.colors.text}`}>
+          {brand.name}
+        </a>
+      </div>
+      <!-- Nav centered -->
+      <nav class="hidden md:flex items-center justify-center gap-8 pb-3">
+        {brand.nav.map((item: any) => (
+          <a href={item.href} class="text-[0.6875rem] font-medium tracking-[0.15em] uppercase transition-colors duration-200" style={`color:${brand.colors.textMuted}`}>
+            {item.label}
+          </a>
+        ))}
+        <a href="#contact" class="text-[0.6875rem] font-medium tracking-[0.15em] uppercase transition-colors duration-200" style={`color:${brand.colors.accent}`}>
+          Contact
+        </a>
+      </nav>
+      <!-- Mobile button -->
+      <button id="mobile-btn" class="md:hidden absolute top-4 right-6 p-2" aria-label="Menu">
+        <div class="space-y-1.5">
+          <span class="block w-5 h-px" style={`background:${brand.colors.text}`}></span>
+          <span class="block w-3.5 h-px" style={`background:${brand.colors.text}`}></span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden fixed inset-0 top-[72px] transform translate-x-full transition-transform duration-300 z-40" style={`background:${brand.colors.bg}`}>
+    <nav class="flex flex-col items-center justify-center h-full gap-6">
+      {brand.nav.map((item: any) => (
+        <a href={item.href} class="mobile-link font-display text-xl tracking-wider" style={`color:${brand.colors.text}`}>{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+<script>
+  const btn = document.getElementById('mobile-btn');
+  const menu = document.getElementById('mobile-menu');
+  let open = false;
+  btn?.addEventListener('click', () => {
+    open = !open;
+    menu?.classList.toggle('translate-x-full', !open);
+    menu?.classList.toggle('translate-x-0', open);
+  });
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+    open = false; menu?.classList.add('translate-x-full'); menu?.classList.remove('translate-x-0');
+  }));
+</script>

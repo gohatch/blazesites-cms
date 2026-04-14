@@ -1,0 +1,193 @@
+{
+  "businessName": "Sterling & Associates",
+  "tagline": "Justice. Integrity. Results.",
+  "description": "For over 25 years, Sterling & Associates has been the trusted legal counsel for individuals and businesses across the state.",
+  "colors": {
+    "primary": "#0C1B33",
+    "primaryLight": "#1A2D4D",
+    "accent": "#C9A84C",
+    "bg": "#F8F6F2",
+    "text": "#1A1A2E",
+    "textLight": "#6B7280",
+    "white": "#FFFFFF",
+    "border": "#E5E0D8"
+  },
+  "fonts": {
+    "heading": "Playfair Display",
+    "body": "Inter"
+  },
+  "logoUrl": "",
+  "contact": {
+    "email": "contact@sterlinglaw.com",
+    "phone": "(555) 892-4500",
+    "address": "200 Park Avenue, Suite 1800, New York, NY 10166",
+    "hours": "Monday - Friday: 8:00 AM - 6:00 PM, Saturday: By Appointment Only"
+  },
+  "nav": [
+    { "label": "Practice Areas", "href": "#practice-areas" },
+    { "label": "Attorneys", "href": "#team" },
+    { "label": "Results", "href": "#results" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "heading": "Justice. Integrity. Results.",
+    "accentWord": "Justice.",
+    "subheading": "For over 25 years, Sterling & Associates has been the trusted legal counsel for individuals and businesses across the state. We fight relentlessly to protect your rights.",
+    "primaryCta": "Free Consultation",
+    "secondaryCta": "Our Practice Areas"
+  },
+  "services": [
+    {
+      "title": "Corporate Law",
+      "description": "Comprehensive legal counsel for businesses of all sizes, from formation and governance to mergers, acquisitions, and compliance.",
+      "icon": "building"
+    },
+    {
+      "title": "Family Law",
+      "description": "Compassionate yet determined advocacy in divorce, custody, adoption, and all matters affecting your family's future.",
+      "icon": "family"
+    },
+    {
+      "title": "Criminal Defense",
+      "description": "Aggressive defense strategies protecting your freedom and reputation. Every case receives our full attention and resources.",
+      "icon": "shield"
+    },
+    {
+      "title": "Real Estate Law",
+      "description": "Expert guidance through complex real estate transactions, disputes, zoning matters, and property development.",
+      "icon": "home"
+    },
+    {
+      "title": "Employment Law",
+      "description": "Protecting the rights of employees and employers in workplace disputes, discrimination claims, and contract negotiations.",
+      "icon": "briefcase"
+    },
+    {
+      "title": "Personal Injury",
+      "description": "Maximizing your compensation for injuries caused by negligence. No fees unless we win your case.",
+      "icon": "heart"
+    }
+  ],
+  "stats": [
+    { "value": "25+", "label": "Years of Experience" },
+    { "value": "5,000+", "label": "Cases Won" },
+    { "value": "98%", "label": "Success Rate" },
+    { "value": "45", "label": "Attorneys" }
+  ],
+  "about": {
+    "heading": "A Legacy of Legal Excellence",
+    "text": "Founded in 1999 by Jonathan Sterling, our firm has grown from a small practice into one of the most respected legal institutions in the state. We believe every client deserves exceptional legal representation, regardless of the complexity of their case. Our attorneys combine decades of courtroom experience with a genuine commitment to our clients' well-being.",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "values": [
+      { "title": "Excellence", "description": "We pursue the highest standard in every case, every brief, and every courtroom appearance." },
+      { "title": "Integrity", "description": "Honest counsel and transparent communication form the foundation of our practice." },
+      { "title": "Dedication", "description": "We treat every case as if it were our own, fighting tirelessly for our clients." },
+      { "title": "Results", "description": "Our track record speaks for itself — over 5,000 successful case outcomes." }
+    ]
+  },
+  "team": [
+    {
+      "name": "Jonathan Sterling",
+      "title": "Founding Partner",
+      "bio": "Harvard Law '94. Over 30 years in corporate litigation with a record of landmark victories.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    },
+    {
+      "name": "Victoria Chen",
+      "title": "Senior Partner, Family Law",
+      "bio": "Recognized as a Top 50 Family Law Attorney. Passionate advocate for children's rights.",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+    },
+    {
+      "name": "Marcus Thompson",
+      "title": "Partner, Criminal Defense",
+      "bio": "Former federal prosecutor. 15 years of trial experience with a 96% acquittal rate.",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80"
+    },
+    {
+      "name": "Elena Rodriguez",
+      "title": "Partner, Personal Injury",
+      "bio": "Recovered over $200M for clients. Named to Super Lawyers list 8 consecutive years.",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
+    }
+  ],
+  "results": [
+    {
+      "amount": "$12.5M",
+      "type": "Personal Injury",
+      "description": "Settlement for a client injured in a commercial vehicle accident involving corporate negligence."
+    },
+    {
+      "amount": "Not Guilty",
+      "type": "Criminal Defense",
+      "description": "Full acquittal in a high-profile federal fraud case with 47 counts dismissed."
+    },
+    {
+      "amount": "$8.2M",
+      "type": "Employment Law",
+      "description": "Class action verdict for workplace discrimination affecting 200+ employees."
+    },
+    {
+      "amount": "$4.7M",
+      "type": "Real Estate",
+      "description": "Recovery in a complex commercial property dispute involving breach of contract."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Sterling & Associates didn't just win my case — they gave me my life back. Jonathan and his team were available around the clock and never wavered in their commitment.",
+      "author": "Robert M.",
+      "role": "Personal Injury Client",
+      "rating": 5
+    },
+    {
+      "quote": "When our company faced a complex merger challenge, Victoria's expertise and strategic thinking saved us millions. I wouldn't trust anyone else with our legal matters.",
+      "author": "Sarah K.",
+      "role": "Corporate Client, CEO",
+      "rating": 5
+    },
+    {
+      "quote": "Marcus Thompson is the reason I'm a free man today. His courtroom presence is unmatched, and his preparation is meticulous. Truly the best defense attorney in the state.",
+      "author": "David L.",
+      "role": "Criminal Defense Client",
+      "rating": 5
+    }
+  ],
+  "pricing": [
+    {
+      "name": "Free Consultation",
+      "price": "Free",
+      "description": "30-minute initial case evaluation",
+      "features": ["Case Assessment", "Legal Strategy Overview", "No Obligation", "Confidential"]
+    },
+    {
+      "name": "Standard Retainer",
+      "price": "$350",
+      "unit": "/hr",
+      "description": "For individual legal matters",
+      "features": ["Dedicated Attorney", "Regular Updates", "Court Representation", "Document Preparation", "Negotiation Support"],
+      "featured": true
+    },
+    {
+      "name": "Premium Counsel",
+      "price": "$550",
+      "unit": "/hr",
+      "description": "For complex & corporate cases",
+      "features": ["Senior Partner Lead", "Full Legal Team", "24/7 Availability", "Priority Handling", "Strategic Planning", "Expert Witnesses"]
+    }
+  ],
+  "cta": {
+    "heading": "Schedule Your Free Consultation",
+    "subheading": "Take the first step toward justice. Our attorneys are ready to review your case and provide expert guidance.",
+    "buttonText": "Schedule Now",
+    "phone": "(555) 892-4500"
+  },
+  "footer": {
+    "motto": "Your rights. Our fight.",
+    "socials": [
+      { "platform": "LinkedIn", "url": "#" },
+      { "platform": "Twitter", "url": "#" },
+      { "platform": "Facebook", "url": "#" }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+@import "tailwindcss";
+html { scroll-behavior: smooth; }
+.font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+.animate-on-scroll { opacity:0; transform:translateY(24px); transition:opacity 0.8s ease, transform 0.8s ease; }
+.animate-on-scroll.visible { opacity:1; transform:translateY(0); }
+.stagger-children > * { opacity:0; transform:translateY(16px); transition:opacity 0.6s ease, transform 0.6s ease; }
+.stagger-children.visible > *:nth-child(1) { transition-delay:0s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay:0.08s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay:0.16s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay:0.24s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay:0.32s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay:0.4s; }
+.stagger-children.visible > * { opacity:1; transform:translateY(0); }
+@keyframes heroFadeUp { from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)} }
+.hero-animate { opacity:0; animation:heroFadeUp 0.8s ease forwards; }
+.hero-animate-1{animation-delay:.1s}.hero-animate-2{animation-delay:.25s}.hero-animate-3{animation-delay:.4s}.hero-animate-4{animation-delay:.55s}
+.btn-primary { display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.875rem 2rem;background:#1A1A1A;color:#fff;font-family:'DM Sans',sans-serif;font-weight:500;font-size:.8125rem;letter-spacing:.05em;text-transform:uppercase;border:none;transition:all .3s ease;text-decoration:none;cursor:pointer; }
+.btn-primary:hover { background:#C2703E; }
+.btn-outline { display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.875rem 2rem;background:transparent;color:#1A1A1A;font-family:'DM Sans',sans-serif;font-weight:500;font-size:.8125rem;letter-spacing:.05em;text-transform:uppercase;border:1px solid #1A1A1A;transition:all .3s ease;text-decoration:none;cursor:pointer; }
+.btn-outline:hover { background:#1A1A1A;color:#fff; }
+.section-padding { padding:5rem 1.5rem; }
+@media(min-width:768px){ .section-padding{padding:6rem 2rem;} }
+.card-hover { transition:all .3s ease; }
+.card-hover:hover { transform:translateY(-4px); }
+.img-hover { overflow:hidden; }
+.img-hover img { transition:transform .6s ease; }
+.img-hover:hover img { transform:scale(1.04); }

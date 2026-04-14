@@ -1,0 +1,22 @@
+---
+import brand from '../../brand.json';
+---
+<section id="team" class="section-padding" style={`background:${brand.colors.white}`}>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-on-scroll">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-2" style={`color:${brand.colors.primary}`}>Learn From The Best</p>
+      <h2 class="font-display text-3xl sm:text-4xl" style={`color:${brand.colors.text}`}>Our Instructors</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
+      {brand.team.map((t: any) => (
+        <div class="group text-center">
+          <div class="rounded-2xl overflow-hidden mb-4 card-hover" style={`background:${brand.colors.bg}`}>
+            <img src={t.image} alt={t.name} class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <h3 class="font-display text-sm" style={`color:${brand.colors.text}`}>{t.name}</h3>
+          <p class="text-xs" style={`color:${brand.colors.textMuted}`}>{t.role}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

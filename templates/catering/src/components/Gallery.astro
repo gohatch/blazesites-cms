@@ -1,0 +1,36 @@
+---
+import brand from '../../brand.json';
+---
+<section id="gallery" class="section-padding" style={`background-color: ${brand.colors.bg}`}>
+  <div class="max-w-7xl mx-auto">
+    <!-- Heading -->
+    <div class="text-center mb-14 animate-on-scroll">
+      <p
+        class="text-sm font-bold uppercase tracking-[0.2em] mb-3"
+        style={`color: ${brand.colors.accent}`}
+      >Our Portfolio</p>
+      <h2 class="font-serif text-4xl md:text-5xl uppercase" style={`color: ${brand.colors.text}`}>
+        Visual Gallery
+      </h2>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 stagger-children">
+      {brand.galleryImages.map((img: string, i: number) => (
+        <div class={`img-zoom rounded-xl overflow-hidden ${i === 0 || i === 5 ? 'md:row-span-2 aspect-[3/4]' : 'aspect-square'}`}>
+          <img
+            src={img}
+            alt={`Catering gallery image ${i + 1}`}
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12 animate-on-scroll">
+      <a href="#" class="btn-primary">View More &#8594;</a>
+    </div>
+  </div>
+</section>

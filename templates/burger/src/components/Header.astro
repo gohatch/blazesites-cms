@@ -1,0 +1,70 @@
+---
+import brand from '../../brand.json';
+---
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header" style={`background-color: ${brand.colors.primary}ee`}>
+  <div class="absolute inset-0 backdrop-blur-md"></div>
+  <div class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <!-- Logo -->
+    <a href="/" class="heading-display text-2xl text-white sm:text-3xl">{brand.businessName}</a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden items-center gap-8 md:flex">
+      {brand.nav.map(link => (
+        <a
+          href={link.href}
+          class="text-sm font-medium uppercase tracking-wider text-white/70 transition-colors duration-200 hover:text-white"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href="/contact" class="btn-pill !border-[var(--color-accent)] !bg-[var(--color-accent)] !text-[var(--color-primary)] hover:!bg-transparent hover:!text-[var(--color-accent)]">
+        {brand.cta.buttonText}
+      </a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-white" id="mobile-menu-btn" aria-label="Toggle menu">
+      <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="hidden md:hidden" id="mobile-menu" style={`background-color: ${brand.colors.primary}`}>
+    <div class="space-y-1 px-6 pb-6 pt-2">
+      {brand.nav.map(link => (
+        <a
+          href={link.href}
+          class="block rounded-xl px-4 py-3 text-sm font-medium uppercase tracking-wider text-white/70 transition-colors hover:bg-white/10 hover:text-white"
+        >
+          {link.label}
+        </a>
+      ))}
+      <div class="pt-3">
+        <a href="/contact" class="btn-pill !border-[var(--color-accent)] !bg-[var(--color-accent)] !text-[var(--color-primary)] w-full justify-center">
+          {brand.cta.buttonText}
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Toggle mobile menu
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+
+  // Header scroll effect
+  const header = document.getElementById('main-header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.2)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    }, { passive: true });
+  }
+</script>

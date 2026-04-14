@@ -1,0 +1,16 @@
+---
+import brand from '../../brand.json';
+const items = brand.services.map(s => s.title);
+---
+<section class="overflow-hidden py-4" style={`background-color: ${brand.colors.primary}`}>
+  <div class="relative flex whitespace-nowrap">
+    <div class="marquee-track flex items-center gap-0">
+      {[...items, ...items, ...items].map((service) => (
+        <span class="flex items-center gap-8 px-8 text-sm font-light uppercase tracking-[0.2em] text-white/80">
+          {service}
+          <span class="text-white/30">✦</span>
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
