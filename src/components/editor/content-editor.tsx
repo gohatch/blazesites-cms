@@ -175,7 +175,7 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
       ) : (
       <div className="flex flex-1 overflow-hidden">
         {/* Left sidebar */}
-        <ContentSidebar />
+        <ContentSidebar projectId={projectId} />
 
         {/* Center: iframe preview */}
         <div className="flex flex-1 items-start justify-center overflow-auto bg-muted/20 p-4">

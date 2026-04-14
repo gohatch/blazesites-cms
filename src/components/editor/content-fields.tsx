@@ -45,10 +45,16 @@ function FieldRenderer({
   field,
   value,
   onChange,
+  onAddItem,
+  onRemoveItem,
+  onMoveItem,
 }: {
   field: FieldDef;
   value: unknown;
   onChange: (path: string, value: unknown) => void;
+  onAddItem?: (path: string, item: unknown) => void;
+  onRemoveItem?: (path: string, index: number) => void;
+  onMoveItem?: (path: string, from: number, to: number) => void;
 }) {
   switch (field.type) {
     case 'text':
@@ -136,8 +142,11 @@ function FieldRenderer({
       return (
         <RepeaterField
           field={field}
-          value={value}
-          onChange={onChange}
+          items={Array.isArray(value) ? value : []}
+          onUpdateField={onChange}
+          onAddItem={onAddItem!}
+          onRemoveItem={onRemoveItem!}
+          onMoveItem={onMoveItem!}
         />
       );
 
@@ -150,6 +159,9 @@ export function ContentFields() {
   const activeSection = useContentEditorStore((s) => s.activeSection);
   const brandContent = useContentEditorStore((s) => s.brandContent);
   const updateField = useContentEditorStore((s) => s.updateField);
+  const addArrayItem = useContentEditorStore((s) => s.addArrayItem);
+  const removeArrayItem = useContentEditorStore((s) => s.removeArrayItem);
+  const moveArrayItem = useContentEditorStore((s) => s.moveArrayItem);
 
   if (!activeSection) {
     return (
@@ -193,6 +205,9 @@ export function ContentFields() {
               field={field}
               value={value}
               onChange={updateField}
+              onAddItem={addArrayItem}
+              onRemoveItem={removeArrayItem}
+              onMoveItem={moveArrayItem}
             />
           );
         })}

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useContentEditorStore } from '@/lib/editor/content-store';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -21,6 +22,7 @@ import {
   Search,
   Sparkles,
 } from 'lucide-react';
+import { AiSectionModal } from '@/components/editor/ai-section-modal';
 
 // ---------------------------------------------------------------------------
 // Section definitions grouped by category
@@ -74,8 +76,21 @@ const sectionGroups: SectionGroup[] = [
 // Component
 // ---------------------------------------------------------------------------
 
-export function ContentSidebar() {
-  const { activeSection, setActiveSection } = useContentEditorStore();
+interface ContentSidebarProps {
+  projectId: string;
+}
+
+export function ContentSidebar({ projectId }: ContentSidebarProps) {
+  const { activeSection, setActiveSection, updateField } = useContentEditorStore();
+  const [aiModalOpen, setAiModalOpen] = useState(false);
+
+  const handleAiAccept = (sectionType: string, data: Record<string, unknown>) => {
+    // Merge the generated data into brandContent via updateField
+    const sectionData = data[sectionType];
+    if (sectionData !== undefined) {
+      updateField(sectionType, sectionData);
+    }
+  };
 
   return (
     <aside className="flex h-full w-64 flex-col border-r bg-muted/30">
@@ -118,11 +133,24 @@ export function ContentSidebar() {
 
       {/* Add with AI button */}
       <div className="border-t p-3">
-        <Button variant="outline" className="w-full gap-2" size="sm">
+        <Button
+          variant="outline"
+          className="w-full gap-2"
+          size="sm"
+          onClick={() => setAiModalOpen(true)}
+        >
           <Sparkles className="h-3.5 w-3.5" />
           Add with AI
         </Button>
       </div>
+
+      {/* AI Section Modal */}
+      <AiSectionModal
+        open={aiModalOpen}
+        onOpenChange={setAiModalOpen}
+        onAccept={handleAiAccept}
+        projectId={projectId}
+      />
     </aside>
   );
 }
