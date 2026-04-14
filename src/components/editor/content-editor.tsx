@@ -76,7 +76,7 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
     setError(null);
 
     try {
-      // 1. Save content
+      // 1. Save content (always works — just writes to DB)
       setSaving(true);
       const saveRes = await fetch(`/api/projects/${projectId}/content`, {
         method: 'PUT',
@@ -89,21 +89,32 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
       }
 
       setSaving(false);
+      markClean();
 
-      // 2. Trigger rebuild
+      // 2. Try to rebuild (may fail on serverless — that's OK, content is saved)
       setRebuilding(true);
-      const buildRes = await fetch(`/api/projects/${projectId}/build`, {
-        method: 'POST',
-      });
+      try {
+        const buildRes = await fetch(`/api/projects/${projectId}/build`, {
+          method: 'POST',
+        });
 
-      if (!buildRes.ok) {
-        throw new Error('Failed to rebuild site');
+        if (buildRes.ok) {
+          const buildData = await buildRes.json();
+          // Refresh iframe with new URL
+          if (buildData.url) {
+            setIframeSrc(`${buildData.url}?t=${Date.now()}`);
+          } else {
+            setIframeSrc(`${project.built_url}?t=${Date.now()}`);
+          }
+        } else {
+          // Build failed but content is saved — show info, not error
+          setError('Content saved. Preview rebuild is not available in this environment — your changes will appear when published.');
+        }
+      } catch {
+        setError('Content saved. Preview rebuild is not available in this environment — your changes will appear when published.');
       }
 
-      // 3. Refresh iframe with cache buster
-      setIframeSrc(`${project.built_url}?t=${Date.now()}`);
       setRebuilding(false);
-      markClean();
     } catch (err) {
       setSaving(false);
       setRebuilding(false);

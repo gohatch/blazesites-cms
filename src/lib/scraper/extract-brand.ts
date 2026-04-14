@@ -16,13 +16,15 @@ export async function extractBrand(
       signal: AbortSignal.timeout(TIMEOUT_MS),
       headers: {
         'User-Agent':
-          'Mozilla/5.0 (compatible; Blazesites/1.0; +https://blazesites.com)',
-        Accept: 'text/html,application/xhtml+xml',
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
       },
+      redirect: 'follow',
     });
 
     if (!response.ok) {
-      return { error: `Website returned status ${response.status}` };
+      return { error: `Could not reach website (status ${response.status}). Please check the URL and try again.` };
     }
 
     const contentLength = response.headers.get('content-length');
@@ -31,6 +33,11 @@ export async function extractBrand(
     }
 
     const html = await response.text();
+
+    // Check for blocked/challenge pages (very small HTML = likely Cloudflare/bot protection)
+    if (html.length < 500) {
+      return { error: 'Website is protected by bot detection. Please try a different URL or skip to fill in content manually.' };
+    }
     const $ = cheerio.load(html);
 
     // Extract business name
