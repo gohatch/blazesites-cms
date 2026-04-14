@@ -24,6 +24,9 @@ export async function extractBrand(
     });
 
     if (!response.ok) {
+      if (response.status === 403 || response.status === 503) {
+        return { error: 'This website has bot protection enabled. Try skipping and entering your business details manually — AI will generate great content for you.' };
+      }
       return { error: `Could not reach website (status ${response.status}). Please check the URL and try again.` };
     }
 

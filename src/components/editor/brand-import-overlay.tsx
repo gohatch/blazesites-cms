@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Globe, Loader2, Sparkles, ArrowRight, Check } from 'lucide-react';
+import { Textarea } from '@/components/ui/textarea';
+import { Globe, Loader2, Sparkles, ArrowRight, Check, PenLine } from 'lucide-react';
 import type { AstroBrandContent } from '@/types';
 
-type Step = 'url' | 'scanning' | 'generating' | 'done' | 'error';
+type Step = 'url' | 'manual' | 'scanning' | 'generating' | 'done' | 'error';
 
 interface BrandImportOverlayProps {
   projectId: string;
@@ -17,6 +18,8 @@ interface BrandImportOverlayProps {
 export function BrandImportOverlay({ projectId, onComplete, onSkip }: BrandImportOverlayProps) {
   const [step, setStep] = useState<Step>('url');
   const [url, setUrl] = useState('');
+  const [businessName, setBusinessName] = useState('');
+  const [businessDesc, setBusinessDesc] = useState('');
   const [error, setError] = useState('');
   const [statusText, setStatusText] = useState('');
 
@@ -86,6 +89,52 @@ export function BrandImportOverlay({ projectId, onComplete, onSkip }: BrandImpor
     }
   }
 
+  async function handleManualGenerate() {
+    if (!businessName.trim()) return;
+
+    try {
+      setStep('generating');
+      setStatusText('AI is writing your website content...');
+      setError('');
+
+      const generateRes = await fetch('/api/generate-content', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          manual: {
+            businessName: businessName.trim(),
+            description: businessDesc.trim() || businessName.trim(),
+            industry: '',
+          },
+        }),
+      });
+
+      const generateData = await generateRes.json();
+
+      if (!generateData.success) {
+        setError(generateData.error || 'Failed to generate content');
+        setStep('manual');
+        return;
+      }
+
+      const brandContent = generateData.data as AstroBrandContent;
+
+      setStatusText('Saving your brand...');
+      await fetch(`/api/projects/${projectId}/content`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(brandContent),
+      });
+
+      setStep('done');
+      setStatusText('Content generated successfully!');
+      setTimeout(() => onComplete(brandContent), 800);
+    } catch {
+      setError('Something went wrong. Please try again.');
+      setStep('manual');
+    }
+  }
+
   return (
     <div className="flex h-full items-center justify-center bg-gradient-to-br from-background via-background to-muted/30">
       <div className="w-full max-w-lg space-y-8 px-6 text-center">
@@ -95,6 +144,8 @@ export function BrandImportOverlay({ projectId, onComplete, onSkip }: BrandImpor
             <Check className="h-10 w-10 text-green-500" />
           ) : step === 'scanning' || step === 'generating' ? (
             <Loader2 className="h-10 w-10 animate-spin text-primary" />
+          ) : step === 'manual' ? (
+            <PenLine className="h-10 w-10 text-primary" />
           ) : (
             <Globe className="h-10 w-10 text-primary" />
           )}
@@ -103,11 +154,16 @@ export function BrandImportOverlay({ projectId, onComplete, onSkip }: BrandImpor
         {/* Title */}
         <div>
           <h2 className="text-2xl font-bold tracking-tight">
-            {step === 'url' || step === 'error' ? 'Import Your Brand' : statusText}
+            {step === 'manual' ? 'Tell Us About Your Business' : step === 'url' || step === 'error' ? 'Import Your Brand' : statusText}
           </h2>
           {step === 'url' && (
             <p className="mt-2 text-muted-foreground">
               Enter your website URL and AI will import your branding, content, colors, and images automatically.
+            </p>
+          )}
+          {step === 'manual' && (
+            <p className="mt-2 text-muted-foreground">
+              Enter your business name and a brief description. AI will generate all your website content.
             </p>
           )}
           {step === 'generating' && (
@@ -135,14 +191,70 @@ export function BrandImportOverlay({ projectId, onComplete, onSkip }: BrandImpor
             </div>
 
             {error && (
-              <p className="text-sm text-destructive">{error}</p>
+              <div className="space-y-3">
+                <p className="text-sm text-destructive">{error}</p>
+                <Button
+                  variant="outline"
+                  onClick={() => { setStep('manual'); setError(''); }}
+                  className="gap-2"
+                >
+                  <PenLine className="h-4 w-4" />
+                  Enter details manually instead
+                </Button>
+              </div>
             )}
 
+            <div className="flex items-center gap-4 text-sm text-muted-foreground">
+              <button
+                onClick={() => setStep('manual')}
+                className="underline-offset-4 hover:text-foreground hover:underline"
+              >
+                Don&apos;t have a website? Enter details manually
+              </button>
+              <span className="text-muted-foreground/30">|</span>
+              <button
+                onClick={onSkip}
+                className="underline-offset-4 hover:text-foreground hover:underline"
+              >
+                Skip
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Manual Entry */}
+        {step === 'manual' && (
+          <div className="w-full max-w-md space-y-4">
+            <Input
+              value={businessName}
+              onChange={(e) => setBusinessName(e.target.value)}
+              placeholder="Your business name"
+              className="h-12 text-base"
+            />
+            <Textarea
+              value={businessDesc}
+              onChange={(e) => setBusinessDesc(e.target.value)}
+              placeholder="Briefly describe your business, services, and target audience..."
+              rows={3}
+              className="text-base"
+            />
+            <Button
+              onClick={handleManualGenerate}
+              size="lg"
+              className="w-full h-12 gap-2"
+              disabled={!businessName.trim()}
+            >
+              <Sparkles className="h-4 w-4" />
+              Generate Content with AI
+            </Button>
+
+            {error && <p className="text-sm text-destructive">{error}</p>}
+
             <button
-              onClick={onSkip}
+              onClick={() => { setStep('url'); setError(''); }}
               className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
             >
-              Skip — I&apos;ll fill in content manually
+              Back to URL import
             </button>
           </div>
         )}
