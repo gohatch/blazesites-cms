@@ -1,23 +1,34 @@
 'use client';
 
+import { useState, useMemo } from 'react';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useContentEditorStore } from '@/lib/editor/content-store';
-import { ArrowLeft, Monitor, Tablet, Smartphone, Loader2, Undo2, Redo2, RotateCw } from 'lucide-react';
+import { ArrowLeft, Monitor, Tablet, Smartphone, Loader2, Undo2, Redo2, RotateCw, Globe } from 'lucide-react';
 import Link from 'next/link';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { DomainSettings } from '@/components/projects/domain-settings';
+import { calculateSeoScore, SeoScorecard } from '@/components/editor/seo-scorecard';
 
 interface ContentEditorToolbarProps {
   projectId: string;
   projectName: string;
+  subdomain: string;
+  customDomain?: string;
+  dnsVerified?: boolean;
   onSaveAndRebuild: () => void;
 }
 
 export function ContentEditorToolbar({
   projectId,
   projectName,
+  subdomain,
+  customDomain,
+  dnsVerified,
   onSaveAndRebuild,
 }: ContentEditorToolbarProps) {
   const {
+    brandContent,
     deviceMode,
     setDeviceMode,
     isDirty,
@@ -28,6 +39,9 @@ export function ContentEditorToolbar({
     canUndo,
     canRedo,
   } = useContentEditorStore();
+
+  const [seoOpen, setSeoOpen] = useState(false);
+  const seo = useMemo(() => calculateSeoScore(brandContent), [brandContent]);
 
   return (
     <div className="flex h-14 items-center justify-between border-b bg-background px-4">
@@ -69,8 +83,21 @@ export function ContentEditorToolbar({
         </Button>
       </div>
 
-      {/* Right: device toggle + save & rebuild */}
+      {/* Right: SEO badge + device toggle + save & rebuild */}
       <div className="flex items-center gap-3">
+        <button
+          type="button"
+          onClick={() => setSeoOpen(true)}
+          className={cn(
+            'rounded-md border px-2 py-0.5 text-xs font-bold transition-colors hover:opacity-80',
+            seo.gradeColor,
+          )}
+          title="Open SEO Scorecard"
+        >
+          SEO: {seo.grade}
+        </button>
+        <SeoScorecard open={seoOpen} onOpenChange={setSeoOpen} projectId={projectId} />
+
         <div className="flex items-center gap-1 rounded-lg border p-1">
           <Button
             variant={deviceMode === 'desktop' ? 'secondary' : 'ghost'}
@@ -97,6 +124,27 @@ export function ContentEditorToolbar({
             <Smartphone className="h-3.5 w-3.5" />
           </Button>
         </div>
+
+        <Dialog>
+          <DialogTrigger
+            render={
+              <Button variant="ghost" size="icon" className="h-8 w-8" title="Domain Settings" />
+            }
+          >
+            <Globe className="h-3.5 w-3.5" />
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-lg p-0 gap-0 overflow-hidden">
+            <DialogHeader className="sr-only">
+              <DialogTitle>Domain Settings</DialogTitle>
+            </DialogHeader>
+            <DomainSettings
+              projectId={projectId}
+              subdomain={subdomain}
+              customDomain={customDomain}
+              dnsVerified={dnsVerified}
+            />
+          </DialogContent>
+        </Dialog>
 
         <Button
           onClick={onSaveAndRebuild}

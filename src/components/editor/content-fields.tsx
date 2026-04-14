@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+import { useParams } from 'next/navigation';
 import { useContentEditorStore } from '@/lib/editor/content-store';
 import { contentSections, type FieldDef } from '@/lib/editor/content-sections';
 import { Input } from '@/components/ui/input';
@@ -7,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { MediaUploader } from '@/components/ui/media-uploader';
 import { RepeaterField } from './fields/repeater-field';
+import { Sparkles, Loader2 } from 'lucide-react';
 
 const GOOGLE_FONTS = [
   'Inter',
@@ -48,6 +51,8 @@ function FieldRenderer({
   onAddItem,
   onRemoveItem,
   onMoveItem,
+  rewritingField,
+  onRewrite,
 }: {
   field: FieldDef;
   value: unknown;
@@ -55,12 +60,28 @@ function FieldRenderer({
   onAddItem?: (path: string, item: unknown) => void;
   onRemoveItem?: (path: string, index: number) => void;
   onMoveItem?: (path: string, from: number, to: number) => void;
+  rewritingField?: string | null;
+  onRewrite?: (fieldPath: string, currentText: string) => void;
 }) {
   switch (field.type) {
     case 'text':
       return (
         <div>
-          <Label className="text-xs">{field.label}</Label>
+          <div className="flex items-center justify-between">
+            <Label className="text-xs">{field.label}</Label>
+            <button
+              onClick={() => onRewrite?.(field.path, String(value ?? ''))}
+              disabled={rewritingField === field.path || !value}
+              className="text-muted-foreground hover:text-primary transition-colors disabled:opacity-30"
+              title="Rewrite with AI"
+            >
+              {rewritingField === field.path ? (
+                <Loader2 className="h-3.5 w-3.5 animate-spin" />
+              ) : (
+                <Sparkles className="h-3.5 w-3.5" />
+              )}
+            </button>
+          </div>
           <Input
             value={(value as string) ?? ''}
             onChange={(e) => onChange(field.path, e.target.value)}
@@ -73,7 +94,21 @@ function FieldRenderer({
     case 'textarea':
       return (
         <div>
-          <Label className="text-xs">{field.label}</Label>
+          <div className="flex items-center justify-between">
+            <Label className="text-xs">{field.label}</Label>
+            <button
+              onClick={() => onRewrite?.(field.path, String(value ?? ''))}
+              disabled={rewritingField === field.path || !value}
+              className="text-muted-foreground hover:text-primary transition-colors disabled:opacity-30"
+              title="Rewrite with AI"
+            >
+              {rewritingField === field.path ? (
+                <Loader2 className="h-3.5 w-3.5 animate-spin" />
+              ) : (
+                <Sparkles className="h-3.5 w-3.5" />
+              )}
+            </button>
+          </div>
           <Textarea
             value={(value as string) ?? ''}
             onChange={(e) => onChange(field.path, e.target.value)}
@@ -163,6 +198,32 @@ export function ContentFields() {
   const removeArrayItem = useContentEditorStore((s) => s.removeArrayItem);
   const moveArrayItem = useContentEditorStore((s) => s.moveArrayItem);
 
+  const [rewritingField, setRewritingField] = useState<string | null>(null);
+  const params = useParams();
+  const projectId = params?.id as string | undefined;
+
+  async function handleRewrite(fieldPath: string, currentText: string) {
+    if (!projectId || !currentText) return;
+    setRewritingField(fieldPath);
+    try {
+      const res = await fetch(`/api/projects/${projectId}/rewrite`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fieldPath, currentText }),
+      });
+      const result = await res.json();
+      if (result.success && result.text) {
+        updateField(fieldPath, result.text);
+      } else {
+        console.error('Rewrite failed:', result.error);
+      }
+    } catch (err) {
+      console.error('Rewrite error:', err);
+    } finally {
+      setRewritingField(null);
+    }
+  }
+
   if (!activeSection) {
     return (
       <aside className="flex h-full w-80 flex-col border-l bg-background">
@@ -208,6 +269,8 @@ export function ContentFields() {
               onAddItem={addArrayItem}
               onRemoveItem={removeArrayItem}
               onMoveItem={moveArrayItem}
+              rewritingField={rewritingField}
+              onRewrite={handleRewrite}
             />
           );
         })}

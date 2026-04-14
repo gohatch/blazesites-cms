@@ -36,6 +36,9 @@ interface ContentEditorProps {
     built_url: string;
     brand_profile: AstroBrandContent;
     template_id: string;
+    subdomain: string;
+    custom_domain?: string;
+    dns_verified?: boolean;
   };
 }
 
@@ -148,6 +151,9 @@ export function ContentEditor({ projectId, project }: ContentEditorProps) {
       <ContentEditorToolbar
         projectId={projectId}
         projectName={project.name}
+        subdomain={project.subdomain}
+        customDomain={project.custom_domain}
+        dnsVerified={project.dns_verified}
         onSaveAndRebuild={handleSaveAndRebuild}
       />
 

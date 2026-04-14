@@ -125,6 +125,9 @@ export default function EditorPage() {
           built_url: project.built_url as string,
           brand_profile: project.brand_profile as AstroBrandContent,
           template_id: project.template_id as string,
+          subdomain: project.subdomain as string,
+          custom_domain: project.custom_domain as string | undefined,
+          dns_verified: project.dns_verified as boolean | undefined,
         }}
       />
     );
