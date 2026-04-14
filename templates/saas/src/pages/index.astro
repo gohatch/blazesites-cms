@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import DetailSections from '../components/DetailSections.astro';
+import CTA from '../components/CTA.astro';
+import Reviews from '../components/Reviews.astro';
+import Blog from '../components/Blog.astro';
+import Footer from '../components/Footer.astro';
+import brand from '../../brand.json';
+
+const componentMap: Record<string, any> = {
+  hero: Hero,
+  features: Features,
+  detailsections: DetailSections,
+  cta: CTA,
+  reviews: Reviews,
+  blog: Blog,
+};
+
+const sections = brand.sectionOrder || ['hero', 'features', 'detailsections', 'cta', 'reviews', 'blog'];
+---
+<Layout>
+  <Header />
+  <main>
+    {sections.map(id => {
+      const Component = componentMap[id];
+      return Component ? <Component /> : null;
+    })}
+  </main>
+  <Footer />
+</Layout>

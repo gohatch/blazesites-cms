@@ -25,6 +25,7 @@ const emptyBrandContent: AstroBrandContent = {
   contact: { heading: 'Contact Us', subheading: '', image: '', hours: [] },
   footer: { tagline: '', socials: [] },
   seo: { homepage: { title: '', description: '' }, keywords: [] },
+  sectionOrder: ['hero', 'about', 'features', 'stats', 'testimonials', 'cta'],
 };
 
 interface ContentEditorProps {

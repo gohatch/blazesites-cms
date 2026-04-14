@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Values from '../components/Values.astro';
+import Offerings from '../components/Offerings.astro';
+import About from '../components/About.astro';
+import Gallery from '../components/Gallery.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+import brand from '../../brand.json';
+
+const componentMap: Record<string, any> = {
+  hero: Hero,
+  values: Values,
+  offerings: Offerings,
+  about: About,
+  gallery: Gallery,
+  testimonials: Testimonials,
+  cta: CTA,
+};
+
+const sections = brand.sectionOrder || ['hero', 'values', 'offerings', 'about', 'gallery', 'testimonials', 'cta'];
+---
+<Layout title="Home" description="Feastar Catering - Discover Culinary Excellence. Premium catering services for weddings, corporate events, and private celebrations.">
+  <Header />
+  <main>
+    {sections.map((id) => {
+      const Component = componentMap[id];
+      return Component ? <Component /> : null;
+    })}
+  </main>
+  <Footer />
+</Layout>

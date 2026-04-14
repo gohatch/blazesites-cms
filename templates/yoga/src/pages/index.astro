@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Stats from '../components/Stats.astro';
+import Classes from '../components/Classes.astro';
+import Benefits from '../components/Benefits.astro';
+import Pricing from '../components/Pricing.astro';
+import CTA from '../components/CTA.astro';
+import Testimonials from '../components/Testimonials.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+
+import brand from '../../brand.json';
+
+const componentMap: Record<string, any> = {
+  hero: Hero,
+  about: About,
+  stats: Stats,
+  classes: Classes,
+  benefits: Benefits,
+  pricing: Pricing,
+  cta: CTA,
+  testimonials: Testimonials,
+  contact: ContactForm,
+};
+
+const sections = brand.sectionOrder || ['hero', 'about', 'stats', 'classes', 'benefits', 'pricing', 'cta', 'testimonials', 'contact'];
+---
+<Layout title="Home" description={brand.description}>
+  <Header />
+  <main>
+    {sections.map(id => {
+      const Component = componentMap[id];
+      return Component ? <Component /> : null;
+    })}
+  </main>
+  <Footer />
+</Layout>

@@ -1,4 +1,5 @@
 import type { AstroBrandContent } from '@/types';
+import { getDefaultSectionOrder } from '@/lib/astro/template-capabilities';
 
 /**
  * Template-specific brand.json schema configurations.
@@ -107,6 +108,11 @@ export function adaptBrandToTemplate(
   } else {
     // Default: keep as "services"
     output.services = content.services;
+  }
+
+  // Set default sectionOrder if not already provided
+  if (!output.sectionOrder) {
+    output.sectionOrder = getDefaultSectionOrder(templateDir);
   }
 
   return output;

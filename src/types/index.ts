@@ -316,6 +316,7 @@ export interface AstroBrandContent {
     homepage: { title: string; description: string };
     keywords: string[];
   };
+  sectionOrder?: string[];
 }
 
 export interface ManualInput {
